@@ -1,0 +1,11 @@
+# SendMixedArrayRequestBody
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `File`                                                                                    | [SendMixedArrayRequestBodyFile](../../models/operations/sendmixedarrayrequestbodyfile.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `Integers`                                                                                | []*int*                                                                                   | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `Models`                                                                                  | [][shared.Employee](../../models/shared/employee.md)                                      | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `Strings`                                                                                 | []*string*                                                                                | :heavy_check_mark:                                                                        | N/A                                                                                       |
