@@ -1,0 +1,6332 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Tester",
+    "description": "Testing various\n api \nfeatures",
+    "contact": {},
+    "version": "1.4"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/response/integer": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Integer",
+        "description": "Gets a integer response",
+        "operationId": "GetInteger",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/binary": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Binary",
+        "description": "gets a binary object",
+        "operationId": "GetBinary",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/precision": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Precision",
+        "operationId": "GetPrecision",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/model": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Model Array",
+        "operationId": "GetModelArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Person"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/long": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Long",
+        "operationId": "GetLong",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://localhost:3000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/response/date": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Date Array",
+        "operationId": "GetDateArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/getContentType": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "get content type headers",
+        "operationId": "getcontenttypeheaders",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/unixdatetime": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get UnixDateTime",
+        "operationId": "GetUnixDateTime",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "number",
+                  "format": "unix-timestamp"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/1123datetime": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get 1123DateTime",
+        "operationId": "Get1123DateTime",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time-rfc1123"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/headers": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Headers",
+        "operationId": "GetHeaders",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/boolean": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Boolean",
+        "operationId": "GetBoolean",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/3339datetime": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get 3339Datetime",
+        "operationId": "Get3339Datetime",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/dynamic": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get Dynamic",
+        "operationId": "GetDynamic",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/responseWitEnum": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "return response with enums",
+        "operationId": "returnresponsewithenums",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/responsewithEnum"
+                    },
+                    {
+                      "example": {
+                        "paramFormat": "Template",
+                        "optional": false,
+                        "type": "Long",
+                        "constant": false,
+                        "isArray": false,
+                        "isStream": false,
+                        "isAttribute": false,
+                        "isMap": false,
+                        "attributes": {
+                          "exclusiveMaximum": false,
+                          "exclusiveMinimum": false,
+                          "id": "5a9fcb01caacc310dc6bab51"
+                        },
+                        "nullable": false,
+                        "id": "5a9fcb01caacc310dc6bab50",
+                        "name": "petId",
+                        "description": "ID of pet to update"
+                      }
+                    }
+                  ]
+                },
+                "example": {
+                  "paramFormat": "Template",
+                  "optional": false,
+                  "type": "Long",
+                  "constant": false,
+                  "isArray": false,
+                  "isStream": false,
+                  "isAttribute": false,
+                  "isMap": false,
+                  "attributes": {
+                    "exclusiveMaximum": false,
+                    "exclusiveMinimum": false,
+                    "id": "5a9fcb01caacc310dc6bab51"
+                  },
+                  "nullable": false,
+                  "id": "5a9fcb01caacc310dc6bab50",
+                  "name": "petId",
+                  "description": "ID of pet to update"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/response/enum": {
+      "get": {
+        "tags": [
+          "ResponseTypes"
+        ],
+        "summary": "Get String Enum Array",
+        "operationId": "GetStringEnumArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                "string"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Days"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/file": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send File",
+        "operationId": "SendFile",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "file"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/model": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send Model",
+        "operationId": "SendModel",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "model"
+                ],
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "$ref": "#/components/schemas/Employee"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/date": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send Date",
+        "operationId": "SendDate",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "date"
+                ],
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/deleteForm": {
+      "delete": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "send delete Form",
+        "operationId": "senddeleteForm",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/deleteMultipart": {
+      "delete": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "send Delete Multipart",
+        "operationId": "sendDeleteMultipart",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/unixdatetime": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send UnixDateTime",
+        "operationId": "SendUnixDateTime",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "datetime"
+                ],
+                "type": "object",
+                "properties": {
+                  "datetime": {
+                    "type": "number",
+                    "format": "unix-timestamp"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/rfc1123datetime": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send Rfc1123 DateTime",
+        "operationId": "SendRfc1123DateTime",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "datetime"
+                ],
+                "type": "object",
+                "properties": {
+                  "datetime": {
+                    "type": "string",
+                    "format": "date-time-rfc1123"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/rfc3339datetime": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send Rfc3339 DateTime",
+        "operationId": "SendRfc3339DateTime",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "datetime"
+                ],
+                "type": "object",
+                "properties": {
+                  "datetime": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/number": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send Long",
+        "operationId": "SendLong",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "value"
+                ],
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/string": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Send String Array",
+        "operationId": "SendStringArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "strings"
+                ],
+                "type": "object",
+                "properties": {
+                  "strings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": ""
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/mixed": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "SendMixedArray",
+        "description": "Send a variety for form params. Returns file count and body params",
+        "operationId": "SendMixedArray",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "file",
+                  "integers",
+                  "models",
+                  "strings"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "integers": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "description": ""
+                  },
+                  "models": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Employee"
+                    },
+                    "description": ""
+                  },
+                  "strings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": ""
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/updateModel": {
+      "put": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "Update Model with Form",
+        "operationId": "UpdateModelwithForm",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "model"
+                ],
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "$ref": "#/components/schemas/Employee"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/deleteForm1": {
+      "delete": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "send delete Form1",
+        "operationId": "senddeleteForm1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/updateString": {
+      "put": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "update String with Form",
+        "operationId": "updateStringwithForm",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "value"
+                ],
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/integerenum": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "SendIntegerEnumArray",
+        "operationId": "SendIntegerEnumArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "suites"
+                ],
+                "type": "object",
+                "properties": {
+                  "suites": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/SuiteCode"
+                    },
+                    "description": ""
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/form/stringenum": {
+      "post": {
+        "tags": [
+          "FormParams"
+        ],
+        "summary": "SendStringEnumArray",
+        "operationId": "SendStringEnumArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "days"
+                ],
+                "type": "object",
+                "properties": {
+                  "days": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Days"
+                    },
+                    "description": ""
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/model": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Model",
+        "operationId": "PostSendModel",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/date": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Date",
+        "operationId": "PostSendDate",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/updateModel": {
+      "put": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Update Model",
+        "operationId": "UpdateModel",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/deletePlainTextBody": {
+      "delete": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Delete PlainText",
+        "operationId": "SendDeletePlainText",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/deleteBody": {
+      "delete": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "send Delete Body",
+        "operationId": "sendDeleteBody",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/unixdatetime": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send UnixDateTime",
+        "operationId": "PostSendUnixDateTime",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "number",
+                "format": "unix-timestamp"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/rfc1123datetime": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Rfc1123 DateTime",
+        "operationId": "PostSendRfc1123DateTime",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "format": "date-time-rfc1123"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/rfc3339datetime": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Rfc3339 DateTime",
+        "operationId": "PostSendRfc3339DateTime",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/string": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send String Array",
+        "description": "sends a string body param",
+        "operationId": "PostSendStringArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": ""
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/updateString": {
+      "put": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "update String",
+        "operationId": "updateString",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/number": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Integer Array",
+        "operationId": "PostSendIntegerArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "description": ""
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/dynamic": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Dynamic",
+        "operationId": "SendDynamic",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/stringenum": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "SendStringEnumArray",
+        "operationId": "PostSendStringEnumArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Days"
+                },
+                "description": ""
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/integerenum": {
+      "post": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "SendIntegerEnumArray",
+        "operationId": "PostSendIntegerEnumArray",
+        "parameters": [
+          {
+            "name": "array",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "enum": [
+                true
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SuiteCode"
+                },
+                "description": ""
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/body/deleteBody1": {
+      "delete": {
+        "tags": [
+          "BodyParams"
+        ],
+        "summary": "Send Delete Body with Model",
+        "operationId": "SendDeleteBodywithModel",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/error/500": {
+      "get": {
+        "tags": [
+          "ErrorCodes"
+        ],
+        "summary": "Get500",
+        "operationId": "Get500",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/error/400": {
+      "get": {
+        "tags": [
+          "ErrorCodes"
+        ],
+        "summary": "Get400",
+        "operationId": "Get400",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/error/501": {
+      "get": {
+        "tags": [
+          "ErrorCodes"
+        ],
+        "summary": "Get501",
+        "operationId": "Get501",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "error 501",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/error/412": {
+      "get": {
+        "tags": [
+          "ErrorCodes"
+        ],
+        "summary": "catch 412 global error",
+        "operationId": "catch412globalerror",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/error/401": {
+      "get": {
+        "tags": [
+          "ErrorCodes"
+        ],
+        "summary": "Get401",
+        "operationId": "Get401",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "401 Local",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalTestException"
+                }
+              }
+            }
+          },
+          "421": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalTestException"
+                }
+              }
+            }
+          },
+          "431": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalTestException"
+                }
+              }
+            }
+          },
+          "432": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalTestException"
+                }
+              }
+            }
+          },
+          "441": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocalTestException"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/date": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Date",
+        "operationId": "Date",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/datearray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Date Array",
+        "operationId": "DateArray",
+        "parameters": [
+          {
+            "name": "dates",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/noparams": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "NoParams",
+        "operationId": "NoParams",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/optionalQueryParam": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Optional Dynamic Query Param",
+        "description": "get optional dynamic query parameter",
+        "operationId": "OptionalDynamicQueryParam",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/unixdatetimearray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Unix DateTime Array",
+        "operationId": "UnixDateTimeArray",
+        "parameters": [
+          {
+            "name": "datetimes",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "format": "unix-timestamp"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/unixdatetime": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Unix DateTime",
+        "operationId": "UnixDateTime",
+        "parameters": [
+          {
+            "name": "datetime",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "number",
+              "format": "unix-timestamp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/rfc1123datetime": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Rfc1123 DateTime",
+        "operationId": "Rfc1123DateTime",
+        "parameters": [
+          {
+            "name": "datetime",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time-rfc1123"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/rfc1123datetimearray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Rfc1123 DateTime Array",
+        "operationId": "Rfc1123DateTimeArray",
+        "parameters": [
+          {
+            "name": "datetimes",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "date-time-rfc1123"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/rfc3339datetimearray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Rfc3339 DateTime Array",
+        "operationId": "Rfc3339DateTimeArray",
+        "parameters": [
+          {
+            "name": "datetimes",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/rfc3339datetime": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Rfc3339 DateTime",
+        "description": "",
+        "operationId": "Rfc3339DateTime",
+        "parameters": [
+          {
+            "name": "datetime",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/stringparam": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "StringParam",
+        "operationId": "StringParam",
+        "parameters": [
+          {
+            "name": "string",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/urlparam": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "UrlParam",
+        "operationId": "UrlParam",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/numberarray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Number Array",
+        "operationId": "NumberArray",
+        "parameters": [
+          {
+            "name": "integers",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/stringarray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "String Array",
+        "operationId": "StringArray",
+        "parameters": [
+          {
+            "name": "strings",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "SimpleQuery",
+        "operationId": "SimpleQuery",
+        "parameters": [
+          {
+            "name": "boolean",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "number",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "string",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/stringenumarray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "String Enum Array",
+        "operationId": "StringEnumArray",
+        "parameters": [
+          {
+            "name": "days",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Days"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/multipleparams": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "MultipleParams",
+        "operationId": "MultipleParams",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "precision",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "string",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "url",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/query/integerenumarray": {
+      "get": {
+        "tags": [
+          "QueryParam"
+        ],
+        "summary": "Integer Enum Array",
+        "operationId": "IntegerEnumArray",
+        "parameters": [
+          {
+            "name": "suites",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SuiteCode"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Echo"
+        ],
+        "summary": "QueryEcho",
+        "operationId": "QueryEcho",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EchoResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Echo"
+        ],
+        "summary": "Json echo",
+        "description": "Echo's back the request",
+        "operationId": "Jsonecho",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/header": {
+      "post": {
+        "tags": [
+          "Header"
+        ],
+        "summary": "Send Headers",
+        "description": "Sends a single header params",
+        "operationId": "SendHeaders",
+        "parameters": [
+          {
+            "name": "custom-header",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "value"
+                ],
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string",
+                    "description": "Represents the value of the custom header"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Global"
+          },
+          "402": {
+            "description": "402 Global"
+          },
+          "403": {
+            "description": "403 Global"
+          },
+          "404": {
+            "description": "404 Global"
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NestedModelException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "500 Global",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Invalid response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalTestException"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "delete_body": {
+        "title": "delete_body",
+        "required": [
+          "name",
+          "field"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          }
+        }
+      },
+      "Boss": {
+        "title": "Boss",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Employee"
+          },
+          {
+            "required": [
+              "promotedAt"
+            ],
+            "type": "object",
+            "properties": {
+              "promotedAt": {
+                "type": "number",
+                "format": "unix-timestamp"
+              },
+              "assistant": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            }
+          }
+        ],
+        "description": "Testing circular reference."
+      },
+      "QueryParameter": {
+        "title": "QueryParameter",
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          }
+        },
+        "description": "Query parameter key value pair echoed back from the server."
+      },
+      "LocalTestException": {
+        "title": "LocalTestException",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GlobalTestException"
+          },
+          {
+            "required": [
+              "SecretMessageForEndpoint"
+            ],
+            "type": "object",
+            "properties": {
+              "SecretMessageForEndpoint": {
+                "type": "string",
+                "description": "Represents the specific endpoint info"
+              }
+            }
+          }
+        ],
+        "description": "To test specific local exceptions."
+      },
+      "Employee": {
+        "title": "Employee",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Person"
+          },
+          {
+            "required": [
+              "department",
+              "dependents",
+              "hiredAt",
+              "joiningDay",
+              "salary",
+              "workingDays"
+            ],
+            "type": "object",
+            "properties": {
+              "department": {
+                "type": "string"
+              },
+              "dependents": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Person"
+                },
+                "description": ""
+              },
+              "hiredAt": {
+                "type": "string",
+                "format": "date-time-rfc1123"
+              },
+              "joiningDay": {
+                "$ref": "#/components/schemas/Days"
+              },
+              "salary": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "workingDays": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Days"
+                },
+                "description": ""
+              },
+              "boss": {
+                "$ref": "#/components/schemas/Person"
+              }
+            }
+          }
+        ]
+      },
+      "Days": {
+        "title": "Days",
+        "enum": [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "type": "string",
+        "description": "A string enum representing days of the week"
+      },
+      "GlobalTestException": {
+        "title": "GlobalTestException",
+        "required": [
+          "ServerMessage",
+          "ServerCode"
+        ],
+        "type": "object",
+        "properties": {
+          "ServerMessage": {
+            "type": "string",
+            "description": "Represents the server's exception message"
+          },
+          "ServerCode": {
+            "type": "integer",
+            "description": "Represents the server's error code",
+            "format": "int32"
+          }
+        },
+        "description": "To test specific global exceptions."
+      },
+      "EchoResponse": {
+        "title": "EchoResponse",
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "method": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "description": "relativePath"
+          },
+          "query": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/QueryParameter"
+            }
+          },
+          "uploadCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "description": "Raw http Request info"
+      },
+      "SuiteCode": {
+        "title": "SuiteCode",
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "description": "A integer based enum representing a Suite in a game of cards"
+      },
+      "Person": {
+        "title": "Person",
+        "required": [
+          "address",
+          "age",
+          "birthday",
+          "birthtime",
+          "name",
+          "uid",
+          "personType"
+        ],
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
+          },
+          "birthtime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string"
+          },
+          "uid": {
+            "type": "string"
+          },
+          "personType": {
+            "type": "string"
+          }
+        },
+        "discriminator": {
+          "propertyName": "personType",
+          "mapping": {
+            "Empl": "Employee",
+            "Boss": "Boss"
+          }
+        }
+      },
+      "ServerResponse": {
+        "title": "ServerResponse",
+        "required": [
+          "passed"
+        ],
+        "type": "object",
+        "properties": {
+          "passed": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "input": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "NestedModelException": {
+        "title": "NestedModelException",
+        "required": [
+          "ServerMessage",
+          "ServerCode",
+          "model"
+        ],
+        "type": "object",
+        "properties": {
+          "ServerMessage": {
+            "type": "string"
+          },
+          "ServerCode": {
+            "type": "string"
+          },
+          "model": {
+            "$ref": "#/components/schemas/validate"
+          }
+        }
+      },
+      "validate": {
+        "title": "validate",
+        "required": [
+          "field",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          }
+        }
+      },
+      "ParamFormat": {
+        "title": "ParamFormat",
+        "enum": [
+          "Template",
+          "Form",
+          "Body",
+          "Header",
+          "Query"
+        ],
+        "type": "string"
+      },
+      "Attributes": {
+        "title": "Attributes",
+        "required": [
+          "exclusiveMaximum",
+          "exclusiveMinimum",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "exclusiveMaximum": {
+            "type": "boolean",
+            "example": false
+          },
+          "exclusiveMinimum": {
+            "type": "boolean",
+            "example": false
+          },
+          "id": {
+            "type": "string",
+            "example": "5a9fcb01caacc310dc6bab51"
+          }
+        },
+        "example": {
+          "exclusiveMaximum": false,
+          "exclusiveMinimum": false,
+          "id": "5a9fcb01caacc310dc6bab51"
+        }
+      },
+      "Type": {
+        "title": "Type",
+        "enum": [
+          "Long",
+          "Number",
+          "Precision",
+          "Boolean",
+          "DateTime",
+          "Date",
+          "String"
+        ],
+        "type": "string"
+      },
+      "responsewithEnum": {
+        "title": "responsewithEnum",
+        "required": [
+          "paramFormat",
+          "optional",
+          "type",
+          "constant",
+          "isArray",
+          "isStream",
+          "isAttribute",
+          "isMap",
+          "attributes",
+          "nullable",
+          "id",
+          "name",
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "paramFormat": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ParamFormat"
+              },
+              {
+                "example": "Template"
+              }
+            ]
+          },
+          "optional": {
+            "type": "boolean",
+            "example": false
+          },
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Type"
+              },
+              {
+                "example": "Long"
+              }
+            ]
+          },
+          "constant": {
+            "type": "boolean",
+            "example": false
+          },
+          "isArray": {
+            "type": "boolean",
+            "example": false
+          },
+          "isStream": {
+            "type": "boolean",
+            "example": false
+          },
+          "isAttribute": {
+            "type": "boolean",
+            "example": false
+          },
+          "isMap": {
+            "type": "boolean",
+            "example": false
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Attributes"
+              },
+              {
+                "example": {
+                  "exclusiveMaximum": false,
+                  "exclusiveMinimum": false,
+                  "id": "5a9fcb01caacc310dc6bab51"
+                }
+              }
+            ]
+          },
+          "nullable": {
+            "type": "boolean",
+            "example": false
+          },
+          "id": {
+            "type": "string",
+            "example": "5a9fcb01caacc310dc6bab50"
+          },
+          "name": {
+            "type": "string",
+            "example": "petId"
+          },
+          "description": {
+            "type": "string",
+            "example": "ID of pet to update"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "ResponseTypes",
+      "description": ""
+    },
+    {
+      "name": "FormParams",
+      "description": ""
+    },
+    {
+      "name": "BodyParams",
+      "description": ""
+    },
+    {
+      "name": "ErrorCodes",
+      "description": ""
+    },
+    {
+      "name": "QueryParam",
+      "description": ""
+    },
+    {
+      "name": "Echo",
+      "description": ""
+    },
+    {
+      "name": "Header",
+      "description": ""
+    },
+    {
+      "name": "TemplateParams",
+      "description": ""
+    },
+    {
+      "name": "QueryParams",
+      "description": ""
+    }
+  ]
+}
