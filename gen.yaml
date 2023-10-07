@@ -1,4 +1,9 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 00e173209ee87c215970773789a89b4a
+  docVersion: "1.4"
+  speakeasyVersion: 1.96.1
+  generationVersion: 2.150.0
 generation:
   comments:
     disableComments: false
@@ -7,8 +12,15 @@ generation:
   sdkClassName: tester
   singleTagPerOp: false
   tagNamespacingDisabled: false
+features:
+  go:
+    core: 2.91.4
+    downloadStreams: 0.1.0
+    globalServerURLs: 2.82.0
+    methodServerURLs: 2.82.0
 go:
-  version: 0.0.1
+  version: 0.1.0
   clientServerStatusCodesAsErrors: true
+  flattenGlobalSecurity: true
   maxMethodParams: 0
   packageName: github.com/speakeasy-sdks/blah
