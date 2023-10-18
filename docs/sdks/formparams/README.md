@@ -90,7 +90,7 @@ func main() {
     res, err := s.FormParams.SendFile(ctx, &operations.SendFileRequestBody{
         File: operations.SendFileRequestBodyFile{
             Content: []byte("uAspk_G{\["),
-            File: "crewmen",
+            File: "Fadel",
         },
     })
     if err != nil {
@@ -239,51 +239,51 @@ func main() {
     res, err := s.FormParams.SendMixedArray(ctx, &operations.SendMixedArrayRequestBody{
         File: operations.SendMixedArrayRequestBodyFile{
             Content: []byte("N|}Ave]2L-"),
-            File: "networks East robust",
+            File: "Electric",
         },
         Integers: []int{
-            90433,
+            816429,
         },
         Models: []shared.Employee{
             shared.Employee{
-                Address: "72590 Cordie Wells",
-                Age: 482234,
-                Birthday: types.MustDateFromString("2021-11-15"),
-                Birthtime: types.MustTimeFromString("2022-09-26T08:49:30.884Z"),
+                Address: "22003 Grimes Mills",
+                Age: 951933,
+                Birthday: types.MustDateFromString("2021-03-22"),
+                Birthtime: types.MustTimeFromString("2021-10-17T14:28:49.414Z"),
                 Boss: &shared.Person{
-                    Address: "442 Tamara Grove",
-                    Age: 318424,
-                    Birthday: types.MustDateFromString("2023-02-04"),
-                    Birthtime: types.MustTimeFromString("2021-05-07T13:59:39.796Z"),
-                    Name: "card Investor withdrawal",
-                    PersonType: "Designer female",
-                    UID: "stipple Optional",
+                    Address: "94257 Jacques Forks",
+                    Age: 480419,
+                    Birthday: types.MustDateFromString("2023-09-25"),
+                    Birthtime: types.MustTimeFromString("2022-01-13T00:34:45.421Z"),
+                    Name: "visualize",
+                    PersonType: "Southeast",
+                    UID: "card",
                 },
-                Department: "Kennedi Northeast",
+                Department: "Investor",
                 Dependents: []shared.Person{
                     shared.Person{
-                        Address: "09598 Arnold Bridge",
-                        Age: 484536,
-                        Birthday: types.MustDateFromString("2021-06-01"),
-                        Birthtime: types.MustTimeFromString("2022-07-01T11:59:35.408Z"),
-                        Name: "helpfully Licensed",
-                        PersonType: "Northwest",
-                        UID: "auxiliary",
+                        Address: "4365 Frami Landing",
+                        Age: 988098,
+                        Birthday: types.MustDateFromString("2023-07-29"),
+                        Birthtime: types.MustTimeFromString("2022-01-20T22:03:14.338Z"),
+                        Name: "calculate",
+                        PersonType: "Kennedi",
+                        UID: "Northeast",
                     },
                 },
-                HiredAt: "reboot Bedfordshire",
-                JoiningDay: shared.DaysMonday,
-                Name: "Books",
-                PersonType: "Kids Movies",
-                Salary: 892296,
-                UID: "repurpose Modern",
+                HiredAt: "Bangladesh",
+                JoiningDay: shared.DaysSaturday,
+                Name: "voluptatibus",
+                PersonType: "North",
+                Salary: 484536,
+                UID: "Missouri",
                 WorkingDays: []shared.Days{
-                    shared.DaysThursday,
+                    shared.DaysTuesday,
                 },
             },
         },
         Strings: []string{
-            "Pakistan",
+            "helpfully",
         },
     })
     if err != nil {
@@ -376,7 +376,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendRfc1123DateTime(ctx, &operations.SendRfc1123DateTimeRequestBody{
-        Datetime: "sky ampere",
+        Datetime: "panel",
     })
     if err != nil {
         log.Fatal(err)
@@ -790,7 +790,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.UpdateStringwithForm(ctx, &operations.UpdateStringwithFormRequestBody{
-        Value: "interesting Unbranded",
+        Value: "UDP",
     })
     if err != nil {
         log.Fatal(err)

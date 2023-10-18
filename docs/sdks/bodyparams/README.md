@@ -192,30 +192,30 @@ func main() {
             Age: 46325,
             Birthday: types.MustDateFromString("2022-11-16"),
             Birthtime: types.MustTimeFromString("2023-02-10T04:24:43.071Z"),
-            Name: "structure if",
-            PersonType: "Rap",
-            UID: "Borders blockchains Plastic",
+            Name: "Krona",
+            PersonType: "Hybrid",
+            UID: "enhance",
         },
-        Department: "Rustic Buckinghamshire",
+        Department: "Rap",
         Dependents: []shared.Person{
             shared.Person{
-                Address: "252 Hirthe Points",
-                Age: 103701,
-                Birthday: types.MustDateFromString("2023-06-03"),
-                Birthtime: types.MustTimeFromString("2022-12-12T11:03:45.416Z"),
-                Name: "arid Northwest",
-                PersonType: "Bedfordshire",
-                UID: "Venezuelan Minnesota",
+                Address: "053 Franecki Heights",
+                Age: 505550,
+                Birthday: types.MustDateFromString("2021-08-29"),
+                Birthtime: types.MustTimeFromString("2021-06-22T03:05:29.229Z"),
+                Name: "Buckinghamshire",
+                PersonType: "female",
+                UID: "overriding",
             },
         },
-        HiredAt: "backing",
-        JoiningDay: shared.DaysMonday,
-        Name: "Northwest",
-        PersonType: "Angus",
-        Salary: 677435,
-        UID: "siemens",
+        HiredAt: "jealously",
+        JoiningDay: shared.DaysThursday,
+        Name: "Southwest",
+        PersonType: "Central",
+        Salary: 874680,
+        UID: "deposit",
         WorkingDays: []shared.Days{
-            shared.DaysFriday,
+            shared.DaysSunday,
         },
     })
     if err != nil {
@@ -260,7 +260,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.PostSendRfc1123DateTime(ctx, "Analyst Elegant")
+    res, err := s.BodyParams.PostSendRfc1123DateTime(ctx, "national")
     if err != nil {
         log.Fatal(err)
     }
@@ -628,30 +628,30 @@ func main() {
             Age: 27925,
             Birthday: types.MustDateFromString("2023-02-24"),
             Birthtime: types.MustTimeFromString("2021-11-27T19:07:57.711Z"),
-            Name: "male",
-            PersonType: "Gasoline Rhodium mint",
-            UID: "Madagascar",
+            Name: "Clothing",
+            PersonType: "minus",
+            UID: "Gasoline",
         },
-        Department: "stimulating alarm",
+        Department: "Rhodium",
         Dependents: []shared.Person{
             shared.Person{
-                Address: "86897 Hadley River",
-                Age: 383456,
-                Birthday: types.MustDateFromString("2023-01-04"),
-                Birthtime: types.MustTimeFromString("2022-10-08T22:52:02.234Z"),
-                Name: "green",
-                PersonType: "Designer Hyundai bluetooth",
-                UID: "portal Specialist Tools",
+                Address: "13205 Sabryna Springs",
+                Age: 538953,
+                Birthday: types.MustDateFromString("2022-11-22"),
+                Birthtime: types.MustTimeFromString("2021-12-02T00:56:36.035Z"),
+                Name: "Mazda",
+                PersonType: "vastly",
+                UID: "Card",
             },
         },
-        HiredAt: "Northeast henry",
-        JoiningDay: shared.DaysFriday,
-        Name: "Massachusetts generate Integration",
-        PersonType: "volt",
-        Salary: 930709,
-        UID: "integrated",
+        HiredAt: "Brand",
+        JoiningDay: shared.DaysMonday,
+        Name: "Buckinghamshire",
+        PersonType: "Designer",
+        Salary: 829496,
+        UID: "Dinar",
         WorkingDays: []shared.Days{
-            shared.DaysSunday,
+            shared.DaysSaturday,
         },
     })
     if err != nil {

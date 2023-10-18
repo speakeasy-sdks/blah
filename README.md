@@ -7,7 +7,7 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
 ```bash
 go get github.com/speakeasy-sdks/blah
@@ -16,38 +16,37 @@ go get github.com/speakeasy-sdks/blah
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
-import(
+import (
 	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"log"
 )
 
 func main() {
-    s := blah.New()
+	s := blah.New()
 
-    ctx := context.Background()
-    res, err := s.BodyParams.PostSendDate(ctx, []byte("Hy}S3c@&JC"))
-    if err != nil {
-        log.Fatal(err)
-    }
+	ctx := context.Background()
+	res, err := s.BodyParams.PostSendDate(ctx, []byte("Hy}S3c@&JC"))
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    if res.ServerResponse != nil {
-        // handle response
-    }
+	if res.ServerResponse != nil {
+		// handle response
+	}
 }
+
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [BodyParams](docs/sdks/bodyparams/README.md)
+### [BodyParams](docs/sdks/bodyparams/README.md)
 
 * [PostSendDate](docs/sdks/bodyparams/README.md#postsenddate) - Send Date
 * [PostSendIntegerArray](docs/sdks/bodyparams/README.md#postsendintegerarray) - Send Integer Array
@@ -65,12 +64,12 @@ func main() {
 * [SendDeleteBody](docs/sdks/bodyparams/README.md#senddeletebody) - send Delete Body
 * [UpdateString](docs/sdks/bodyparams/README.md#updatestring) - update String
 
-## [Echo](docs/sdks/echo/README.md)
+### [Echo](docs/sdks/echo/README.md)
 
 * [Jsonecho](docs/sdks/echo/README.md#jsonecho) - Json echo
 * [QueryEcho](docs/sdks/echo/README.md#queryecho) - QueryEcho
 
-## [ErrorCodes](docs/sdks/errorcodes/README.md)
+### [ErrorCodes](docs/sdks/errorcodes/README.md)
 
 * [Get400](docs/sdks/errorcodes/README.md#get400) - Get400
 * [Get401](docs/sdks/errorcodes/README.md#get401) - Get401
@@ -78,7 +77,7 @@ func main() {
 * [Get501](docs/sdks/errorcodes/README.md#get501) - Get501
 * [Catch412globalerror](docs/sdks/errorcodes/README.md#catch412globalerror) - catch 412 global error
 
-## [FormParams](docs/sdks/formparams/README.md)
+### [FormParams](docs/sdks/formparams/README.md)
 
 * [SendDate](docs/sdks/formparams/README.md#senddate) - Send Date
 * [SendFile](docs/sdks/formparams/README.md#sendfile) - Send File
@@ -97,11 +96,11 @@ func main() {
 * [SenddeleteForm1](docs/sdks/formparams/README.md#senddeleteform1) - send delete Form1
 * [UpdateStringwithForm](docs/sdks/formparams/README.md#updatestringwithform) - update String with Form
 
-## [Header](docs/sdks/header/README.md)
+### [Header](docs/sdks/header/README.md)
 
 * [SendHeaders](docs/sdks/header/README.md#sendheaders) - Send Headers
 
-## [QueryParam](docs/sdks/queryparam/README.md)
+### [QueryParam](docs/sdks/queryparam/README.md)
 
 * [Date](docs/sdks/queryparam/README.md#date) - Date
 * [DateArray](docs/sdks/queryparam/README.md#datearray) - Date Array
@@ -122,7 +121,7 @@ func main() {
 * [UnixDateTimeArray](docs/sdks/queryparam/README.md#unixdatetimearray) - Unix DateTime Array
 * [URLParam](docs/sdks/queryparam/README.md#urlparam) - UrlParam
 
-## [ResponseTypes](docs/sdks/responsetypes/README.md)
+### [ResponseTypes](docs/sdks/responsetypes/README.md)
 
 * [Get1123DateTime](docs/sdks/responsetypes/README.md#get1123datetime) - Get 1123DateTime
 * [Get3339Datetime](docs/sdks/responsetypes/README.md#get3339datetime) - Get 3339Datetime
@@ -142,8 +141,6 @@ func main() {
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
