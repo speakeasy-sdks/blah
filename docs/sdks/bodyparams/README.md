@@ -192,30 +192,30 @@ func main() {
             Age: 46325,
             Birthday: types.MustDateFromString("2022-11-16"),
             Birthtime: types.MustTimeFromString("2023-02-10T04:24:43.071Z"),
-            Name: "Krona",
-            PersonType: "Hybrid",
-            UID: "enhance",
+            Name: "string",
+            PersonType: "string",
+            UID: "string",
         },
-        Department: "Rap",
+        Department: "string",
         Dependents: []shared.Person{
             shared.Person{
-                Address: "053 Franecki Heights",
-                Age: 505550,
-                Birthday: types.MustDateFromString("2021-08-29"),
-                Birthtime: types.MustTimeFromString("2021-06-22T03:05:29.229Z"),
-                Name: "Buckinghamshire",
-                PersonType: "female",
-                UID: "overriding",
+                Address: "3789 Dawson Overpass",
+                Age: 992245,
+                Birthday: types.MustDateFromString("2023-06-09"),
+                Birthtime: types.MustTimeFromString("2021-03-28T14:57:58.898Z"),
+                Name: "string",
+                PersonType: "string",
+                UID: "string",
             },
         },
-        HiredAt: "jealously",
-        JoiningDay: shared.DaysThursday,
-        Name: "Southwest",
-        PersonType: "Central",
-        Salary: 874680,
-        UID: "deposit",
+        HiredAt: "string",
+        JoiningDay: shared.DaysWednesday,
+        Name: "string",
+        PersonType: "string",
+        Salary: 333563,
+        UID: "string",
         WorkingDays: []shared.Days{
-            shared.DaysSunday,
+            shared.DaysSaturday,
         },
     })
     if err != nil {
@@ -260,7 +260,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.PostSendRfc1123DateTime(ctx, "national")
+    res, err := s.BodyParams.PostSendRfc1123DateTime(ctx, "string")
     if err != nil {
         log.Fatal(err)
     }
@@ -349,7 +349,7 @@ func main() {
     ctx := context.Background()
     res, err := s.BodyParams.PostSendStringArray(ctx, operations.PostSendStringArrayRequest{
         RequestBody: []string{
-            "1080p",
+            "string",
         },
         Array: false,
     })
@@ -628,30 +628,30 @@ func main() {
             Age: 27925,
             Birthday: types.MustDateFromString("2023-02-24"),
             Birthtime: types.MustTimeFromString("2021-11-27T19:07:57.711Z"),
-            Name: "Clothing",
-            PersonType: "minus",
-            UID: "Gasoline",
+            Name: "string",
+            PersonType: "string",
+            UID: "string",
         },
-        Department: "Rhodium",
+        Department: "string",
         Dependents: []shared.Person{
             shared.Person{
-                Address: "13205 Sabryna Springs",
-                Age: 538953,
-                Birthday: types.MustDateFromString("2022-11-22"),
-                Birthtime: types.MustTimeFromString("2021-12-02T00:56:36.035Z"),
-                Name: "Mazda",
-                PersonType: "vastly",
-                UID: "Card",
+                Address: "75786 Hirthe Dale",
+                Age: 167624,
+                Birthday: types.MustDateFromString("2022-03-06"),
+                Birthtime: types.MustTimeFromString("2021-10-10T21:23:07.232Z"),
+                Name: "string",
+                PersonType: "string",
+                UID: "string",
             },
         },
-        HiredAt: "Brand",
-        JoiningDay: shared.DaysMonday,
-        Name: "Buckinghamshire",
-        PersonType: "Designer",
-        Salary: 829496,
-        UID: "Dinar",
+        HiredAt: "string",
+        JoiningDay: shared.DaysSunday,
+        Name: "string",
+        PersonType: "string",
+        Salary: 527957,
+        UID: "string",
         WorkingDays: []shared.Days{
-            shared.DaysSaturday,
+            shared.DaysTuesday,
         },
     })
     if err != nil {
@@ -738,7 +738,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.UpdateString(ctx, "Helena")
+    res, err := s.BodyParams.UpdateString(ctx, "string")
     if err != nil {
         log.Fatal(err)
     }

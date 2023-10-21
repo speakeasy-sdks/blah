@@ -190,8 +190,8 @@ func main() {
     res, err := s.QueryParam.MultipleParams(ctx, operations.MultipleParamsRequest{
         Number: 907904,
         Precision: 9477.38,
-        String: "Cadillac",
-        URL: "https://showy-macro.biz",
+        String: "string",
+        URL: "https://definitive-tab.net",
     })
     if err != nil {
         log.Fatal(err)
@@ -327,7 +327,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.QueryParam.OptionalDynamicQueryParam(ctx, operations.OptionalDynamicQueryParamRequest{
-        Name: "Diesel",
+        Name: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -373,7 +373,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.QueryParam.Rfc1123DateTime(ctx, operations.Rfc1123DateTimeRequest{
-        Datetime: "Tricycle",
+        Datetime: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -420,7 +420,7 @@ func main() {
     ctx := context.Background()
     res, err := s.QueryParam.Rfc1123DateTimeArray(ctx, operations.Rfc1123DateTimeArrayRequest{
         Datetimes: []string{
-            "Games",
+            "string",
         },
     })
     if err != nil {
@@ -565,7 +565,7 @@ func main() {
     res, err := s.QueryParam.SimpleQuery(ctx, operations.SimpleQueryRequest{
         Boolean: false,
         Number: 41509,
-        String: "Rap",
+        String: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -612,7 +612,7 @@ func main() {
     ctx := context.Background()
     res, err := s.QueryParam.StringArray(ctx, operations.StringArrayRequest{
         Strings: []string{
-            "Nicaragua",
+            "string",
         },
     })
     if err != nil {
@@ -708,7 +708,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.QueryParam.StringParam(ctx, operations.StringParamRequest{
-        String: "Southwest",
+        String: "string",
     })
     if err != nil {
         log.Fatal(err)

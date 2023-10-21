@@ -2,19 +2,29 @@
 
 package sdkerrors
 
-import (
-	"encoding/json"
-)
-
 type Validate struct {
 	Address *string `json:"address,omitempty"`
 	Field   string  `json:"field"`
 	Name    string  `json:"name"`
 }
 
-var _ error = &Validate{}
+func (o *Validate) GetAddress() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Address
+}
 
-func (e *Validate) Error() string {
-	data, _ := json.Marshal(e)
-	return string(data)
+func (o *Validate) GetField() string {
+	if o == nil {
+		return ""
+	}
+	return o.Field
+}
+
+func (o *Validate) GetName() string {
+	if o == nil {
+		return ""
+	}
+	return o.Name
 }

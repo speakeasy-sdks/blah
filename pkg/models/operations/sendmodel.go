@@ -8,12 +8,12 @@ import (
 )
 
 type SendModelRequestBody struct {
-	Model interface{} `form:"name=model,json"`
+	Model shared.Employee `form:"name=model,json"`
 }
 
-func (o *SendModelRequestBody) GetModel() interface{} {
+func (o *SendModelRequestBody) GetModel() shared.Employee {
 	if o == nil {
-		return nil
+		return shared.Employee{}
 	}
 	return o.Model
 }

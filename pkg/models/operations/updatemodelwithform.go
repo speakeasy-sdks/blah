@@ -8,12 +8,12 @@ import (
 )
 
 type UpdateModelwithFormRequestBody struct {
-	Model interface{} `form:"name=model,json"`
+	Model shared.Employee `form:"name=model,json"`
 }
 
-func (o *UpdateModelwithFormRequestBody) GetModel() interface{} {
+func (o *UpdateModelwithFormRequestBody) GetModel() shared.Employee {
 	if o == nil {
-		return nil
+		return shared.Employee{}
 	}
 	return o.Model
 }

@@ -90,7 +90,7 @@ func main() {
     res, err := s.FormParams.SendFile(ctx, &operations.SendFileRequestBody{
         File: operations.SendFileRequestBodyFile{
             Content: []byte("uAspk_G{\["),
-            File: "Fadel",
+            File: "string",
         },
     })
     if err != nil {
@@ -239,51 +239,51 @@ func main() {
     res, err := s.FormParams.SendMixedArray(ctx, &operations.SendMixedArrayRequestBody{
         File: operations.SendMixedArrayRequestBodyFile{
             Content: []byte("N|}Ave]2L-"),
-            File: "Electric",
+            File: "string",
         },
         Integers: []int{
-            816429,
+            807632,
         },
         Models: []shared.Employee{
             shared.Employee{
-                Address: "22003 Grimes Mills",
-                Age: 951933,
-                Birthday: types.MustDateFromString("2021-03-22"),
-                Birthtime: types.MustTimeFromString("2021-10-17T14:28:49.414Z"),
+                Address: "80220 Elvis Shore",
+                Age: 294259,
+                Birthday: types.MustDateFromString("2022-08-22"),
+                Birthtime: types.MustTimeFromString("2023-11-09T08:47:25.677Z"),
                 Boss: &shared.Person{
-                    Address: "94257 Jacques Forks",
-                    Age: 480419,
-                    Birthday: types.MustDateFromString("2023-09-25"),
-                    Birthtime: types.MustTimeFromString("2022-01-13T00:34:45.421Z"),
-                    Name: "visualize",
-                    PersonType: "Southeast",
-                    UID: "card",
+                    Address: "22942 Ryan Lane",
+                    Age: 457209,
+                    Birthday: types.MustDateFromString("2021-11-17"),
+                    Birthtime: types.MustTimeFromString("2022-06-11T01:25:06.384Z"),
+                    Name: "string",
+                    PersonType: "string",
+                    UID: "string",
                 },
-                Department: "Investor",
+                Department: "string",
                 Dependents: []shared.Person{
                     shared.Person{
-                        Address: "4365 Frami Landing",
-                        Age: 988098,
-                        Birthday: types.MustDateFromString("2023-07-29"),
-                        Birthtime: types.MustTimeFromString("2022-01-20T22:03:14.338Z"),
-                        Name: "calculate",
-                        PersonType: "Kennedi",
-                        UID: "Northeast",
+                        Address: "336 Murl Meadow",
+                        Age: 331405,
+                        Birthday: types.MustDateFromString("2022-12-07"),
+                        Birthtime: types.MustTimeFromString("2022-11-27T11:08:19.758Z"),
+                        Name: "string",
+                        PersonType: "string",
+                        UID: "string",
                     },
                 },
-                HiredAt: "Bangladesh",
-                JoiningDay: shared.DaysSaturday,
-                Name: "voluptatibus",
-                PersonType: "North",
-                Salary: 484536,
-                UID: "Missouri",
+                HiredAt: "string",
+                JoiningDay: shared.DaysWednesday,
+                Name: "string",
+                PersonType: "string",
+                Salary: 492681,
+                UID: "string",
                 WorkingDays: []shared.Days{
                     shared.DaysTuesday,
                 },
             },
         },
         Strings: []string{
-            "helpfully",
+            "string",
         },
     })
     if err != nil {
@@ -323,6 +323,8 @@ import(
 	"log"
 	"github.com/speakeasy-sdks/blah"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/types"
 )
 
 func main() {
@@ -330,7 +332,42 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendModel(ctx, &operations.SendModelRequestBody{
-        Model: "Checking",
+        Model: shared.Employee{
+            Address: "0371 Nienow Coves",
+            Age: 574270,
+            Birthday: types.MustDateFromString("2021-05-28"),
+            Birthtime: types.MustTimeFromString("2022-10-14T06:30:12.294Z"),
+            Boss: &shared.Person{
+                Address: "8002 Pansy Dale",
+                Age: 509061,
+                Birthday: types.MustDateFromString("2021-10-26"),
+                Birthtime: types.MustTimeFromString("2023-06-05T00:58:45.263Z"),
+                Name: "string",
+                PersonType: "string",
+                UID: "string",
+            },
+            Department: "string",
+            Dependents: []shared.Person{
+                shared.Person{
+                    Address: "8830 McDermott Forks",
+                    Age: 465073,
+                    Birthday: types.MustDateFromString("2021-02-06"),
+                    Birthtime: types.MustTimeFromString("2023-04-01T23:29:40.608Z"),
+                    Name: "string",
+                    PersonType: "string",
+                    UID: "string",
+                },
+            },
+            HiredAt: "string",
+            JoiningDay: shared.DaysMonday,
+            Name: "string",
+            PersonType: "string",
+            Salary: 35111,
+            UID: "string",
+            WorkingDays: []shared.Days{
+                shared.DaysSunday,
+            },
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -376,7 +413,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendRfc1123DateTime(ctx, &operations.SendRfc1123DateTimeRequestBody{
-        Datetime: "panel",
+        Datetime: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -471,7 +508,7 @@ func main() {
     res, err := s.FormParams.SendStringArray(ctx, operations.SendStringArrayRequest{
         RequestBody: &operations.SendStringArrayRequestBody{
             Strings: []string{
-                "Bedfordshire",
+                "string",
             },
         },
         Array: false,
@@ -611,6 +648,8 @@ import(
 	"log"
 	"github.com/speakeasy-sdks/blah"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/types"
 )
 
 func main() {
@@ -618,7 +657,42 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.UpdateModelwithForm(ctx, &operations.UpdateModelwithFormRequestBody{
-        Model: "Towels",
+        Model: shared.Employee{
+            Address: "37579 Sporer Fields",
+            Age: 899553,
+            Birthday: types.MustDateFromString("2023-02-10"),
+            Birthtime: types.MustTimeFromString("2021-06-17T01:16:01.265Z"),
+            Boss: &shared.Person{
+                Address: "1901 Carter Lodge",
+                Age: 445689,
+                Birthday: types.MustDateFromString("2022-02-09"),
+                Birthtime: types.MustTimeFromString("2022-03-17T14:13:39.740Z"),
+                Name: "string",
+                PersonType: "string",
+                UID: "string",
+            },
+            Department: "string",
+            Dependents: []shared.Person{
+                shared.Person{
+                    Address: "11041 Jacobi Stream",
+                    Age: 134413,
+                    Birthday: types.MustDateFromString("2021-08-30"),
+                    Birthtime: types.MustTimeFromString("2023-11-26T23:43:21.899Z"),
+                    Name: "string",
+                    PersonType: "string",
+                    UID: "string",
+                },
+            },
+            HiredAt: "string",
+            JoiningDay: shared.DaysFriday,
+            Name: "string",
+            PersonType: "string",
+            Salary: 697151,
+            UID: "string",
+            WorkingDays: []shared.Days{
+                shared.DaysMonday,
+            },
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -790,7 +864,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.UpdateStringwithForm(ctx, &operations.UpdateStringwithFormRequestBody{
-        Value: "UDP",
+        Value: "string",
     })
     if err != nil {
         log.Fatal(err)
