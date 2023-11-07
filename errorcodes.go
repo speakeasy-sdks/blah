@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type errorCodes struct {
+type ErrorCodes struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newErrorCodes(sdkConfig sdkConfiguration) *errorCodes {
-	return &errorCodes{
+func newErrorCodes(sdkConfig sdkConfiguration) *ErrorCodes {
+	return &ErrorCodes{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // Get400
-func (s *errorCodes) Get400(ctx context.Context, opts ...operations.Option) (*operations.Get400Response, error) {
+func (s *ErrorCodes) Get400(ctx context.Context, opts ...operations.Option) (*operations.Get400Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -81,7 +81,7 @@ func (s *errorCodes) Get400(ctx context.Context, opts ...operations.Option) (*op
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Get400200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -137,7 +137,7 @@ func (s *errorCodes) Get400(ctx context.Context, opts ...operations.Option) (*op
 }
 
 // Get401
-func (s *errorCodes) Get401(ctx context.Context, opts ...operations.Option) (*operations.Get401Response, error) {
+func (s *ErrorCodes) Get401(ctx context.Context, opts ...operations.Option) (*operations.Get401Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -192,7 +192,7 @@ func (s *errorCodes) Get401(ctx context.Context, opts ...operations.Option) (*op
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Get401200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -267,7 +267,7 @@ func (s *errorCodes) Get401(ctx context.Context, opts ...operations.Option) (*op
 }
 
 // Get500
-func (s *errorCodes) Get500(ctx context.Context, opts ...operations.Option) (*operations.Get500Response, error) {
+func (s *ErrorCodes) Get500(ctx context.Context, opts ...operations.Option) (*operations.Get500Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -322,7 +322,7 @@ func (s *errorCodes) Get500(ctx context.Context, opts ...operations.Option) (*op
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Get500200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -378,7 +378,7 @@ func (s *errorCodes) Get500(ctx context.Context, opts ...operations.Option) (*op
 }
 
 // Get501
-func (s *errorCodes) Get501(ctx context.Context, opts ...operations.Option) (*operations.Get501Response, error) {
+func (s *ErrorCodes) Get501(ctx context.Context, opts ...operations.Option) (*operations.Get501Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -433,7 +433,7 @@ func (s *errorCodes) Get501(ctx context.Context, opts ...operations.Option) (*op
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Get501200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -491,7 +491,7 @@ func (s *errorCodes) Get501(ctx context.Context, opts ...operations.Option) (*op
 }
 
 // Catch412globalerror - catch 412 global error
-func (s *errorCodes) Catch412globalerror(ctx context.Context, opts ...operations.Option) (*operations.Catch412globalerrorResponse, error) {
+func (s *ErrorCodes) Catch412globalerror(ctx context.Context, opts ...operations.Option) (*operations.Catch412globalerrorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -546,7 +546,7 @@ func (s *errorCodes) Catch412globalerror(ctx context.Context, opts ...operations
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Catch412globalerror200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

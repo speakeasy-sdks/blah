@@ -9,14 +9,14 @@ import (
 
 type GetDynamicResponse struct {
 	// HTTP response content type for this operation
-	ContentType                  string
-	GetDynamic200TextPlainObject *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *GetDynamicResponse) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *GetDynamicResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetDynamicResponse) GetGetDynamic200TextPlainObject() *string {
-	if o == nil {
-		return nil
-	}
-	return o.GetDynamic200TextPlainObject
 }
 
 func (o *GetDynamicResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *GetDynamicResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetDynamicResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

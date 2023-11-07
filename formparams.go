@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type formParams struct {
+type FormParams struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newFormParams(sdkConfig sdkConfiguration) *formParams {
-	return &formParams{
+func newFormParams(sdkConfig sdkConfiguration) *FormParams {
+	return &FormParams{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // SendDate - Send Date
-func (s *formParams) SendDate(ctx context.Context, request *operations.SendDateRequestBody) (*operations.SendDateResponse, error) {
+func (s *FormParams) SendDate(ctx context.Context, request *operations.SendDateRequestBody) (*operations.SendDateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/date"
 
@@ -133,7 +133,7 @@ func (s *formParams) SendDate(ctx context.Context, request *operations.SendDateR
 }
 
 // SendFile - Send File
-func (s *formParams) SendFile(ctx context.Context, request *operations.SendFileRequestBody) (*operations.SendFileResponse, error) {
+func (s *FormParams) SendFile(ctx context.Context, request *operations.SendFileRequestBody) (*operations.SendFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/file"
 
@@ -240,7 +240,7 @@ func (s *formParams) SendFile(ctx context.Context, request *operations.SendFileR
 }
 
 // SendIntegerEnumArray
-func (s *formParams) SendIntegerEnumArray(ctx context.Context, request operations.SendIntegerEnumArrayRequest) (*operations.SendIntegerEnumArrayResponse, error) {
+func (s *FormParams) SendIntegerEnumArray(ctx context.Context, request operations.SendIntegerEnumArrayRequest) (*operations.SendIntegerEnumArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/integerenum"
 
@@ -351,7 +351,7 @@ func (s *formParams) SendIntegerEnumArray(ctx context.Context, request operation
 }
 
 // SendLong - Send Long
-func (s *formParams) SendLong(ctx context.Context, request *operations.SendLongRequestBody) (*operations.SendLongResponse, error) {
+func (s *FormParams) SendLong(ctx context.Context, request *operations.SendLongRequestBody) (*operations.SendLongResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/number"
 
@@ -459,7 +459,7 @@ func (s *formParams) SendLong(ctx context.Context, request *operations.SendLongR
 
 // SendMixedArray
 // Send a variety for form params. Returns file count and body params
-func (s *formParams) SendMixedArray(ctx context.Context, request *operations.SendMixedArrayRequestBody) (*operations.SendMixedArrayResponse, error) {
+func (s *FormParams) SendMixedArray(ctx context.Context, request *operations.SendMixedArrayRequestBody) (*operations.SendMixedArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/mixed"
 
@@ -566,7 +566,7 @@ func (s *formParams) SendMixedArray(ctx context.Context, request *operations.Sen
 }
 
 // SendModel - Send Model
-func (s *formParams) SendModel(ctx context.Context, request *operations.SendModelRequestBody) (*operations.SendModelResponse, error) {
+func (s *FormParams) SendModel(ctx context.Context, request *operations.SendModelRequestBody) (*operations.SendModelResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/model"
 
@@ -673,7 +673,7 @@ func (s *formParams) SendModel(ctx context.Context, request *operations.SendMode
 }
 
 // SendRfc1123DateTime - Send Rfc1123 DateTime
-func (s *formParams) SendRfc1123DateTime(ctx context.Context, request *operations.SendRfc1123DateTimeRequestBody) (*operations.SendRfc1123DateTimeResponse, error) {
+func (s *FormParams) SendRfc1123DateTime(ctx context.Context, request *operations.SendRfc1123DateTimeRequestBody) (*operations.SendRfc1123DateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/rfc1123datetime"
 
@@ -780,7 +780,7 @@ func (s *formParams) SendRfc1123DateTime(ctx context.Context, request *operation
 }
 
 // SendRfc3339DateTime - Send Rfc3339 DateTime
-func (s *formParams) SendRfc3339DateTime(ctx context.Context, request *operations.SendRfc3339DateTimeRequestBody) (*operations.SendRfc3339DateTimeResponse, error) {
+func (s *FormParams) SendRfc3339DateTime(ctx context.Context, request *operations.SendRfc3339DateTimeRequestBody) (*operations.SendRfc3339DateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/rfc3339datetime"
 
@@ -887,7 +887,7 @@ func (s *formParams) SendRfc3339DateTime(ctx context.Context, request *operation
 }
 
 // SendStringArray - Send String Array
-func (s *formParams) SendStringArray(ctx context.Context, request operations.SendStringArrayRequest) (*operations.SendStringArrayResponse, error) {
+func (s *FormParams) SendStringArray(ctx context.Context, request operations.SendStringArrayRequest) (*operations.SendStringArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/string"
 
@@ -998,7 +998,7 @@ func (s *formParams) SendStringArray(ctx context.Context, request operations.Sen
 }
 
 // SendStringEnumArray
-func (s *formParams) SendStringEnumArray(ctx context.Context, request operations.SendStringEnumArrayRequest) (*operations.SendStringEnumArrayResponse, error) {
+func (s *FormParams) SendStringEnumArray(ctx context.Context, request operations.SendStringEnumArrayRequest) (*operations.SendStringEnumArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/stringenum"
 
@@ -1109,7 +1109,7 @@ func (s *formParams) SendStringEnumArray(ctx context.Context, request operations
 }
 
 // SendUnixDateTime - Send UnixDateTime
-func (s *formParams) SendUnixDateTime(ctx context.Context, request *operations.SendUnixDateTimeRequestBody) (*operations.SendUnixDateTimeResponse, error) {
+func (s *FormParams) SendUnixDateTime(ctx context.Context, request *operations.SendUnixDateTimeRequestBody) (*operations.SendUnixDateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/unixdatetime"
 
@@ -1216,7 +1216,7 @@ func (s *formParams) SendUnixDateTime(ctx context.Context, request *operations.S
 }
 
 // UpdateModelwithForm - Update Model with Form
-func (s *formParams) UpdateModelwithForm(ctx context.Context, request *operations.UpdateModelwithFormRequestBody) (*operations.UpdateModelwithFormResponse, error) {
+func (s *FormParams) UpdateModelwithForm(ctx context.Context, request *operations.UpdateModelwithFormRequestBody) (*operations.UpdateModelwithFormResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/updateModel"
 
@@ -1323,7 +1323,7 @@ func (s *formParams) UpdateModelwithForm(ctx context.Context, request *operation
 }
 
 // SendDeleteMultipart - send Delete Multipart
-func (s *formParams) SendDeleteMultipart(ctx context.Context) (*operations.SendDeleteMultipartResponse, error) {
+func (s *FormParams) SendDeleteMultipart(ctx context.Context) (*operations.SendDeleteMultipartResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/deleteMultipart"
 
@@ -1423,7 +1423,7 @@ func (s *formParams) SendDeleteMultipart(ctx context.Context) (*operations.SendD
 }
 
 // SenddeleteForm - send delete Form
-func (s *formParams) SenddeleteForm(ctx context.Context) (*operations.SenddeleteFormResponse, error) {
+func (s *FormParams) SenddeleteForm(ctx context.Context) (*operations.SenddeleteFormResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/deleteForm"
 
@@ -1523,7 +1523,7 @@ func (s *formParams) SenddeleteForm(ctx context.Context) (*operations.Senddelete
 }
 
 // SenddeleteForm1 - send delete Form1
-func (s *formParams) SenddeleteForm1(ctx context.Context) (*operations.SenddeleteForm1Response, error) {
+func (s *FormParams) SenddeleteForm1(ctx context.Context) (*operations.SenddeleteForm1Response, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/deleteForm1"
 
@@ -1623,7 +1623,7 @@ func (s *formParams) SenddeleteForm1(ctx context.Context) (*operations.Senddelet
 }
 
 // UpdateStringwithForm - update String with Form
-func (s *formParams) UpdateStringwithForm(ctx context.Context, request *operations.UpdateStringwithFormRequestBody) (*operations.UpdateStringwithFormResponse, error) {
+func (s *FormParams) UpdateStringwithForm(ctx context.Context, request *operations.UpdateStringwithFormRequestBody) (*operations.UpdateStringwithFormResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/form/updateString"
 

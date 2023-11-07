@@ -14,12 +14,12 @@ type JsonechoResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// 500 Global
-	GlobalTestException        *shared.GlobalTestException
-	Jsonecho200TextPlainObject *string
+	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *JsonechoResponse) GetContentType() string {
@@ -36,13 +36,6 @@ func (o *JsonechoResponse) GetGlobalTestException() *shared.GlobalTestException 
 	return o.GlobalTestException
 }
 
-func (o *JsonechoResponse) GetJsonecho200TextPlainObject() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Jsonecho200TextPlainObject
-}
-
 func (o *JsonechoResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
@@ -55,4 +48,11 @@ func (o *JsonechoResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *JsonechoResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

@@ -16,18 +16,18 @@ import (
 	"strings"
 )
 
-type responseTypes struct {
+type ResponseTypes struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newResponseTypes(sdkConfig sdkConfiguration) *responseTypes {
-	return &responseTypes{
+func newResponseTypes(sdkConfig sdkConfiguration) *ResponseTypes {
+	return &ResponseTypes{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // Get1123DateTime - Get 1123DateTime
-func (s *responseTypes) Get1123DateTime(ctx context.Context, opts ...operations.Option) (*operations.Get1123DateTimeResponse, error) {
+func (s *ResponseTypes) Get1123DateTime(ctx context.Context, opts ...operations.Option) (*operations.Get1123DateTimeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -82,7 +82,7 @@ func (s *responseTypes) Get1123DateTime(ctx context.Context, opts ...operations.
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Get1123DateTime200TextPlainDateTimeRfc1123String = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -138,7 +138,7 @@ func (s *responseTypes) Get1123DateTime(ctx context.Context, opts ...operations.
 }
 
 // Get3339Datetime - Get 3339Datetime
-func (s *responseTypes) Get3339Datetime(ctx context.Context, opts ...operations.Option) (*operations.Get3339DatetimeResponse, error) {
+func (s *ResponseTypes) Get3339Datetime(ctx context.Context, opts ...operations.Option) (*operations.Get3339DatetimeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -193,7 +193,7 @@ func (s *responseTypes) Get3339Datetime(ctx context.Context, opts ...operations.
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Get3339Datetime200TextPlainDateTimeString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -250,7 +250,7 @@ func (s *responseTypes) Get3339Datetime(ctx context.Context, opts ...operations.
 
 // GetBinary - Get Binary
 // gets a binary object
-func (s *responseTypes) GetBinary(ctx context.Context, opts ...operations.Option) (*operations.GetBinaryResponse, error) {
+func (s *ResponseTypes) GetBinary(ctx context.Context, opts ...operations.Option) (*operations.GetBinaryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -295,7 +295,7 @@ func (s *responseTypes) GetBinary(ctx context.Context, opts ...operations.Option
 	}
 
 	if (httpRes.StatusCode == 200) && utils.MatchContentType(contentType, `application/octet-stream`) {
-		res.GetBinary200ApplicationOctetStreamBinaryString = httpRes.Body
+		res.Stream = httpRes.Body
 
 		return res, nil
 	}
@@ -364,7 +364,7 @@ func (s *responseTypes) GetBinary(ctx context.Context, opts ...operations.Option
 }
 
 // GetBoolean - Get Boolean
-func (s *responseTypes) GetBoolean(ctx context.Context, opts ...operations.Option) (*operations.GetBooleanResponse, error) {
+func (s *ResponseTypes) GetBoolean(ctx context.Context, opts ...operations.Option) (*operations.GetBooleanResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -419,7 +419,7 @@ func (s *responseTypes) GetBoolean(ctx context.Context, opts ...operations.Optio
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.GetBoolean200TextPlainBoolean = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -475,7 +475,7 @@ func (s *responseTypes) GetBoolean(ctx context.Context, opts ...operations.Optio
 }
 
 // GetDateArray - Get Date Array
-func (s *responseTypes) GetDateArray(ctx context.Context, request operations.GetDateArrayRequest) (*operations.GetDateArrayResponse, error) {
+func (s *ResponseTypes) GetDateArray(ctx context.Context, request operations.GetDateArrayRequest) (*operations.GetDateArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/response/date"
 
@@ -523,7 +523,7 @@ func (s *responseTypes) GetDateArray(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.GetDateArray200ApplicationJSONDateStrings = out
+			res.Dates = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -579,7 +579,7 @@ func (s *responseTypes) GetDateArray(ctx context.Context, request operations.Get
 }
 
 // GetDynamic - Get Dynamic
-func (s *responseTypes) GetDynamic(ctx context.Context, opts ...operations.Option) (*operations.GetDynamicResponse, error) {
+func (s *ResponseTypes) GetDynamic(ctx context.Context, opts ...operations.Option) (*operations.GetDynamicResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -634,7 +634,7 @@ func (s *responseTypes) GetDynamic(ctx context.Context, opts ...operations.Optio
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.GetDynamic200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -690,7 +690,7 @@ func (s *responseTypes) GetDynamic(ctx context.Context, opts ...operations.Optio
 }
 
 // GetHeaders - Get Headers
-func (s *responseTypes) GetHeaders(ctx context.Context) (*operations.GetHeadersResponse, error) {
+func (s *ResponseTypes) GetHeaders(ctx context.Context) (*operations.GetHeadersResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/response/headers"
 
@@ -780,7 +780,7 @@ func (s *responseTypes) GetHeaders(ctx context.Context) (*operations.GetHeadersR
 
 // GetInteger - Get Integer
 // Gets a integer response
-func (s *responseTypes) GetInteger(ctx context.Context, opts ...operations.Option) (*operations.GetIntegerResponse, error) {
+func (s *ResponseTypes) GetInteger(ctx context.Context, opts ...operations.Option) (*operations.GetIntegerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -835,7 +835,7 @@ func (s *responseTypes) GetInteger(ctx context.Context, opts ...operations.Optio
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.GetInteger200TextPlainInt32Integer = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -891,7 +891,7 @@ func (s *responseTypes) GetInteger(ctx context.Context, opts ...operations.Optio
 }
 
 // GetLong - Get Long
-func (s *responseTypes) GetLong(ctx context.Context, opts ...operations.Option) (*operations.GetLongResponse, error) {
+func (s *ResponseTypes) GetLong(ctx context.Context, opts ...operations.Option) (*operations.GetLongResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionServerURL,
@@ -951,7 +951,7 @@ func (s *responseTypes) GetLong(ctx context.Context, opts ...operations.Option) 
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.GetLong200TextPlainInt64Integer = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1007,7 +1007,7 @@ func (s *responseTypes) GetLong(ctx context.Context, opts ...operations.Option) 
 }
 
 // GetModelArray - Get Model Array
-func (s *responseTypes) GetModelArray(ctx context.Context, request operations.GetModelArrayRequest) (*operations.GetModelArrayResponse, error) {
+func (s *ResponseTypes) GetModelArray(ctx context.Context, request operations.GetModelArrayRequest) (*operations.GetModelArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/response/model"
 
@@ -1055,7 +1055,7 @@ func (s *responseTypes) GetModelArray(ctx context.Context, request operations.Ge
 				return nil, err
 			}
 
-			res.People = out
+			res.Classes = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1111,7 +1111,7 @@ func (s *responseTypes) GetModelArray(ctx context.Context, request operations.Ge
 }
 
 // GetPrecision - Get Precision
-func (s *responseTypes) GetPrecision(ctx context.Context, opts ...operations.Option) (*operations.GetPrecisionResponse, error) {
+func (s *ResponseTypes) GetPrecision(ctx context.Context, opts ...operations.Option) (*operations.GetPrecisionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -1166,7 +1166,7 @@ func (s *responseTypes) GetPrecision(ctx context.Context, opts ...operations.Opt
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.GetPrecision200TextPlainDoubleNumber = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1222,7 +1222,7 @@ func (s *responseTypes) GetPrecision(ctx context.Context, opts ...operations.Opt
 }
 
 // GetStringEnumArray - Get String Enum Array
-func (s *responseTypes) GetStringEnumArray(ctx context.Context, request operations.GetStringEnumArrayRequest) (*operations.GetStringEnumArrayResponse, error) {
+func (s *ResponseTypes) GetStringEnumArray(ctx context.Context, request operations.GetStringEnumArrayRequest) (*operations.GetStringEnumArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/response/enum"
 
@@ -1270,7 +1270,7 @@ func (s *responseTypes) GetStringEnumArray(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.Days = out
+			res.Enums = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1326,7 +1326,7 @@ func (s *responseTypes) GetStringEnumArray(ctx context.Context, request operatio
 }
 
 // GetUnixDateTime - Get UnixDateTime
-func (s *responseTypes) GetUnixDateTime(ctx context.Context, opts ...operations.Option) (*operations.GetUnixDateTimeResponse, error) {
+func (s *ResponseTypes) GetUnixDateTime(ctx context.Context, opts ...operations.Option) (*operations.GetUnixDateTimeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -1381,7 +1381,7 @@ func (s *responseTypes) GetUnixDateTime(ctx context.Context, opts ...operations.
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.GetUnixDateTime200TextPlainUnixTimestampNumber = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1437,7 +1437,7 @@ func (s *responseTypes) GetUnixDateTime(ctx context.Context, opts ...operations.
 }
 
 // Getcontenttypeheaders - get content type headers
-func (s *responseTypes) Getcontenttypeheaders(ctx context.Context) (*operations.GetcontenttypeheadersResponse, error) {
+func (s *ResponseTypes) Getcontenttypeheaders(ctx context.Context) (*operations.GetcontenttypeheadersResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/response/getContentType"
 
@@ -1526,7 +1526,7 @@ func (s *responseTypes) Getcontenttypeheaders(ctx context.Context) (*operations.
 }
 
 // Returnresponsewithenums - return response with enums
-func (s *responseTypes) Returnresponsewithenums(ctx context.Context) (*operations.ReturnresponsewithenumsResponse, error) {
+func (s *ResponseTypes) Returnresponsewithenums(ctx context.Context) (*operations.ReturnresponsewithenumsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/response/responseWitEnum"
 

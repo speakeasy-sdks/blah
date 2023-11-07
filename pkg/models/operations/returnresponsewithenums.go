@@ -9,48 +9,48 @@ import (
 	"net/http"
 )
 
-type ReturnresponsewithenumsResponsewithEnumAttributes struct {
+type Attributes struct {
 	ExclusiveMaximum bool   `json:"exclusiveMaximum"`
 	ExclusiveMinimum bool   `json:"exclusiveMinimum"`
 	ID               string `json:"id"`
 }
 
-func (o *ReturnresponsewithenumsResponsewithEnumAttributes) GetExclusiveMaximum() bool {
+func (o *Attributes) GetExclusiveMaximum() bool {
 	if o == nil {
 		return false
 	}
 	return o.ExclusiveMaximum
 }
 
-func (o *ReturnresponsewithenumsResponsewithEnumAttributes) GetExclusiveMinimum() bool {
+func (o *Attributes) GetExclusiveMinimum() bool {
 	if o == nil {
 		return false
 	}
 	return o.ExclusiveMinimum
 }
 
-func (o *ReturnresponsewithenumsResponsewithEnumAttributes) GetID() string {
+func (o *Attributes) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type ReturnresponsewithenumsResponsewithEnumParamFormat string
+type ParamFormat string
 
 const (
-	ReturnresponsewithenumsResponsewithEnumParamFormatTemplate ReturnresponsewithenumsResponsewithEnumParamFormat = "Template"
-	ReturnresponsewithenumsResponsewithEnumParamFormatForm     ReturnresponsewithenumsResponsewithEnumParamFormat = "Form"
-	ReturnresponsewithenumsResponsewithEnumParamFormatBody     ReturnresponsewithenumsResponsewithEnumParamFormat = "Body"
-	ReturnresponsewithenumsResponsewithEnumParamFormatHeader   ReturnresponsewithenumsResponsewithEnumParamFormat = "Header"
-	ReturnresponsewithenumsResponsewithEnumParamFormatQuery    ReturnresponsewithenumsResponsewithEnumParamFormat = "Query"
+	ParamFormatTemplate ParamFormat = "Template"
+	ParamFormatForm     ParamFormat = "Form"
+	ParamFormatBody     ParamFormat = "Body"
+	ParamFormatHeader   ParamFormat = "Header"
+	ParamFormatQuery    ParamFormat = "Query"
 )
 
-func (e ReturnresponsewithenumsResponsewithEnumParamFormat) ToPointer() *ReturnresponsewithenumsResponsewithEnumParamFormat {
+func (e ParamFormat) ToPointer() *ParamFormat {
 	return &e
 }
 
-func (e *ReturnresponsewithenumsResponsewithEnumParamFormat) UnmarshalJSON(data []byte) error {
+func (e *ParamFormat) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -65,30 +65,30 @@ func (e *ReturnresponsewithenumsResponsewithEnumParamFormat) UnmarshalJSON(data 
 	case "Header":
 		fallthrough
 	case "Query":
-		*e = ReturnresponsewithenumsResponsewithEnumParamFormat(v)
+		*e = ParamFormat(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnresponsewithenumsResponsewithEnumParamFormat: %v", v)
+		return fmt.Errorf("invalid value for ParamFormat: %v", v)
 	}
 }
 
-type ReturnresponsewithenumsResponsewithEnumType string
+type ReturnresponsewithenumsType string
 
 const (
-	ReturnresponsewithenumsResponsewithEnumTypeLong      ReturnresponsewithenumsResponsewithEnumType = "Long"
-	ReturnresponsewithenumsResponsewithEnumTypeNumber    ReturnresponsewithenumsResponsewithEnumType = "Number"
-	ReturnresponsewithenumsResponsewithEnumTypePrecision ReturnresponsewithenumsResponsewithEnumType = "Precision"
-	ReturnresponsewithenumsResponsewithEnumTypeBoolean   ReturnresponsewithenumsResponsewithEnumType = "Boolean"
-	ReturnresponsewithenumsResponsewithEnumTypeDateTime  ReturnresponsewithenumsResponsewithEnumType = "DateTime"
-	ReturnresponsewithenumsResponsewithEnumTypeDate      ReturnresponsewithenumsResponsewithEnumType = "Date"
-	ReturnresponsewithenumsResponsewithEnumTypeString    ReturnresponsewithenumsResponsewithEnumType = "String"
+	ReturnresponsewithenumsTypeLong      ReturnresponsewithenumsType = "Long"
+	ReturnresponsewithenumsTypeNumber    ReturnresponsewithenumsType = "Number"
+	ReturnresponsewithenumsTypePrecision ReturnresponsewithenumsType = "Precision"
+	ReturnresponsewithenumsTypeBoolean   ReturnresponsewithenumsType = "Boolean"
+	ReturnresponsewithenumsTypeDateTime  ReturnresponsewithenumsType = "DateTime"
+	ReturnresponsewithenumsTypeDate      ReturnresponsewithenumsType = "Date"
+	ReturnresponsewithenumsTypeString    ReturnresponsewithenumsType = "String"
 )
 
-func (e ReturnresponsewithenumsResponsewithEnumType) ToPointer() *ReturnresponsewithenumsResponsewithEnumType {
+func (e ReturnresponsewithenumsType) ToPointer() *ReturnresponsewithenumsType {
 	return &e
 }
 
-func (e *ReturnresponsewithenumsResponsewithEnumType) UnmarshalJSON(data []byte) error {
+func (e *ReturnresponsewithenumsType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -107,32 +107,32 @@ func (e *ReturnresponsewithenumsResponsewithEnumType) UnmarshalJSON(data []byte)
 	case "Date":
 		fallthrough
 	case "String":
-		*e = ReturnresponsewithenumsResponsewithEnumType(v)
+		*e = ReturnresponsewithenumsType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnresponsewithenumsResponsewithEnumType: %v", v)
+		return fmt.Errorf("invalid value for ReturnresponsewithenumsType: %v", v)
 	}
 }
 
 type ReturnresponsewithenumsResponsewithEnum struct {
-	Attributes  ReturnresponsewithenumsResponsewithEnumAttributes  `json:"attributes"`
-	Constant    bool                                               `json:"constant"`
-	Description string                                             `json:"description"`
-	ID          string                                             `json:"id"`
-	IsArray     bool                                               `json:"isArray"`
-	IsAttribute bool                                               `json:"isAttribute"`
-	IsMap       bool                                               `json:"isMap"`
-	IsStream    bool                                               `json:"isStream"`
-	Name        string                                             `json:"name"`
-	Nullable    bool                                               `json:"nullable"`
-	Optional    bool                                               `json:"optional"`
-	ParamFormat ReturnresponsewithenumsResponsewithEnumParamFormat `json:"paramFormat"`
-	Type        ReturnresponsewithenumsResponsewithEnumType        `json:"type"`
+	Attributes  Attributes                  `json:"attributes"`
+	Constant    bool                        `json:"constant"`
+	Description string                      `json:"description"`
+	ID          string                      `json:"id"`
+	IsArray     bool                        `json:"isArray"`
+	IsAttribute bool                        `json:"isAttribute"`
+	IsMap       bool                        `json:"isMap"`
+	IsStream    bool                        `json:"isStream"`
+	Name        string                      `json:"name"`
+	Nullable    bool                        `json:"nullable"`
+	Optional    bool                        `json:"optional"`
+	ParamFormat ParamFormat                 `json:"paramFormat"`
+	Type        ReturnresponsewithenumsType `json:"type"`
 }
 
-func (o *ReturnresponsewithenumsResponsewithEnum) GetAttributes() ReturnresponsewithenumsResponsewithEnumAttributes {
+func (o *ReturnresponsewithenumsResponsewithEnum) GetAttributes() Attributes {
 	if o == nil {
-		return ReturnresponsewithenumsResponsewithEnumAttributes{}
+		return Attributes{}
 	}
 	return o.Attributes
 }
@@ -207,16 +207,16 @@ func (o *ReturnresponsewithenumsResponsewithEnum) GetOptional() bool {
 	return o.Optional
 }
 
-func (o *ReturnresponsewithenumsResponsewithEnum) GetParamFormat() ReturnresponsewithenumsResponsewithEnumParamFormat {
+func (o *ReturnresponsewithenumsResponsewithEnum) GetParamFormat() ParamFormat {
 	if o == nil {
-		return ReturnresponsewithenumsResponsewithEnumParamFormat("")
+		return ParamFormat("")
 	}
 	return o.ParamFormat
 }
 
-func (o *ReturnresponsewithenumsResponsewithEnum) GetType() ReturnresponsewithenumsResponsewithEnumType {
+func (o *ReturnresponsewithenumsResponsewithEnum) GetType() ReturnresponsewithenumsType {
 	if o == nil {
-		return ReturnresponsewithenumsResponsewithEnumType("")
+		return ReturnresponsewithenumsType("")
 	}
 	return o.Type
 }

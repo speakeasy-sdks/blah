@@ -9,14 +9,14 @@ import (
 
 type Get3339DatetimeResponse struct {
 	// HTTP response content type for this operation
-	ContentType                               string
-	Get3339Datetime200TextPlainDateTimeString *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *Get3339DatetimeResponse) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *Get3339DatetimeResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *Get3339DatetimeResponse) GetGet3339Datetime200TextPlainDateTimeString() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Get3339Datetime200TextPlainDateTimeString
 }
 
 func (o *Get3339DatetimeResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *Get3339DatetimeResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *Get3339DatetimeResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

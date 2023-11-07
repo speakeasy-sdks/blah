@@ -7,35 +7,35 @@ import (
 	"net/http"
 )
 
-type SendMixedArrayRequestBodyFile struct {
-	Content []byte `multipartForm:"content"`
-	File    string `multipartForm:"name=file"`
+type SendMixedArrayFile struct {
+	Content  []byte `multipartForm:"content"`
+	FileName string `multipartForm:"name=file"`
 }
 
-func (o *SendMixedArrayRequestBodyFile) GetContent() []byte {
+func (o *SendMixedArrayFile) GetContent() []byte {
 	if o == nil {
 		return []byte{}
 	}
 	return o.Content
 }
 
-func (o *SendMixedArrayRequestBodyFile) GetFile() string {
+func (o *SendMixedArrayFile) GetFileName() string {
 	if o == nil {
 		return ""
 	}
-	return o.File
+	return o.FileName
 }
 
 type SendMixedArrayRequestBody struct {
-	File     SendMixedArrayRequestBodyFile `multipartForm:"file"`
-	Integers []int                         `multipartForm:"name=integers"`
-	Models   []shared.Employee             `multipartForm:"name=models,json"`
-	Strings  []string                      `multipartForm:"name=strings"`
+	File     SendMixedArrayFile `multipartForm:"file"`
+	Integers []int              `multipartForm:"name=integers"`
+	Models   []shared.Employee  `multipartForm:"name=models,json"`
+	Strings  []string           `multipartForm:"name=strings"`
 }
 
-func (o *SendMixedArrayRequestBody) GetFile() SendMixedArrayRequestBodyFile {
+func (o *SendMixedArrayRequestBody) GetFile() SendMixedArrayFile {
 	if o == nil {
-		return SendMixedArrayRequestBodyFile{}
+		return SendMixedArrayFile{}
 	}
 	return o.File
 }

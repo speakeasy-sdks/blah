@@ -9,14 +9,14 @@ import (
 
 type Get401Response struct {
 	// HTTP response content type for this operation
-	ContentType              string
-	Get401200TextPlainObject *string
+	ContentType string
 	// 401 Local
 	LocalTestException *shared.LocalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *Get401Response) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *Get401Response) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *Get401Response) GetGet401200TextPlainObject() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Get401200TextPlainObject
 }
 
 func (o *Get401Response) GetLocalTestException() *shared.LocalTestException {
@@ -52,4 +45,11 @@ func (o *Get401Response) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *Get401Response) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

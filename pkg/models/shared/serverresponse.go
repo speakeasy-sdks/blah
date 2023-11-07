@@ -2,13 +2,13 @@
 
 package shared
 
-type ServerResponseInput struct {
+type Input struct {
 }
 
 type ServerResponse struct {
-	Message *string                        `json:"Message,omitempty"`
-	Input   map[string]ServerResponseInput `json:"input,omitempty"`
-	Passed  bool                           `json:"passed"`
+	Message *string          `json:"Message,omitempty"`
+	Input   map[string]Input `json:"input,omitempty"`
+	Passed  bool             `json:"passed"`
 }
 
 func (o *ServerResponse) GetMessage() *string {
@@ -18,7 +18,7 @@ func (o *ServerResponse) GetMessage() *string {
 	return o.Message
 }
 
-func (o *ServerResponse) GetInput() map[string]ServerResponseInput {
+func (o *ServerResponse) GetInput() map[string]Input {
 	if o == nil {
 		return nil
 	}

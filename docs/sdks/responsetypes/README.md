@@ -1,5 +1,5 @@
 # ResponseTypes
-(*ResponseTypes*)
+(*.ResponseTypes*)
 
 ### Available Operations
 
@@ -43,7 +43,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Get1123DateTime200TextPlainDateTimeRfc1123String != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -85,7 +85,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Get3339Datetime200TextPlainDateTimeString != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -127,7 +127,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetBinary200ApplicationOctetStreamBinaryString != nil {
+    if res.Stream != nil {
         // handle response
     }
 }
@@ -169,7 +169,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetBoolean200TextPlainBoolean != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -214,7 +214,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetDateArray200ApplicationJSONDateStrings != nil {
+    if res.Dates != nil {
         // handle response
     }
 }
@@ -257,7 +257,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetDynamic200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -341,7 +341,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetInteger200TextPlainInt32Integer != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -383,7 +383,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetLong200TextPlainInt64Integer != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -429,7 +429,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.People != nil {
+    if res.Classes != nil {
         // handle response
     }
 }
@@ -472,7 +472,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetPrecision200TextPlainDoubleNumber != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -512,13 +512,13 @@ func main() {
     ctx := context.Background()
     res, err := s.ResponseTypes.GetStringEnumArray(ctx, operations.GetStringEnumArrayRequest{
         Array: false,
-        Type: operations.GetStringEnumArrayTypeString,
+        Type: operations.TypeString,
     })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Days != nil {
+    if res.Enums != nil {
         // handle response
     }
 }
@@ -561,7 +561,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetUnixDateTime200TextPlainUnixTimestampNumber != nil {
+    if res.Res != nil {
         // handle response
     }
 }

@@ -1,5 +1,5 @@
 # QueryParam
-(*QueryParam*)
+(*.QueryParam*)
 
 ### Available Operations
 

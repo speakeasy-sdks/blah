@@ -22,14 +22,14 @@ func (o *GetDateArrayRequest) GetArray() bool {
 
 type GetDateArrayResponse struct {
 	// HTTP response content type for this operation
-	ContentType                               string
-	GetDateArray200ApplicationJSONDateStrings []types.Date
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Dates       []types.Date
 }
 
 func (g GetDateArrayResponse) MarshalJSON() ([]byte, error) {
@@ -48,13 +48,6 @@ func (o *GetDateArrayResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetDateArrayResponse) GetGetDateArray200ApplicationJSONDateStrings() []types.Date {
-	if o == nil {
-		return nil
-	}
-	return o.GetDateArray200ApplicationJSONDateStrings
 }
 
 func (o *GetDateArrayResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -76,4 +69,11 @@ func (o *GetDateArrayResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetDateArrayResponse) GetDates() []types.Date {
+	if o == nil {
+		return nil
+	}
+	return o.Dates
 }

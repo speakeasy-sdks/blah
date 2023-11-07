@@ -15,8 +15,8 @@ type Catch412globalerrorResponse struct {
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
-	RawResponse                           *http.Response
-	Catch412globalerror200TextPlainObject *string
+	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *Catch412globalerrorResponse) GetContentType() string {
@@ -47,9 +47,9 @@ func (o *Catch412globalerrorResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *Catch412globalerrorResponse) GetCatch412globalerror200TextPlainObject() *string {
+func (o *Catch412globalerrorResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Catch412globalerror200TextPlainObject
+	return o.Res
 }

@@ -9,14 +9,14 @@ import (
 
 type GetIntegerResponse struct {
 	// HTTP response content type for this operation
-	ContentType                        string
-	GetInteger200TextPlainInt32Integer *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *GetIntegerResponse) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *GetIntegerResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetIntegerResponse) GetGetInteger200TextPlainInt32Integer() *string {
-	if o == nil {
-		return nil
-	}
-	return o.GetInteger200TextPlainInt32Integer
 }
 
 func (o *GetIntegerResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *GetIntegerResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetIntegerResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

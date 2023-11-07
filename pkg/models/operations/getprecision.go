@@ -9,14 +9,14 @@ import (
 
 type GetPrecisionResponse struct {
 	// HTTP response content type for this operation
-	ContentType                          string
-	GetPrecision200TextPlainDoubleNumber *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *GetPrecisionResponse) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *GetPrecisionResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetPrecisionResponse) GetGetPrecision200TextPlainDoubleNumber() *string {
-	if o == nil {
-		return nil
-	}
-	return o.GetPrecision200TextPlainDoubleNumber
 }
 
 func (o *GetPrecisionResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *GetPrecisionResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetPrecisionResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

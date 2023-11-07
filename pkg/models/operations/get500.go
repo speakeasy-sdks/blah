@@ -9,14 +9,14 @@ import (
 
 type Get500Response struct {
 	// HTTP response content type for this operation
-	ContentType              string
-	Get500200TextPlainObject *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *Get500Response) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *Get500Response) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *Get500Response) GetGet500200TextPlainObject() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Get500200TextPlainObject
 }
 
 func (o *Get500Response) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *Get500Response) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *Get500Response) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

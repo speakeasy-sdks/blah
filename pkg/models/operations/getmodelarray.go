@@ -23,11 +23,11 @@ type GetModelArrayResponse struct {
 	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
-	People              []shared.Person
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Classes     []shared.Person
 }
 
 func (o *GetModelArrayResponse) GetContentType() string {
@@ -44,13 +44,6 @@ func (o *GetModelArrayResponse) GetGlobalTestException() *shared.GlobalTestExcep
 	return o.GlobalTestException
 }
 
-func (o *GetModelArrayResponse) GetPeople() []shared.Person {
-	if o == nil {
-		return nil
-	}
-	return o.People
-}
-
 func (o *GetModelArrayResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
@@ -63,4 +56,11 @@ func (o *GetModelArrayResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetModelArrayResponse) GetClasses() []shared.Person {
+	if o == nil {
+		return nil
+	}
+	return o.Classes
 }

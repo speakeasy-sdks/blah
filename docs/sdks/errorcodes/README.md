@@ -1,5 +1,5 @@
 # ErrorCodes
-(*ErrorCodes*)
+(*.ErrorCodes*)
 
 ### Available Operations
 
@@ -33,7 +33,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Get400200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -75,7 +75,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Get401200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -117,7 +117,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Get500200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -159,7 +159,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Get501200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -201,7 +201,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Catch412globalerror200TextPlainObject != nil {
+    if res.Res != nil {
         // handle response
     }
 }

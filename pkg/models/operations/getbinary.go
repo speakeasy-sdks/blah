@@ -11,14 +11,14 @@ import (
 type GetBinaryResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
-	// The Close method must be called on this field, even if it is not used, to prevent resource leaks.
-	GetBinary200ApplicationOctetStreamBinaryString io.ReadCloser
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	// The Close method must be called on this field, even if it is not used, to prevent resource leaks.
+	Stream io.ReadCloser
 }
 
 func (o *GetBinaryResponse) GetContentType() string {
@@ -26,13 +26,6 @@ func (o *GetBinaryResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetBinaryResponse) GetGetBinary200ApplicationOctetStreamBinaryString() io.ReadCloser {
-	if o == nil {
-		return nil
-	}
-	return o.GetBinary200ApplicationOctetStreamBinaryString
 }
 
 func (o *GetBinaryResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -54,4 +47,11 @@ func (o *GetBinaryResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetBinaryResponse) GetStream() io.ReadCloser {
+	if o == nil {
+		return nil
+	}
+	return o.Stream
 }

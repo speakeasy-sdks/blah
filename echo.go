@@ -15,19 +15,19 @@ import (
 	"strings"
 )
 
-type echo struct {
+type Echo struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newEcho(sdkConfig sdkConfiguration) *echo {
-	return &echo{
+func newEcho(sdkConfig sdkConfiguration) *Echo {
+	return &Echo{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // Jsonecho - Json echo
 // Echo's back the request
-func (s *echo) Jsonecho(ctx context.Context, request []byte, opts ...operations.Option) (*operations.JsonechoResponse, error) {
+func (s *Echo) Jsonecho(ctx context.Context, request []byte, opts ...operations.Option) (*operations.JsonechoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionAcceptHeaderOverride,
@@ -92,7 +92,7 @@ func (s *echo) Jsonecho(ctx context.Context, request []byte, opts ...operations.
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Jsonecho200TextPlainObject = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -148,7 +148,7 @@ func (s *echo) Jsonecho(ctx context.Context, request []byte, opts ...operations.
 }
 
 // QueryEcho
-func (s *echo) QueryEcho(ctx context.Context) (*operations.QueryEchoResponse, error) {
+func (s *Echo) QueryEcho(ctx context.Context) (*operations.QueryEchoResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 

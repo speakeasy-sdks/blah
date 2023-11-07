@@ -1,5 +1,5 @@
 # FormParams
-(*FormParams*)
+(*.FormParams*)
 
 ### Available Operations
 
@@ -88,9 +88,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendFile(ctx, &operations.SendFileRequestBody{
-        File: operations.SendFileRequestBodyFile{
-            Content: []byte("uAspk_G{\["),
-            File: "string",
+        File: operations.File{
+            Content: []byte("0xD7DCBe9Fdd"),
+            FileName: "crewmen.gif",
         },
     })
     if err != nil {
@@ -237,24 +237,24 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendMixedArray(ctx, &operations.SendMixedArrayRequestBody{
-        File: operations.SendMixedArrayRequestBodyFile{
-            Content: []byte("N|}Ave]2L-"),
-            File: "string",
+        File: operations.SendMixedArrayFile{
+            Content: []byte("0xaFF7EAe4a2"),
+            FileName: "networks_east_robust.pdf",
         },
         Integers: []int{
-            807632,
+            311835,
         },
         Models: []shared.Employee{
             shared.Employee{
-                Address: "80220 Elvis Shore",
-                Age: 294259,
-                Birthday: types.MustDateFromString("2022-08-22"),
-                Birthtime: types.MustTimeFromString("2023-11-09T08:47:25.677Z"),
+                Address: "259 Diego Estates",
+                Age: 994876,
+                Birthday: types.MustDateFromString("2022-06-13"),
+                Birthtime: types.MustTimeFromString("2021-11-15T23:08:18.123Z"),
                 Boss: &shared.Person{
-                    Address: "22942 Ryan Lane",
-                    Age: 457209,
-                    Birthday: types.MustDateFromString("2021-11-17"),
-                    Birthtime: types.MustTimeFromString("2022-06-11T01:25:06.384Z"),
+                    Address: "7442 Tamara Grove",
+                    Age: 318424,
+                    Birthday: types.MustDateFromString("2023-02-04"),
+                    Birthtime: types.MustTimeFromString("2021-05-07T13:59:39.796Z"),
                     Name: "string",
                     PersonType: "string",
                     UID: "string",
@@ -262,23 +262,23 @@ func main() {
                 Department: "string",
                 Dependents: []shared.Person{
                     shared.Person{
-                        Address: "336 Murl Meadow",
-                        Age: 331405,
-                        Birthday: types.MustDateFromString("2022-12-07"),
-                        Birthtime: types.MustTimeFromString("2022-11-27T11:08:19.758Z"),
+                        Address: "536 King Locks",
+                        Age: 351258,
+                        Birthday: types.MustDateFromString("2023-01-25"),
+                        Birthtime: types.MustTimeFromString("2022-08-23T17:04:03.001Z"),
                         Name: "string",
                         PersonType: "string",
                         UID: "string",
                     },
                 },
                 HiredAt: "string",
-                JoiningDay: shared.DaysWednesday,
+                JoiningDay: shared.DaysThursday,
                 Name: "string",
                 PersonType: "string",
-                Salary: 492681,
+                Salary: 244149,
                 UID: "string",
                 WorkingDays: []shared.Days{
-                    shared.DaysTuesday,
+                    shared.DaysWednesday,
                 },
             },
         },

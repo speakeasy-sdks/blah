@@ -9,14 +9,14 @@ import (
 
 type GetBooleanResponse struct {
 	// HTTP response content type for this operation
-	ContentType                   string
-	GetBoolean200TextPlainBoolean *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *GetBooleanResponse) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *GetBooleanResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetBooleanResponse) GetGetBoolean200TextPlainBoolean() *string {
-	if o == nil {
-		return nil
-	}
-	return o.GetBoolean200TextPlainBoolean
 }
 
 func (o *GetBooleanResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *GetBooleanResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetBooleanResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

@@ -7,32 +7,32 @@ import (
 	"net/http"
 )
 
-type SendFileRequestBodyFile struct {
-	Content []byte `multipartForm:"content"`
-	File    string `multipartForm:"name=file"`
+type File struct {
+	Content  []byte `multipartForm:"content"`
+	FileName string `multipartForm:"name=file"`
 }
 
-func (o *SendFileRequestBodyFile) GetContent() []byte {
+func (o *File) GetContent() []byte {
 	if o == nil {
 		return []byte{}
 	}
 	return o.Content
 }
 
-func (o *SendFileRequestBodyFile) GetFile() string {
+func (o *File) GetFileName() string {
 	if o == nil {
 		return ""
 	}
-	return o.File
+	return o.FileName
 }
 
 type SendFileRequestBody struct {
-	File SendFileRequestBodyFile `multipartForm:"file"`
+	File File `multipartForm:"file"`
 }
 
-func (o *SendFileRequestBody) GetFile() SendFileRequestBodyFile {
+func (o *SendFileRequestBody) GetFile() File {
 	if o == nil {
-		return SendFileRequestBodyFile{}
+		return File{}
 	}
 	return o.File
 }

@@ -13,14 +13,14 @@ var GetLongServerList = []string{
 
 type GetLongResponse struct {
 	// HTTP response content type for this operation
-	ContentType                     string
-	GetLong200TextPlainInt64Integer *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *GetLongResponse) GetContentType() string {
@@ -28,13 +28,6 @@ func (o *GetLongResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetLongResponse) GetGetLong200TextPlainInt64Integer() *string {
-	if o == nil {
-		return nil
-	}
-	return o.GetLong200TextPlainInt64Integer
 }
 
 func (o *GetLongResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -56,4 +49,11 @@ func (o *GetLongResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetLongResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

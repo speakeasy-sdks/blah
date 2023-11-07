@@ -1,4 +1,4 @@
-# ReturnresponsewithenumsResponsewithEnumAttributes
+# Attributes
 
 
 ## Fields

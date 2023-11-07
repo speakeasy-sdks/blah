@@ -7,6 +7,7 @@ package main
 import (
 	"context"
 	"github.com/speakeasy-sdks/blah"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 	"log"
 )
 
@@ -14,12 +15,12 @@ func main() {
 	s := blah.New()
 
 	ctx := context.Background()
-	res, err := s.BodyParams.PostSendDate(ctx, []byte("Hy}S3c@&JC"))
+	res, err := s.Echo.Jsonecho(ctx, []byte("0x4CcAf4eebe"))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.ServerResponse != nil {
+	if res.Res != nil {
 		// handle response
 	}
 }

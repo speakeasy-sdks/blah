@@ -9,33 +9,33 @@ import (
 	"net/http"
 )
 
-type GetStringEnumArrayType string
+type Type string
 
 const (
-	GetStringEnumArrayTypeString GetStringEnumArrayType = "string"
+	TypeString Type = "string"
 )
 
-func (e GetStringEnumArrayType) ToPointer() *GetStringEnumArrayType {
+func (e Type) ToPointer() *Type {
 	return &e
 }
 
-func (e *GetStringEnumArrayType) UnmarshalJSON(data []byte) error {
+func (e *Type) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
 	switch v {
 	case "string":
-		*e = GetStringEnumArrayType(v)
+		*e = Type(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetStringEnumArrayType: %v", v)
+		return fmt.Errorf("invalid value for Type: %v", v)
 	}
 }
 
 type GetStringEnumArrayRequest struct {
-	Array bool                   `queryParam:"style=form,explode=true,name=array"`
-	Type  GetStringEnumArrayType `queryParam:"style=form,explode=true,name=type"`
+	Array bool `queryParam:"style=form,explode=true,name=array"`
+	Type  Type `queryParam:"style=form,explode=true,name=type"`
 }
 
 func (o *GetStringEnumArrayRequest) GetArray() bool {
@@ -45,9 +45,9 @@ func (o *GetStringEnumArrayRequest) GetArray() bool {
 	return o.Array
 }
 
-func (o *GetStringEnumArrayRequest) GetType() GetStringEnumArrayType {
+func (o *GetStringEnumArrayRequest) GetType() Type {
 	if o == nil {
-		return GetStringEnumArrayType("")
+		return Type("")
 	}
 	return o.Type
 }
@@ -55,13 +55,13 @@ func (o *GetStringEnumArrayRequest) GetType() GetStringEnumArrayType {
 type GetStringEnumArrayResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
-	Days        []shared.Days
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Enums       []shared.Days
 }
 
 func (o *GetStringEnumArrayResponse) GetContentType() string {
@@ -69,13 +69,6 @@ func (o *GetStringEnumArrayResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetStringEnumArrayResponse) GetDays() []shared.Days {
-	if o == nil {
-		return nil
-	}
-	return o.Days
 }
 
 func (o *GetStringEnumArrayResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -97,4 +90,11 @@ func (o *GetStringEnumArrayResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetStringEnumArrayResponse) GetEnums() []shared.Days {
+	if o == nil {
+		return nil
+	}
+	return o.Enums
 }

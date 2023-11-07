@@ -2,21 +2,21 @@
 
 package shared
 
-type EchoResponseBody struct {
+type Body struct {
 }
 
 // EchoResponse - Raw http Request info
 type EchoResponse struct {
-	Body    map[string]EchoResponseBody `json:"body,omitempty"`
-	Headers map[string]string           `json:"headers,omitempty"`
-	Method  *string                     `json:"method,omitempty"`
+	Body    map[string]Body   `json:"body,omitempty"`
+	Headers map[string]string `json:"headers,omitempty"`
+	Method  *string           `json:"method,omitempty"`
 	// relativePath
 	Path        *string                   `json:"path,omitempty"`
 	Query       map[string]QueryParameter `json:"query,omitempty"`
 	UploadCount *int                      `json:"uploadCount,omitempty"`
 }
 
-func (o *EchoResponse) GetBody() map[string]EchoResponseBody {
+func (o *EchoResponse) GetBody() map[string]Body {
 	if o == nil {
 		return nil
 	}

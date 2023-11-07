@@ -1,5 +1,5 @@
 # BodyParams
-(*BodyParams*)
+(*.BodyParams*)
 
 ### Available Operations
 
@@ -38,7 +38,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.PostSendDate(ctx, []byte("Hy}S3c@&JC"))
+    res, err := s.BodyParams.PostSendDate(ctx, []byte("0x9EFb4f7198"))
     if err != nil {
         log.Fatal(err)
     }
@@ -303,7 +303,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.PostSendRfc3339DateTime(ctx, []byte("c62M[.\"a^h"))
+    res, err := s.BodyParams.PostSendRfc3339DateTime(ctx, []byte("0xf54ad30feB"))
     if err != nil {
         log.Fatal(err)
     }
@@ -445,7 +445,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.PostSendUnixDateTime(ctx, []byte("/G=C%Fo@*s"))
+    res, err := s.BodyParams.PostSendUnixDateTime(ctx, []byte("0x396818C72D"))
     if err != nil {
         log.Fatal(err)
     }
@@ -573,7 +573,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.SendDynamic(ctx, []byte("HTrHHG<o{`"))
+    res, err := s.BodyParams.SendDynamic(ctx, []byte("0x9cD9996CFe"))
     if err != nil {
         log.Fatal(err)
     }

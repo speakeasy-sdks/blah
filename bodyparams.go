@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type bodyParams struct {
+type BodyParams struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newBodyParams(sdkConfig sdkConfiguration) *bodyParams {
-	return &bodyParams{
+func newBodyParams(sdkConfig sdkConfiguration) *BodyParams {
+	return &BodyParams{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // PostSendDate - Send Date
-func (s *bodyParams) PostSendDate(ctx context.Context, request []byte) (*operations.PostSendDateResponse, error) {
+func (s *BodyParams) PostSendDate(ctx context.Context, request []byte) (*operations.PostSendDateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/date"
 
@@ -136,7 +136,7 @@ func (s *bodyParams) PostSendDate(ctx context.Context, request []byte) (*operati
 }
 
 // PostSendIntegerArray - Send Integer Array
-func (s *bodyParams) PostSendIntegerArray(ctx context.Context, request operations.PostSendIntegerArrayRequest) (*operations.PostSendIntegerArrayResponse, error) {
+func (s *BodyParams) PostSendIntegerArray(ctx context.Context, request operations.PostSendIntegerArrayRequest) (*operations.PostSendIntegerArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/number"
 
@@ -250,7 +250,7 @@ func (s *bodyParams) PostSendIntegerArray(ctx context.Context, request operation
 }
 
 // PostSendIntegerEnumArray - SendIntegerEnumArray
-func (s *bodyParams) PostSendIntegerEnumArray(ctx context.Context, request operations.PostSendIntegerEnumArrayRequest) (*operations.PostSendIntegerEnumArrayResponse, error) {
+func (s *BodyParams) PostSendIntegerEnumArray(ctx context.Context, request operations.PostSendIntegerEnumArrayRequest) (*operations.PostSendIntegerEnumArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/integerenum"
 
@@ -364,7 +364,7 @@ func (s *bodyParams) PostSendIntegerEnumArray(ctx context.Context, request opera
 }
 
 // PostSendModel - Send Model
-func (s *bodyParams) PostSendModel(ctx context.Context, request shared.Employee) (*operations.PostSendModelResponse, error) {
+func (s *BodyParams) PostSendModel(ctx context.Context, request shared.Employee) (*operations.PostSendModelResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/model"
 
@@ -474,7 +474,7 @@ func (s *bodyParams) PostSendModel(ctx context.Context, request shared.Employee)
 }
 
 // PostSendRfc1123DateTime - Send Rfc1123 DateTime
-func (s *bodyParams) PostSendRfc1123DateTime(ctx context.Context, request string) (*operations.PostSendRfc1123DateTimeResponse, error) {
+func (s *BodyParams) PostSendRfc1123DateTime(ctx context.Context, request string) (*operations.PostSendRfc1123DateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/rfc1123datetime"
 
@@ -584,7 +584,7 @@ func (s *bodyParams) PostSendRfc1123DateTime(ctx context.Context, request string
 }
 
 // PostSendRfc3339DateTime - Send Rfc3339 DateTime
-func (s *bodyParams) PostSendRfc3339DateTime(ctx context.Context, request []byte) (*operations.PostSendRfc3339DateTimeResponse, error) {
+func (s *BodyParams) PostSendRfc3339DateTime(ctx context.Context, request []byte) (*operations.PostSendRfc3339DateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/rfc3339datetime"
 
@@ -695,7 +695,7 @@ func (s *bodyParams) PostSendRfc3339DateTime(ctx context.Context, request []byte
 
 // PostSendStringArray - Send String Array
 // sends a string body param
-func (s *bodyParams) PostSendStringArray(ctx context.Context, request operations.PostSendStringArrayRequest) (*operations.PostSendStringArrayResponse, error) {
+func (s *BodyParams) PostSendStringArray(ctx context.Context, request operations.PostSendStringArrayRequest) (*operations.PostSendStringArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/string"
 
@@ -809,7 +809,7 @@ func (s *bodyParams) PostSendStringArray(ctx context.Context, request operations
 }
 
 // PostSendStringEnumArray - SendStringEnumArray
-func (s *bodyParams) PostSendStringEnumArray(ctx context.Context, request operations.PostSendStringEnumArrayRequest) (*operations.PostSendStringEnumArrayResponse, error) {
+func (s *BodyParams) PostSendStringEnumArray(ctx context.Context, request operations.PostSendStringEnumArrayRequest) (*operations.PostSendStringEnumArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/stringenum"
 
@@ -923,7 +923,7 @@ func (s *bodyParams) PostSendStringEnumArray(ctx context.Context, request operat
 }
 
 // PostSendUnixDateTime - Send UnixDateTime
-func (s *bodyParams) PostSendUnixDateTime(ctx context.Context, request []byte) (*operations.PostSendUnixDateTimeResponse, error) {
+func (s *BodyParams) PostSendUnixDateTime(ctx context.Context, request []byte) (*operations.PostSendUnixDateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/unixdatetime"
 
@@ -1033,7 +1033,7 @@ func (s *bodyParams) PostSendUnixDateTime(ctx context.Context, request []byte) (
 }
 
 // SendDeleteBodywithModel - Send Delete Body with Model
-func (s *bodyParams) SendDeleteBodywithModel(ctx context.Context) (*operations.SendDeleteBodywithModelResponse, error) {
+func (s *BodyParams) SendDeleteBodywithModel(ctx context.Context) (*operations.SendDeleteBodywithModelResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/deleteBody1"
 
@@ -1133,7 +1133,7 @@ func (s *bodyParams) SendDeleteBodywithModel(ctx context.Context) (*operations.S
 }
 
 // SendDeletePlainText - Send Delete PlainText
-func (s *bodyParams) SendDeletePlainText(ctx context.Context) (*operations.SendDeletePlainTextResponse, error) {
+func (s *BodyParams) SendDeletePlainText(ctx context.Context) (*operations.SendDeletePlainTextResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/deletePlainTextBody"
 
@@ -1233,7 +1233,7 @@ func (s *bodyParams) SendDeletePlainText(ctx context.Context) (*operations.SendD
 }
 
 // SendDynamic - Send Dynamic
-func (s *bodyParams) SendDynamic(ctx context.Context, request []byte) (*operations.SendDynamicResponse, error) {
+func (s *BodyParams) SendDynamic(ctx context.Context, request []byte) (*operations.SendDynamicResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/dynamic"
 
@@ -1343,7 +1343,7 @@ func (s *bodyParams) SendDynamic(ctx context.Context, request []byte) (*operatio
 }
 
 // UpdateModel - Update Model
-func (s *bodyParams) UpdateModel(ctx context.Context, request shared.Employee) (*operations.UpdateModelResponse, error) {
+func (s *BodyParams) UpdateModel(ctx context.Context, request shared.Employee) (*operations.UpdateModelResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/updateModel"
 
@@ -1453,7 +1453,7 @@ func (s *bodyParams) UpdateModel(ctx context.Context, request shared.Employee) (
 }
 
 // SendDeleteBody - send Delete Body
-func (s *bodyParams) SendDeleteBody(ctx context.Context) (*operations.SendDeleteBodyResponse, error) {
+func (s *BodyParams) SendDeleteBody(ctx context.Context) (*operations.SendDeleteBodyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/deleteBody"
 
@@ -1553,7 +1553,7 @@ func (s *bodyParams) SendDeleteBody(ctx context.Context) (*operations.SendDelete
 }
 
 // UpdateString - update String
-func (s *bodyParams) UpdateString(ctx context.Context, request string) (*operations.UpdateStringResponse, error) {
+func (s *BodyParams) UpdateString(ctx context.Context, request string) (*operations.UpdateStringResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/body/updateString"
 

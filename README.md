@@ -22,6 +22,7 @@ package main
 import (
 	"context"
 	"github.com/speakeasy-sdks/blah"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 	"log"
 )
 
@@ -29,12 +30,12 @@ func main() {
 	s := blah.New()
 
 	ctx := context.Background()
-	res, err := s.BodyParams.PostSendDate(ctx, []byte("Hy}S3c@&JC"))
+	res, err := s.Echo.Jsonecho(ctx, []byte("0x4CcAf4eebe"))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.ServerResponse != nil {
+	if res.Res != nil {
 		// handle response
 	}
 }
@@ -46,7 +47,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### [BodyParams](docs/sdks/bodyparams/README.md)
+### [.Echo](docs/sdks/echo/README.md)
+
+* [Jsonecho](docs/sdks/echo/README.md#jsonecho) - Json echo
+* [QueryEcho](docs/sdks/echo/README.md#queryecho) - QueryEcho
+
+### [.BodyParams](docs/sdks/bodyparams/README.md)
 
 * [PostSendDate](docs/sdks/bodyparams/README.md#postsenddate) - Send Date
 * [PostSendIntegerArray](docs/sdks/bodyparams/README.md#postsendintegerarray) - Send Integer Array
@@ -64,12 +70,7 @@ func main() {
 * [SendDeleteBody](docs/sdks/bodyparams/README.md#senddeletebody) - send Delete Body
 * [UpdateString](docs/sdks/bodyparams/README.md#updatestring) - update String
 
-### [Echo](docs/sdks/echo/README.md)
-
-* [Jsonecho](docs/sdks/echo/README.md#jsonecho) - Json echo
-* [QueryEcho](docs/sdks/echo/README.md#queryecho) - QueryEcho
-
-### [ErrorCodes](docs/sdks/errorcodes/README.md)
+### [.ErrorCodes](docs/sdks/errorcodes/README.md)
 
 * [Get400](docs/sdks/errorcodes/README.md#get400) - Get400
 * [Get401](docs/sdks/errorcodes/README.md#get401) - Get401
@@ -77,7 +78,7 @@ func main() {
 * [Get501](docs/sdks/errorcodes/README.md#get501) - Get501
 * [Catch412globalerror](docs/sdks/errorcodes/README.md#catch412globalerror) - catch 412 global error
 
-### [FormParams](docs/sdks/formparams/README.md)
+### [.FormParams](docs/sdks/formparams/README.md)
 
 * [SendDate](docs/sdks/formparams/README.md#senddate) - Send Date
 * [SendFile](docs/sdks/formparams/README.md#sendfile) - Send File
@@ -96,11 +97,11 @@ func main() {
 * [SenddeleteForm1](docs/sdks/formparams/README.md#senddeleteform1) - send delete Form1
 * [UpdateStringwithForm](docs/sdks/formparams/README.md#updatestringwithform) - update String with Form
 
-### [Header](docs/sdks/header/README.md)
+### [.Header](docs/sdks/header/README.md)
 
 * [SendHeaders](docs/sdks/header/README.md#sendheaders) - Send Headers
 
-### [QueryParam](docs/sdks/queryparam/README.md)
+### [.QueryParam](docs/sdks/queryparam/README.md)
 
 * [Date](docs/sdks/queryparam/README.md#date) - Date
 * [DateArray](docs/sdks/queryparam/README.md#datearray) - Date Array
@@ -121,7 +122,7 @@ func main() {
 * [UnixDateTimeArray](docs/sdks/queryparam/README.md#unixdatetimearray) - Unix DateTime Array
 * [URLParam](docs/sdks/queryparam/README.md#urlparam) - UrlParam
 
-### [ResponseTypes](docs/sdks/responsetypes/README.md)
+### [.ResponseTypes](docs/sdks/responsetypes/README.md)
 
 * [Get1123DateTime](docs/sdks/responsetypes/README.md#get1123datetime) - Get 1123DateTime
 * [Get3339Datetime](docs/sdks/responsetypes/README.md#get3339datetime) - Get 3339Datetime
@@ -181,6 +182,188 @@ d5 := types.MustNewDateFromString("2019-01-01") // returns *types.Date and panic
 d6 := types.MustDateFromString("2019-01-01") // returns types.Date and panics on error
 ```
 <!-- End Go Types -->
+
+
+
+<!-- Start Error Handling -->
+# Error Handling
+
+Handling errors in your SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+
+
+## Example
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/blah"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
+)
+
+func main() {
+	s := blah.New()
+
+	ctx := context.Background()
+	res, err := s.Echo.Jsonecho(ctx, []byte("0x4CcAf4eebe"))
+	if err != nil {
+
+		var e *sdkerrors.NestedModelException
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.GlobalTestException
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+	}
+}
+
+```
+<!-- End Error Handling -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally using the `WithServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `http://localhost:3000` | None |
+
+For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/blah"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
+)
+
+func main() {
+	s := blah.New(
+		blah.WithServerIndex(0),
+	)
+
+	ctx := context.Background()
+	res, err := s.Echo.Jsonecho(ctx, []byte("0x4CcAf4eebe"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Res != nil {
+		// handle response
+	}
+}
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally using the `WithServerURL` option when initializing the SDK client instance. For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/blah"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
+)
+
+func main() {
+	s := blah.New(
+		blah.WithServerURL("http://localhost:3000"),
+	)
+
+	ctx := context.Background()
+	res, err := s.Echo.Jsonecho(ctx, []byte("0x4CcAf4eebe"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Res != nil {
+		// handle response
+	}
+}
+
+```
+
+## Override Server URL Per-Operation
+
+The server URL can also be overridden on a per-operation basis, provided a server list was specified for the operation. For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/blah"
+	"log"
+)
+
+func main() {
+	s := blah.New()
+
+	ctx := context.Background()
+	res, err := s.ResponseTypes.GetLong(ctx, operations.WithServerURL("http://localhost:3000"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Res != nil {
+		// handle response
+	}
+}
+
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Custom HTTP Client -->
+# Custom HTTP Client
+
+The Go SDK makes API calls that wrap an internal HTTP client. The requirements for the HTTP client are very simple. It must match this interface:
+
+```go
+type HTTPClient interface {
+	Do(req *http.Request) (*http.Response, error)
+}
+```
+
+The built-in `net/http` client satisfies this interface and a default client based on the built-in is provided by default. To replace this default with a client of your own, you can implement this interface yourself or provide your own client configured as desired. Here's a simple example, which adds a client with a 30 second timeout.
+
+```go
+import (
+	"net/http"
+	"time"
+	"github.com/myorg/your-go-sdk"
+)
+
+var (
+	httpClient = &http.Client{Timeout: 30 * time.Second}
+	sdkClient  = sdk.New(sdk.WithClient(httpClient))
+)
+```
+
+This can be a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration.
+<!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

@@ -65,13 +65,13 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 //
 // features
 type Tester struct {
-	BodyParams    *bodyParams
-	Echo          *echo
-	ErrorCodes    *errorCodes
-	FormParams    *formParams
-	Header        *header
-	QueryParam    *queryParam
-	ResponseTypes *responseTypes
+	Echo          *Echo
+	BodyParams    *BodyParams
+	ErrorCodes    *ErrorCodes
+	FormParams    *FormParams
+	Header        *Header
+	QueryParam    *QueryParam
+	ResponseTypes *ResponseTypes
 
 	sdkConfiguration sdkConfiguration
 }
@@ -126,9 +126,9 @@ func New(opts ...SDKOption) *Tester {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.4",
-			SDKVersion:        "0.2.0",
-			GenVersion:        "2.169.0",
-			UserAgent:         "speakeasy-sdk/go 0.2.0 2.169.0 1.4 github.com/speakeasy-sdks/blah",
+			SDKVersion:        "0.3.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 0.3.0 2.181.1 1.4 github.com/speakeasy-sdks/blah",
 		},
 	}
 	for _, opt := range opts {
@@ -143,9 +143,9 @@ func New(opts ...SDKOption) *Tester {
 		sdk.sdkConfiguration.SecurityClient = sdk.sdkConfiguration.DefaultClient
 	}
 
-	sdk.BodyParams = newBodyParams(sdk.sdkConfiguration)
-
 	sdk.Echo = newEcho(sdk.sdkConfiguration)
+
+	sdk.BodyParams = newBodyParams(sdk.sdkConfiguration)
 
 	sdk.ErrorCodes = newErrorCodes(sdk.sdkConfiguration)
 

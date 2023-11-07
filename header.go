@@ -15,19 +15,19 @@ import (
 	"strings"
 )
 
-type header struct {
+type Header struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newHeader(sdkConfig sdkConfiguration) *header {
-	return &header{
+func newHeader(sdkConfig sdkConfiguration) *Header {
+	return &Header{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // SendHeaders - Send Headers
 // Sends a single header params
-func (s *header) SendHeaders(ctx context.Context, request operations.SendHeadersRequest) (*operations.SendHeadersResponse, error) {
+func (s *Header) SendHeaders(ctx context.Context, request operations.SendHeadersRequest) (*operations.SendHeadersResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/header"
 

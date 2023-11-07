@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type queryParam struct {
+type QueryParam struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newQueryParam(sdkConfig sdkConfiguration) *queryParam {
-	return &queryParam{
+func newQueryParam(sdkConfig sdkConfiguration) *QueryParam {
+	return &QueryParam{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // Date
-func (s *queryParam) Date(ctx context.Context, request operations.DateRequest) (*operations.DateResponse, error) {
+func (s *QueryParam) Date(ctx context.Context, request operations.DateRequest) (*operations.DateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/date"
 
@@ -130,7 +130,7 @@ func (s *queryParam) Date(ctx context.Context, request operations.DateRequest) (
 }
 
 // DateArray - Date Array
-func (s *queryParam) DateArray(ctx context.Context, request operations.DateArrayRequest) (*operations.DateArrayResponse, error) {
+func (s *QueryParam) DateArray(ctx context.Context, request operations.DateArrayRequest) (*operations.DateArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/datearray"
 
@@ -234,7 +234,7 @@ func (s *queryParam) DateArray(ctx context.Context, request operations.DateArray
 }
 
 // IntegerEnumArray - Integer Enum Array
-func (s *queryParam) IntegerEnumArray(ctx context.Context, request operations.IntegerEnumArrayRequest) (*operations.IntegerEnumArrayResponse, error) {
+func (s *QueryParam) IntegerEnumArray(ctx context.Context, request operations.IntegerEnumArrayRequest) (*operations.IntegerEnumArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/integerenumarray"
 
@@ -338,7 +338,7 @@ func (s *queryParam) IntegerEnumArray(ctx context.Context, request operations.In
 }
 
 // MultipleParams
-func (s *queryParam) MultipleParams(ctx context.Context, request operations.MultipleParamsRequest) (*operations.MultipleParamsResponse, error) {
+func (s *QueryParam) MultipleParams(ctx context.Context, request operations.MultipleParamsRequest) (*operations.MultipleParamsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/multipleparams"
 
@@ -442,7 +442,7 @@ func (s *queryParam) MultipleParams(ctx context.Context, request operations.Mult
 }
 
 // NoParams
-func (s *queryParam) NoParams(ctx context.Context) (*operations.NoParamsResponse, error) {
+func (s *QueryParam) NoParams(ctx context.Context) (*operations.NoParamsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/noparams"
 
@@ -542,7 +542,7 @@ func (s *queryParam) NoParams(ctx context.Context) (*operations.NoParamsResponse
 }
 
 // NumberArray - Number Array
-func (s *queryParam) NumberArray(ctx context.Context, request operations.NumberArrayRequest) (*operations.NumberArrayResponse, error) {
+func (s *QueryParam) NumberArray(ctx context.Context, request operations.NumberArrayRequest) (*operations.NumberArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/numberarray"
 
@@ -647,7 +647,7 @@ func (s *queryParam) NumberArray(ctx context.Context, request operations.NumberA
 
 // OptionalDynamicQueryParam - Optional Dynamic Query Param
 // get optional dynamic query parameter
-func (s *queryParam) OptionalDynamicQueryParam(ctx context.Context, request operations.OptionalDynamicQueryParamRequest) (*operations.OptionalDynamicQueryParamResponse, error) {
+func (s *QueryParam) OptionalDynamicQueryParam(ctx context.Context, request operations.OptionalDynamicQueryParamRequest) (*operations.OptionalDynamicQueryParamResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/optionalQueryParam"
 
@@ -751,7 +751,7 @@ func (s *queryParam) OptionalDynamicQueryParam(ctx context.Context, request oper
 }
 
 // Rfc1123DateTime - Rfc1123 DateTime
-func (s *queryParam) Rfc1123DateTime(ctx context.Context, request operations.Rfc1123DateTimeRequest) (*operations.Rfc1123DateTimeResponse, error) {
+func (s *QueryParam) Rfc1123DateTime(ctx context.Context, request operations.Rfc1123DateTimeRequest) (*operations.Rfc1123DateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/rfc1123datetime"
 
@@ -855,7 +855,7 @@ func (s *queryParam) Rfc1123DateTime(ctx context.Context, request operations.Rfc
 }
 
 // Rfc1123DateTimeArray - Rfc1123 DateTime Array
-func (s *queryParam) Rfc1123DateTimeArray(ctx context.Context, request operations.Rfc1123DateTimeArrayRequest) (*operations.Rfc1123DateTimeArrayResponse, error) {
+func (s *QueryParam) Rfc1123DateTimeArray(ctx context.Context, request operations.Rfc1123DateTimeArrayRequest) (*operations.Rfc1123DateTimeArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/rfc1123datetimearray"
 
@@ -959,7 +959,7 @@ func (s *queryParam) Rfc1123DateTimeArray(ctx context.Context, request operation
 }
 
 // Rfc3339DateTime - Rfc3339 DateTime
-func (s *queryParam) Rfc3339DateTime(ctx context.Context, request operations.Rfc3339DateTimeRequest) (*operations.Rfc3339DateTimeResponse, error) {
+func (s *QueryParam) Rfc3339DateTime(ctx context.Context, request operations.Rfc3339DateTimeRequest) (*operations.Rfc3339DateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/rfc3339datetime"
 
@@ -1063,7 +1063,7 @@ func (s *queryParam) Rfc3339DateTime(ctx context.Context, request operations.Rfc
 }
 
 // Rfc3339DateTimeArray - Rfc3339 DateTime Array
-func (s *queryParam) Rfc3339DateTimeArray(ctx context.Context, request operations.Rfc3339DateTimeArrayRequest) (*operations.Rfc3339DateTimeArrayResponse, error) {
+func (s *QueryParam) Rfc3339DateTimeArray(ctx context.Context, request operations.Rfc3339DateTimeArrayRequest) (*operations.Rfc3339DateTimeArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/rfc3339datetimearray"
 
@@ -1167,7 +1167,7 @@ func (s *queryParam) Rfc3339DateTimeArray(ctx context.Context, request operation
 }
 
 // SimpleQuery
-func (s *queryParam) SimpleQuery(ctx context.Context, request operations.SimpleQueryRequest) (*operations.SimpleQueryResponse, error) {
+func (s *QueryParam) SimpleQuery(ctx context.Context, request operations.SimpleQueryRequest) (*operations.SimpleQueryResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query"
 
@@ -1271,7 +1271,7 @@ func (s *queryParam) SimpleQuery(ctx context.Context, request operations.SimpleQ
 }
 
 // StringArray - String Array
-func (s *queryParam) StringArray(ctx context.Context, request operations.StringArrayRequest) (*operations.StringArrayResponse, error) {
+func (s *QueryParam) StringArray(ctx context.Context, request operations.StringArrayRequest) (*operations.StringArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/stringarray"
 
@@ -1375,7 +1375,7 @@ func (s *queryParam) StringArray(ctx context.Context, request operations.StringA
 }
 
 // StringEnumArray - String Enum Array
-func (s *queryParam) StringEnumArray(ctx context.Context, request operations.StringEnumArrayRequest) (*operations.StringEnumArrayResponse, error) {
+func (s *QueryParam) StringEnumArray(ctx context.Context, request operations.StringEnumArrayRequest) (*operations.StringEnumArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/stringenumarray"
 
@@ -1479,7 +1479,7 @@ func (s *queryParam) StringEnumArray(ctx context.Context, request operations.Str
 }
 
 // StringParam
-func (s *queryParam) StringParam(ctx context.Context, request operations.StringParamRequest) (*operations.StringParamResponse, error) {
+func (s *QueryParam) StringParam(ctx context.Context, request operations.StringParamRequest) (*operations.StringParamResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/stringparam"
 
@@ -1583,7 +1583,7 @@ func (s *queryParam) StringParam(ctx context.Context, request operations.StringP
 }
 
 // UnixDateTime - Unix DateTime
-func (s *queryParam) UnixDateTime(ctx context.Context, request operations.UnixDateTimeRequest) (*operations.UnixDateTimeResponse, error) {
+func (s *QueryParam) UnixDateTime(ctx context.Context, request operations.UnixDateTimeRequest) (*operations.UnixDateTimeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/unixdatetime"
 
@@ -1687,7 +1687,7 @@ func (s *queryParam) UnixDateTime(ctx context.Context, request operations.UnixDa
 }
 
 // UnixDateTimeArray - Unix DateTime Array
-func (s *queryParam) UnixDateTimeArray(ctx context.Context, request operations.UnixDateTimeArrayRequest) (*operations.UnixDateTimeArrayResponse, error) {
+func (s *QueryParam) UnixDateTimeArray(ctx context.Context, request operations.UnixDateTimeArrayRequest) (*operations.UnixDateTimeArrayResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/unixdatetimearray"
 
@@ -1791,7 +1791,7 @@ func (s *queryParam) UnixDateTimeArray(ctx context.Context, request operations.U
 }
 
 // URLParam - UrlParam
-func (s *queryParam) URLParam(ctx context.Context, request operations.URLParamRequest) (*operations.URLParamResponse, error) {
+func (s *QueryParam) URLParam(ctx context.Context, request operations.URLParamRequest) (*operations.URLParamResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/query/urlparam"
 

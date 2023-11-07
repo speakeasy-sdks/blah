@@ -9,14 +9,14 @@ import (
 
 type Get400Response struct {
 	// HTTP response content type for this operation
-	ContentType              string
-	Get400200TextPlainObject *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *Get400Response) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *Get400Response) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *Get400Response) GetGet400200TextPlainObject() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Get400200TextPlainObject
 }
 
 func (o *Get400Response) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *Get400Response) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *Get400Response) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }

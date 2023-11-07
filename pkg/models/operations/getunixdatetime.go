@@ -9,14 +9,14 @@ import (
 
 type GetUnixDateTimeResponse struct {
 	// HTTP response content type for this operation
-	ContentType                                    string
-	GetUnixDateTime200TextPlainUnixTimestampNumber *string
+	ContentType string
 	// 500 Global
 	GlobalTestException *shared.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	Res         *string
 }
 
 func (o *GetUnixDateTimeResponse) GetContentType() string {
@@ -24,13 +24,6 @@ func (o *GetUnixDateTimeResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *GetUnixDateTimeResponse) GetGetUnixDateTime200TextPlainUnixTimestampNumber() *string {
-	if o == nil {
-		return nil
-	}
-	return o.GetUnixDateTime200TextPlainUnixTimestampNumber
 }
 
 func (o *GetUnixDateTimeResponse) GetGlobalTestException() *shared.GlobalTestException {
@@ -52,4 +45,11 @@ func (o *GetUnixDateTimeResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *GetUnixDateTimeResponse) GetRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Res
 }
