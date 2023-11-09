@@ -1,5 +1,5 @@
 # Header
-(*.Header*)
+(*Header*)
 
 ### Available Operations
 
@@ -43,13 +43,17 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.SendHeadersRequest](../../models/operations/sendheadersrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.SendHeadersRequest](../../pkg/models/operations/sendheadersrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 
 ### Response
 
-**[*operations.SendHeadersResponse](../../models/operations/sendheadersresponse.md), error**
-
+**[*operations.SendHeadersResponse](../../pkg/models/operations/sendheadersresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |

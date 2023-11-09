@@ -1,5 +1,5 @@
 # BodyParams
-(*.BodyParams*)
+(*BodyParams*)
 
 ### Available Operations
 
@@ -54,13 +54,17 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostSendDateResponse](../../models/operations/postsenddateresponse.md), error**
-
+**[*operations.PostSendDateResponse](../../pkg/models/operations/postsenddateresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendIntegerArray
 
@@ -100,16 +104,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.PostSendIntegerArrayRequest](../../models/operations/postsendintegerarrayrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PostSendIntegerArrayRequest](../../pkg/models/operations/postsendintegerarrayrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[*operations.PostSendIntegerArrayResponse](../../models/operations/postsendintegerarrayresponse.md), error**
-
+**[*operations.PostSendIntegerArrayResponse](../../pkg/models/operations/postsendintegerarrayresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendIntegerEnumArray
 
@@ -150,16 +158,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PostSendIntegerEnumArrayRequest](../../models/operations/postsendintegerenumarrayrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.PostSendIntegerEnumArrayRequest](../../pkg/models/operations/postsendintegerenumarrayrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[*operations.PostSendIntegerEnumArrayResponse](../../models/operations/postsendintegerenumarrayresponse.md), error**
-
+**[*operations.PostSendIntegerEnumArrayResponse](../../pkg/models/operations/postsendintegerenumarrayresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendModel
 
@@ -230,16 +242,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [shared.Employee](../../models/shared/employee.md)    | :heavy_check_mark:                                    | The request object to use for the request.            |
+| Parameter                                              | Type                                                   | Required                                               | Description                                            |
+| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
+| `ctx`                                                  | [context.Context](https://pkg.go.dev/context#Context)  | :heavy_check_mark:                                     | The context to use for the request.                    |
+| `request`                                              | [shared.Employee](../../pkg/models/shared/employee.md) | :heavy_check_mark:                                     | The request object to use for the request.             |
 
 
 ### Response
 
-**[*operations.PostSendModelResponse](../../models/operations/postsendmodelresponse.md), error**
-
+**[*operations.PostSendModelResponse](../../pkg/models/operations/postsendmodelresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendRfc1123DateTime
 
@@ -276,13 +292,17 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [string](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [string](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostSendRfc1123DateTimeResponse](../../models/operations/postsendrfc1123datetimeresponse.md), error**
-
+**[*operations.PostSendRfc1123DateTimeResponse](../../pkg/models/operations/postsendrfc1123datetimeresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendRfc3339DateTime
 
@@ -319,13 +339,17 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostSendRfc3339DateTimeResponse](../../models/operations/postsendrfc3339datetimeresponse.md), error**
-
+**[*operations.PostSendRfc3339DateTimeResponse](../../pkg/models/operations/postsendrfc3339datetimeresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendStringArray
 
@@ -365,16 +389,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PostSendStringArrayRequest](../../models/operations/postsendstringarrayrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PostSendStringArrayRequest](../../pkg/models/operations/postsendstringarrayrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[*operations.PostSendStringArrayResponse](../../models/operations/postsendstringarrayresponse.md), error**
-
+**[*operations.PostSendStringArrayResponse](../../pkg/models/operations/postsendstringarrayresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendStringEnumArray
 
@@ -415,16 +443,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.PostSendStringEnumArrayRequest](../../models/operations/postsendstringenumarrayrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PostSendStringEnumArrayRequest](../../pkg/models/operations/postsendstringenumarrayrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[*operations.PostSendStringEnumArrayResponse](../../models/operations/postsendstringenumarrayresponse.md), error**
-
+**[*operations.PostSendStringEnumArrayResponse](../../pkg/models/operations/postsendstringenumarrayresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## PostSendUnixDateTime
 
@@ -461,13 +493,17 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.PostSendUnixDateTimeResponse](../../models/operations/postsendunixdatetimeresponse.md), error**
-
+**[*operations.PostSendUnixDateTimeResponse](../../pkg/models/operations/postsendunixdatetimeresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## SendDeleteBodywithModel
 
@@ -508,8 +544,12 @@ func main() {
 
 ### Response
 
-**[*operations.SendDeleteBodywithModelResponse](../../models/operations/senddeletebodywithmodelresponse.md), error**
-
+**[*operations.SendDeleteBodywithModelResponse](../../pkg/models/operations/senddeletebodywithmodelresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## SendDeletePlainText
 
@@ -550,8 +590,12 @@ func main() {
 
 ### Response
 
-**[*operations.SendDeletePlainTextResponse](../../models/operations/senddeleteplaintextresponse.md), error**
-
+**[*operations.SendDeletePlainTextResponse](../../pkg/models/operations/senddeleteplaintextresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## SendDynamic
 
@@ -589,13 +633,17 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [[]byte](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [[]byte](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.SendDynamicResponse](../../models/operations/senddynamicresponse.md), error**
-
+**[*operations.SendDynamicResponse](../../pkg/models/operations/senddynamicresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## UpdateModel
 
@@ -666,16 +714,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [shared.Employee](../../models/shared/employee.md)    | :heavy_check_mark:                                    | The request object to use for the request.            |
+| Parameter                                              | Type                                                   | Required                                               | Description                                            |
+| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
+| `ctx`                                                  | [context.Context](https://pkg.go.dev/context#Context)  | :heavy_check_mark:                                     | The context to use for the request.                    |
+| `request`                                              | [shared.Employee](../../pkg/models/shared/employee.md) | :heavy_check_mark:                                     | The request object to use for the request.             |
 
 
 ### Response
 
-**[*operations.UpdateModelResponse](../../models/operations/updatemodelresponse.md), error**
-
+**[*operations.UpdateModelResponse](../../pkg/models/operations/updatemodelresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## SendDeleteBody
 
@@ -716,8 +768,12 @@ func main() {
 
 ### Response
 
-**[*operations.SendDeleteBodyResponse](../../models/operations/senddeletebodyresponse.md), error**
-
+**[*operations.SendDeleteBodyResponse](../../pkg/models/operations/senddeletebodyresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## UpdateString
 
@@ -754,10 +810,14 @@ func main() {
 | Parameter                                             | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `request`                                             | [string](../../models//.md)                           | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `request`                                             | [string](../../.md)                                   | :heavy_check_mark:                                    | The request object to use for the request.            |
 
 
 ### Response
 
-**[*operations.UpdateStringResponse](../../models/operations/updatestringresponse.md), error**
-
+**[*operations.UpdateStringResponse](../../pkg/models/operations/updatestringresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |

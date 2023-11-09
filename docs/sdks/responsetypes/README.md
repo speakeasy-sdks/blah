@@ -1,5 +1,5 @@
 # ResponseTypes
-(*.ResponseTypes*)
+(*ResponseTypes*)
 
 ### Available Operations
 
@@ -58,8 +58,12 @@ func main() {
 
 ### Response
 
-**[*operations.Get1123DateTimeResponse](../../models/operations/get1123datetimeresponse.md), error**
-
+**[*operations.Get1123DateTimeResponse](../../pkg/models/operations/get1123datetimeresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## Get3339Datetime
 
@@ -100,8 +104,12 @@ func main() {
 
 ### Response
 
-**[*operations.Get3339DatetimeResponse](../../models/operations/get3339datetimeresponse.md), error**
-
+**[*operations.Get3339DatetimeResponse](../../pkg/models/operations/get3339datetimeresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetBinary
 
@@ -142,8 +150,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetBinaryResponse](../../models/operations/getbinaryresponse.md), error**
-
+**[*operations.GetBinaryResponse](../../pkg/models/operations/getbinaryresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetBoolean
 
@@ -184,8 +196,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetBooleanResponse](../../models/operations/getbooleanresponse.md), error**
-
+**[*operations.GetBooleanResponse](../../pkg/models/operations/getbooleanresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetDateArray
 
@@ -222,16 +238,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.GetDateArrayRequest](../../models/operations/getdatearrayrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetDateArrayRequest](../../pkg/models/operations/getdatearrayrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[*operations.GetDateArrayResponse](../../models/operations/getdatearrayresponse.md), error**
-
+**[*operations.GetDateArrayResponse](../../pkg/models/operations/getdatearrayresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetDynamic
 
@@ -272,8 +292,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetDynamicResponse](../../models/operations/getdynamicresponse.md), error**
-
+**[*operations.GetDynamicResponse](../../pkg/models/operations/getdynamicresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetHeaders
 
@@ -314,8 +338,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetHeadersResponse](../../models/operations/getheadersresponse.md), error**
-
+**[*operations.GetHeadersResponse](../../pkg/models/operations/getheadersresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetInteger
 
@@ -356,8 +384,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetIntegerResponse](../../models/operations/getintegerresponse.md), error**
-
+**[*operations.GetIntegerResponse](../../pkg/models/operations/getintegerresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetLong
 
@@ -391,16 +423,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `ctx`                                                        | [context.Context](https://pkg.go.dev/context#Context)        | :heavy_check_mark:                                           | The context to use for the request.                          |
+| `opts`                                                       | [][operations.Option](../../pkg/models/operations/option.md) | :heavy_minus_sign:                                           | The options for this request.                                |
 
 
 ### Response
 
-**[*operations.GetLongResponse](../../models/operations/getlongresponse.md), error**
-
+**[*operations.GetLongResponse](../../pkg/models/operations/getlongresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetModelArray
 
@@ -437,16 +473,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.GetModelArrayRequest](../../models/operations/getmodelarrayrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetModelArrayRequest](../../pkg/models/operations/getmodelarrayrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[*operations.GetModelArrayResponse](../../models/operations/getmodelarrayresponse.md), error**
-
+**[*operations.GetModelArrayResponse](../../pkg/models/operations/getmodelarrayresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetPrecision
 
@@ -487,8 +527,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetPrecisionResponse](../../models/operations/getprecisionresponse.md), error**
-
+**[*operations.GetPrecisionResponse](../../pkg/models/operations/getprecisionresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetStringEnumArray
 
@@ -526,16 +570,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.GetStringEnumArrayRequest](../../models/operations/getstringenumarrayrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetStringEnumArrayRequest](../../pkg/models/operations/getstringenumarrayrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[*operations.GetStringEnumArrayResponse](../../models/operations/getstringenumarrayresponse.md), error**
-
+**[*operations.GetStringEnumArrayResponse](../../pkg/models/operations/getstringenumarrayresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## GetUnixDateTime
 
@@ -576,8 +624,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetUnixDateTimeResponse](../../models/operations/getunixdatetimeresponse.md), error**
-
+**[*operations.GetUnixDateTimeResponse](../../pkg/models/operations/getunixdatetimeresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## Getcontenttypeheaders
 
@@ -618,8 +670,12 @@ func main() {
 
 ### Response
 
-**[*operations.GetcontenttypeheadersResponse](../../models/operations/getcontenttypeheadersresponse.md), error**
-
+**[*operations.GetcontenttypeheadersResponse](../../pkg/models/operations/getcontenttypeheadersresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## Returnresponsewithenums
 
@@ -660,5 +716,9 @@ func main() {
 
 ### Response
 
-**[*operations.ReturnresponsewithenumsResponse](../../models/operations/returnresponsewithenumsresponse.md), error**
-
+**[*operations.ReturnresponsewithenumsResponse](../../pkg/models/operations/returnresponsewithenumsresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |

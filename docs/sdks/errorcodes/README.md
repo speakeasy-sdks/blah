@@ -1,5 +1,5 @@
 # ErrorCodes
-(*.ErrorCodes*)
+(*ErrorCodes*)
 
 ### Available Operations
 
@@ -48,8 +48,12 @@ func main() {
 
 ### Response
 
-**[*operations.Get400Response](../../models/operations/get400response.md), error**
-
+**[*operations.Get400Response](../../pkg/models/operations/get400response.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## Get401
 
@@ -90,8 +94,13 @@ func main() {
 
 ### Response
 
-**[*operations.Get401Response](../../models/operations/get401response.md), error**
-
+**[*operations.Get401Response](../../pkg/models/operations/get401response.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.LocalTestException   | 401,421,431,432,441            | application/json               |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## Get500
 
@@ -132,8 +141,12 @@ func main() {
 
 ### Response
 
-**[*operations.Get500Response](../../models/operations/get500response.md), error**
-
+**[*operations.Get500Response](../../pkg/models/operations/get500response.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## Get501
 
@@ -174,8 +187,12 @@ func main() {
 
 ### Response
 
-**[*operations.Get501Response](../../models/operations/get501response.md), error**
-
+**[*operations.Get501Response](../../pkg/models/operations/get501response.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412,501                        | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
 
 ## Catch412globalerror
 
@@ -216,5 +233,9 @@ func main() {
 
 ### Response
 
-**[*operations.Catch412globalerrorResponse](../../models/operations/catch412globalerrorresponse.md), error**
-
+**[*operations.Catch412globalerrorResponse](../../pkg/models/operations/catch412globalerrorresponse.md), error**
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| sdkerrors.NestedModelException | 412                            | application/json               |
+| sdkerrors.GlobalTestException  | 500                            | application/json               |
+| sdkerrors.SDKError             | 400-600                        | */*                            |
