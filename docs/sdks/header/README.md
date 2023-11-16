@@ -15,10 +15,10 @@ Sends a single header params
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {

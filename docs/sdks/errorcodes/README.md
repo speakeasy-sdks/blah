@@ -19,9 +19,9 @@ Get400
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -65,9 +65,9 @@ Get401
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -112,9 +112,9 @@ Get500
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -158,9 +158,9 @@ Get501
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -204,9 +204,9 @@ catch 412 global error
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {

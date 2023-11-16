@@ -1,13 +1,10 @@
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
 import (
 	"context"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 	"log"
 )
 

@@ -29,9 +29,9 @@ Send Date
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -76,10 +76,10 @@ Send Integer Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -129,11 +129,11 @@ SendIntegerEnumArray
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -183,11 +183,11 @@ Send Model
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"log"
 )
 
 func main() {
@@ -267,9 +267,9 @@ Send Rfc1123 DateTime
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -314,9 +314,9 @@ Send Rfc3339 DateTime
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -361,10 +361,10 @@ sends a string body param
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -414,11 +414,11 @@ SendStringEnumArray
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -468,9 +468,9 @@ Send UnixDateTime
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -515,9 +515,9 @@ Send Delete Body with Model
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -561,9 +561,9 @@ Send Delete PlainText
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -607,10 +607,9 @@ Send Dynamic
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 )
 
 func main() {
@@ -655,11 +654,11 @@ Update Model
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"log"
 )
 
 func main() {
@@ -739,9 +738,9 @@ send Delete Body
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -785,9 +784,9 @@ update String
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {

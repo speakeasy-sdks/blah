@@ -30,11 +30,11 @@ Send Date
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -81,10 +81,10 @@ Send File
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -134,11 +134,11 @@ SendIntegerEnumArray
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -190,10 +190,10 @@ Send Long
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -240,12 +240,12 @@ Send a variety for form params. Returns file count and body params
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"log"
 )
 
 func main() {
@@ -339,12 +339,12 @@ Send Model
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -426,10 +426,10 @@ Send Rfc1123 DateTime
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -476,11 +476,11 @@ Send Rfc3339 DateTime
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -527,10 +527,10 @@ Send String Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -582,11 +582,11 @@ SendStringEnumArray
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -638,10 +638,10 @@ Send UnixDateTime
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -688,12 +688,12 @@ Update Model with Form
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -775,9 +775,9 @@ send Delete Multipart
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -821,9 +821,9 @@ send delete Form
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -867,9 +867,9 @@ send delete Form1
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -913,10 +913,10 @@ update String with Form
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {

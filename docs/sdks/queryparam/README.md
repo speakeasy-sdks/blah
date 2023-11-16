@@ -32,11 +32,11 @@ Date
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -83,11 +83,11 @@ Date Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -136,11 +136,11 @@ Integer Enum Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -189,10 +189,10 @@ MultipleParams
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -242,9 +242,9 @@ NoParams
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -288,10 +288,10 @@ Number Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -340,10 +340,10 @@ get optional dynamic query parameter
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -390,10 +390,10 @@ Rfc1123 DateTime
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -440,10 +440,10 @@ Rfc1123 DateTime Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -492,11 +492,11 @@ Rfc3339 DateTime
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -543,11 +543,12 @@ Rfc3339 DateTime Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/types"
+	"time"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -596,10 +597,10 @@ SimpleQuery
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -648,10 +649,10 @@ String Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -700,11 +701,11 @@ String Enum Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -753,10 +754,10 @@ StringParam
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -803,10 +804,10 @@ Unix DateTime
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -853,10 +854,10 @@ Unix DateTime Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -905,10 +906,10 @@ UrlParam
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {

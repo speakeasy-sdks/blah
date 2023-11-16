@@ -16,10 +16,9 @@ Echo's back the request
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
-	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 )
 
 func main() {
@@ -64,9 +63,9 @@ QueryEcho
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {

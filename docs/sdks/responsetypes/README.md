@@ -29,9 +29,9 @@ Get 1123DateTime
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -75,9 +75,9 @@ Get 3339Datetime
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -121,9 +121,9 @@ gets a binary object
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -167,9 +167,9 @@ Get Boolean
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -213,10 +213,10 @@ Get Date Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -263,9 +263,9 @@ Get Dynamic
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -309,9 +309,10 @@ Get Headers
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
+	"net/http"
 )
 
 func main() {
@@ -355,9 +356,9 @@ Gets a integer response
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -401,9 +402,9 @@ Get Long
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -448,10 +449,10 @@ Get Model Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -498,9 +499,9 @@ Get Precision
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -544,10 +545,10 @@ Get String Enum Array
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/blah"
+	"context"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -595,9 +596,9 @@ Get UnixDateTime
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
@@ -641,9 +642,10 @@ get content type headers
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
+	"net/http"
 )
 
 func main() {
@@ -687,9 +689,9 @@ return response with enums
 package main
 
 import(
+	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"github.com/speakeasy-sdks/blah"
 )
 
 func main() {
