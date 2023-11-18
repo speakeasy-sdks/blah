@@ -3,6 +3,7 @@
 package operations
 
 import (
+	"github.com/speakeasy-sdks/blah/pkg/models/sdkerrors"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
 	"net/http"
 )
@@ -11,7 +12,7 @@ type UpdateModelResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// 500 Global
-	GlobalTestException *shared.GlobalTestException
+	GlobalTestException *sdkerrors.GlobalTestException
 	ServerResponse      *shared.ServerResponse
 	// HTTP response status code for this operation
 	StatusCode int
@@ -26,7 +27,7 @@ func (o *UpdateModelResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *UpdateModelResponse) GetGlobalTestException() *shared.GlobalTestException {
+func (o *UpdateModelResponse) GetGlobalTestException() *sdkerrors.GlobalTestException {
 	if o == nil {
 		return nil
 	}

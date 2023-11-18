@@ -97,7 +97,10 @@ pkg/utils/utils.go
 /pkg/models/operations/getunixdatetime.go
 /pkg/models/operations/getcontenttypeheaders.go
 /pkg/models/operations/returnresponsewithenums.go
-/pkg/models/shared/globaltestexception.go
+/pkg/models/sdkerrors/globaltestexception.go
+/pkg/models/sdkerrors/nestedmodelexception.go
+/pkg/models/sdkerrors/localtestexception.go
+/pkg/models/shared/validate.go
 /pkg/models/shared/echoresponse.go
 /pkg/models/shared/queryparameter.go
 /pkg/models/shared/serverresponse.go
@@ -105,11 +108,6 @@ pkg/utils/utils.go
 /pkg/models/shared/employee.go
 /pkg/models/shared/days.go
 /pkg/models/shared/person.go
-/pkg/models/shared/localtestexception.go
-/pkg/models/sdkerrors/nestedmodelexception.go
-/pkg/models/sdkerrors/validate.go
-/pkg/models/sdkerrors/globaltestexception.go
-/pkg/models/sdkerrors/localtestexception.go
 USAGE.md
 docs/pkg/models/operations/jsonechorequestbody.md
 docs/pkg/models/operations/jsonechoresponse.md
@@ -235,7 +233,10 @@ docs/pkg/models/operations/paramformat.md
 docs/pkg/models/operations/returnresponsewithenumstype.md
 docs/pkg/models/operations/returnresponsewithenumsresponsewithenum.md
 docs/pkg/models/operations/returnresponsewithenumsresponse.md
-docs/pkg/models/shared/globaltestexception.md
+docs/pkg/models/sdkerrors/globaltestexception.md
+docs/pkg/models/sdkerrors/nestedmodelexception.md
+docs/pkg/models/sdkerrors/localtestexception.md
+docs/pkg/models/shared/validate.md
 docs/pkg/models/shared/body.md
 docs/pkg/models/shared/echoresponse.md
 docs/pkg/models/shared/queryparameter.md
@@ -245,11 +246,6 @@ docs/pkg/models/shared/suitecode.md
 docs/pkg/models/shared/employee.md
 docs/pkg/models/shared/days.md
 docs/pkg/models/shared/person.md
-docs/pkg/models/shared/localtestexception.md
-docs/pkg/models/sdkerrors/nestedmodelexception.md
-docs/pkg/models/sdkerrors/validate.md
-docs/pkg/models/sdkerrors/globaltestexception.md
-docs/pkg/models/sdkerrors/localtestexception.md
 docs/sdks/tester/README.md
 docs/sdks/echo/README.md
 docs/sdks/bodyparams/README.md

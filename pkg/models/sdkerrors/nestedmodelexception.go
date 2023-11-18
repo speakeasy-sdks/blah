@@ -4,12 +4,14 @@ package sdkerrors
 
 import (
 	"encoding/json"
+	"github.com/speakeasy-sdks/blah/pkg/models/shared"
 )
 
+// NestedModelException - Precondition Failed
 type NestedModelException struct {
-	ServerCode    string   `json:"ServerCode"`
-	ServerMessage string   `json:"ServerMessage"`
-	Model         Validate `json:"model"`
+	ServerCode    string          `json:"ServerCode"`
+	ServerMessage string          `json:"ServerMessage"`
+	Model         shared.Validate `json:"model"`
 }
 
 var _ error = &NestedModelException{}

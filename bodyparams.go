@@ -121,7 +121,7 @@ func (s *BodyParams) PostSendDate(ctx context.Context, request []byte) (*operati
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -235,7 +235,7 @@ func (s *BodyParams) PostSendIntegerArray(ctx context.Context, request operation
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -349,7 +349,7 @@ func (s *BodyParams) PostSendIntegerEnumArray(ctx context.Context, request opera
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -459,7 +459,7 @@ func (s *BodyParams) PostSendModel(ctx context.Context, request shared.Employee)
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -569,7 +569,7 @@ func (s *BodyParams) PostSendRfc1123DateTime(ctx context.Context, request string
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -679,7 +679,7 @@ func (s *BodyParams) PostSendRfc3339DateTime(ctx context.Context, request []byte
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -794,7 +794,7 @@ func (s *BodyParams) PostSendStringArray(ctx context.Context, request operations
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -908,7 +908,7 @@ func (s *BodyParams) PostSendStringEnumArray(ctx context.Context, request operat
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1018,7 +1018,7 @@ func (s *BodyParams) PostSendUnixDateTime(ctx context.Context, request []byte) (
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1118,7 +1118,7 @@ func (s *BodyParams) SendDeleteBodywithModel(ctx context.Context) (*operations.S
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1218,7 +1218,7 @@ func (s *BodyParams) SendDeletePlainText(ctx context.Context) (*operations.SendD
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1328,7 +1328,7 @@ func (s *BodyParams) SendDynamic(ctx context.Context, request []byte) (*operatio
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1438,7 +1438,7 @@ func (s *BodyParams) UpdateModel(ctx context.Context, request shared.Employee) (
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1538,7 +1538,7 @@ func (s *BodyParams) SendDeleteBody(ctx context.Context) (*operations.SendDelete
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1648,7 +1648,7 @@ func (s *BodyParams) UpdateString(ctx context.Context, request string) (*operati
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

@@ -133,7 +133,7 @@ func (s *Echo) Jsonecho(ctx context.Context, request []byte, opts ...operations.
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -233,7 +233,7 @@ func (s *Echo) QueryEcho(ctx context.Context) (*operations.QueryEchoResponse, er
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

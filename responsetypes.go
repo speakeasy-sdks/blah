@@ -123,7 +123,7 @@ func (s *ResponseTypes) Get1123DateTime(ctx context.Context, opts ...operations.
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -234,7 +234,7 @@ func (s *ResponseTypes) Get3339Datetime(ctx context.Context, opts ...operations.
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -349,7 +349,7 @@ func (s *ResponseTypes) GetBinary(ctx context.Context, opts ...operations.Option
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -460,7 +460,7 @@ func (s *ResponseTypes) GetBoolean(ctx context.Context, opts ...operations.Optio
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -564,7 +564,7 @@ func (s *ResponseTypes) GetDateArray(ctx context.Context, request operations.Get
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -675,7 +675,7 @@ func (s *ResponseTypes) GetDynamic(ctx context.Context, opts ...operations.Optio
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -764,7 +764,7 @@ func (s *ResponseTypes) GetHeaders(ctx context.Context) (*operations.GetHeadersR
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -876,7 +876,7 @@ func (s *ResponseTypes) GetInteger(ctx context.Context, opts ...operations.Optio
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -992,7 +992,7 @@ func (s *ResponseTypes) GetLong(ctx context.Context, opts ...operations.Option) 
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1096,7 +1096,7 @@ func (s *ResponseTypes) GetModelArray(ctx context.Context, request operations.Ge
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1207,7 +1207,7 @@ func (s *ResponseTypes) GetPrecision(ctx context.Context, opts ...operations.Opt
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1311,7 +1311,7 @@ func (s *ResponseTypes) GetStringEnumArray(ctx context.Context, request operatio
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1422,7 +1422,7 @@ func (s *ResponseTypes) GetUnixDateTime(ctx context.Context, opts ...operations.
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1511,7 +1511,7 @@ func (s *ResponseTypes) Getcontenttypeheaders(ctx context.Context) (*operations.
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1611,7 +1611,7 @@ func (s *ResponseTypes) Returnresponsewithenums(ctx context.Context) (*operation
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

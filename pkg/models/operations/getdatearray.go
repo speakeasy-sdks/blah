@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/sdkerrors"
 	"github.com/speakeasy-sdks/blah/pkg/types"
 	"github.com/speakeasy-sdks/blah/pkg/utils"
 	"net/http"
@@ -24,7 +24,7 @@ type GetDateArrayResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// 500 Global
-	GlobalTestException *shared.GlobalTestException
+	GlobalTestException *sdkerrors.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -50,7 +50,7 @@ func (o *GetDateArrayResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *GetDateArrayResponse) GetGlobalTestException() *shared.GlobalTestException {
+func (o *GetDateArrayResponse) GetGlobalTestException() *sdkerrors.GlobalTestException {
 	if o == nil {
 		return nil
 	}

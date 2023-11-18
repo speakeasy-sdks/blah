@@ -121,7 +121,7 @@ func (s *Header) SendHeaders(ctx context.Context, request operations.SendHeaders
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

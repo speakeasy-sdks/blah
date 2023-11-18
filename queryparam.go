@@ -115,7 +115,7 @@ func (s *QueryParam) Date(ctx context.Context, request operations.DateRequest) (
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -219,7 +219,7 @@ func (s *QueryParam) DateArray(ctx context.Context, request operations.DateArray
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *QueryParam) IntegerEnumArray(ctx context.Context, request operations.In
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -427,7 +427,7 @@ func (s *QueryParam) MultipleParams(ctx context.Context, request operations.Mult
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -527,7 +527,7 @@ func (s *QueryParam) NoParams(ctx context.Context) (*operations.NoParamsResponse
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -631,7 +631,7 @@ func (s *QueryParam) NumberArray(ctx context.Context, request operations.NumberA
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -736,7 +736,7 @@ func (s *QueryParam) OptionalDynamicQueryParam(ctx context.Context, request oper
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -840,7 +840,7 @@ func (s *QueryParam) Rfc1123DateTime(ctx context.Context, request operations.Rfc
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -944,7 +944,7 @@ func (s *QueryParam) Rfc1123DateTimeArray(ctx context.Context, request operation
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1048,7 +1048,7 @@ func (s *QueryParam) Rfc3339DateTime(ctx context.Context, request operations.Rfc
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1152,7 +1152,7 @@ func (s *QueryParam) Rfc3339DateTimeArray(ctx context.Context, request operation
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1256,7 +1256,7 @@ func (s *QueryParam) SimpleQuery(ctx context.Context, request operations.SimpleQ
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1360,7 +1360,7 @@ func (s *QueryParam) StringArray(ctx context.Context, request operations.StringA
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1464,7 +1464,7 @@ func (s *QueryParam) StringEnumArray(ctx context.Context, request operations.Str
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1568,7 +1568,7 @@ func (s *QueryParam) StringParam(ctx context.Context, request operations.StringP
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1672,7 +1672,7 @@ func (s *QueryParam) UnixDateTime(ctx context.Context, request operations.UnixDa
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1776,7 +1776,7 @@ func (s *QueryParam) UnixDateTimeArray(ctx context.Context, request operations.U
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1880,7 +1880,7 @@ func (s *QueryParam) URLParam(ctx context.Context, request operations.URLParamRe
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

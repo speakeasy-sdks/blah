@@ -5,6 +5,7 @@ package operations
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/speakeasy-sdks/blah/pkg/models/sdkerrors"
 	"github.com/speakeasy-sdks/blah/pkg/models/shared"
 	"net/http"
 )
@@ -56,7 +57,7 @@ type GetStringEnumArrayResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// 500 Global
-	GlobalTestException *shared.GlobalTestException
+	GlobalTestException *sdkerrors.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -71,7 +72,7 @@ func (o *GetStringEnumArrayResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *GetStringEnumArrayResponse) GetGlobalTestException() *shared.GlobalTestException {
+func (o *GetStringEnumArrayResponse) GetGlobalTestException() *sdkerrors.GlobalTestException {
 	if o == nil {
 		return nil
 	}

@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 	"github.com/speakeasy-sdks/blah/pkg/models/sdkerrors"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
 	"github.com/speakeasy-sdks/blah/pkg/utils"
 	"io"
 	"net/http"
@@ -122,7 +121,7 @@ func (s *ErrorCodes) Get400(ctx context.Context, opts ...operations.Option) (*op
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -252,7 +251,7 @@ func (s *ErrorCodes) Get401(ctx context.Context, opts ...operations.Option) (*op
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.LocalTestException
+			var out sdkerrors.LocalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -363,7 +362,7 @@ func (s *ErrorCodes) Get500(ctx context.Context, opts ...operations.Option) (*op
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -476,7 +475,7 @@ func (s *ErrorCodes) Get501(ctx context.Context, opts ...operations.Option) (*op
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -587,7 +586,7 @@ func (s *ErrorCodes) Catch412globalerror(ctx context.Context, opts ...operations
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.GlobalTestException
+			var out sdkerrors.GlobalTestException
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

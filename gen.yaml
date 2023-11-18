@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 00e173209ee87c215970773789a89b4a
   docVersion: "1.4"
-  speakeasyVersion: 1.120.3
-  generationVersion: 2.192.1
+  speakeasyVersion: 1.121.1
+  generationVersion: 2.194.1
 generation:
   comments: {}
   sdkClassName: tester
@@ -14,10 +14,10 @@ features:
   go:
     core: 3.1.5
     downloadStreams: 0.1.1
-    globalServerURLs: 2.82.0
-    methodServerURLs: 2.82.0
+    globalServerURLs: 2.82.1
+    methodServerURLs: 2.82.1
 go:
-  version: 0.3.2
+  version: 0.3.3
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:

@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/sdkerrors"
 	"io"
 	"net/http"
 )
@@ -12,7 +12,7 @@ type GetBinaryResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// 500 Global
-	GlobalTestException *shared.GlobalTestException
+	GlobalTestException *sdkerrors.GlobalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -28,7 +28,7 @@ func (o *GetBinaryResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *GetBinaryResponse) GetGlobalTestException() *shared.GlobalTestException {
+func (o *GetBinaryResponse) GetGlobalTestException() *sdkerrors.GlobalTestException {
 	if o == nil {
 		return nil
 	}

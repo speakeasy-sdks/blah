@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
+	"github.com/speakeasy-sdks/blah/pkg/models/sdkerrors"
 	"net/http"
 )
 
@@ -11,7 +11,7 @@ type Get401Response struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// 401 Local
-	LocalTestException *shared.LocalTestException
+	LocalTestException *sdkerrors.LocalTestException
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -26,7 +26,7 @@ func (o *Get401Response) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *Get401Response) GetLocalTestException() *shared.LocalTestException {
+func (o *Get401Response) GetLocalTestException() *sdkerrors.LocalTestException {
 	if o == nil {
 		return nil
 	}
