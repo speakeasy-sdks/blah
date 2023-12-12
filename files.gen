@@ -108,7 +108,6 @@ pkg/utils/utils.go
 /pkg/models/shared/employee.go
 /pkg/models/shared/days.go
 /pkg/models/shared/person.go
-USAGE.md
 docs/pkg/models/operations/jsonechorequestbody.md
 docs/pkg/models/operations/jsonechoresponse.md
 docs/pkg/models/operations/queryechoresponse.md
@@ -255,5 +254,6 @@ docs/sdks/header/README.md
 docs/sdks/queryparam/README.md
 docs/pkg/models/operations/option.md
 docs/sdks/responsetypes/README.md
+USAGE.md
 pkg/models/operations/options.go
 .gitattributes
