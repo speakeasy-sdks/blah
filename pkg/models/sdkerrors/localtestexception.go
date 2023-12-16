@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 )
 
-// LocalTestException - To test specific global exceptions.
+// LocalTestException - To test specific local exceptions.
 type LocalTestException struct {
 	// Represents the specific endpoint info
 	SecretMessageForEndpoint string `json:"SecretMessageForEndpoint"`

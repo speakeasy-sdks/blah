@@ -1,6 +1,6 @@
 # LocalTestException
 
-To test specific global exceptions.
+To test specific local exceptions.
 
 
 ## Fields
