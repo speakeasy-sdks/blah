@@ -64,7 +64,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendIntegerArray
 
@@ -117,7 +117,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendIntegerEnumArray
 
@@ -171,7 +171,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendModel
 
@@ -197,13 +197,13 @@ func main() {
     res, err := s.BodyParams.PostSendModel(ctx, shared.Employee{
         Address: "4584 Bailey Ways",
         Age: 85493,
-        Birthday: types.MustDateFromString("2021-07-04"),
-        Birthtime: types.MustTimeFromString("2021-02-27T01:41:35.355Z"),
+        Birthday: types.MustDateFromString("2022-07-04"),
+        Birthtime: types.MustTimeFromString("2022-02-27T02:56:38.456Z"),
         Boss: &shared.Person{
             Address: "881 Ryann Ways",
             Age: 46325,
-            Birthday: types.MustDateFromString("2022-11-16"),
-            Birthtime: types.MustTimeFromString("2023-02-10T04:24:43.071Z"),
+            Birthday: types.MustDateFromString("2023-11-16"),
+            Birthtime: types.MustTimeFromString("2024-02-10T21:17:33.741Z"),
             Name: "string",
             PersonType: "string",
             UID: "string",
@@ -213,8 +213,8 @@ func main() {
             shared.Person{
                 Address: "3789 Dawson Overpass",
                 Age: 992245,
-                Birthday: types.MustDateFromString("2023-06-09"),
-                Birthtime: types.MustTimeFromString("2021-03-28T14:57:58.898Z"),
+                Birthday: types.MustDateFromString("2024-06-08"),
+                Birthtime: types.MustTimeFromString("2022-03-28T16:51:53.855Z"),
                 Name: "string",
                 PersonType: "string",
                 UID: "string",
@@ -255,7 +255,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendRfc1123DateTime
 
@@ -302,7 +302,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendRfc3339DateTime
 
@@ -349,7 +349,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendStringArray
 
@@ -402,7 +402,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendStringEnumArray
 
@@ -456,7 +456,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## PostSendUnixDateTime
 
@@ -503,7 +503,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendDeleteBodywithModel
 
@@ -549,7 +549,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendDeletePlainText
 
@@ -595,7 +595,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendDynamic
 
@@ -642,7 +642,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## UpdateModel
 
@@ -668,13 +668,13 @@ func main() {
     res, err := s.BodyParams.UpdateModel(ctx, shared.Employee{
         Address: "47839 Padberg Pass",
         Age: 993094,
-        Birthday: types.MustDateFromString("2021-03-30"),
-        Birthtime: types.MustTimeFromString("2021-07-06T11:57:24.993Z"),
+        Birthday: types.MustDateFromString("2022-03-30"),
+        Birthtime: types.MustTimeFromString("2022-07-06T16:02:40.468Z"),
         Boss: &shared.Person{
             Address: "3734 Brisa Pine",
             Age: 27925,
-            Birthday: types.MustDateFromString("2023-02-24"),
-            Birthtime: types.MustTimeFromString("2021-11-27T19:07:57.711Z"),
+            Birthday: types.MustDateFromString("2024-02-25"),
+            Birthtime: types.MustTimeFromString("2022-11-28T02:22:58.969Z"),
             Name: "string",
             PersonType: "string",
             UID: "string",
@@ -684,8 +684,8 @@ func main() {
             shared.Person{
                 Address: "75786 Hirthe Dale",
                 Age: 167624,
-                Birthday: types.MustDateFromString("2022-03-06"),
-                Birthtime: types.MustTimeFromString("2021-10-10T21:23:07.232Z"),
+                Birthday: types.MustDateFromString("2023-03-06"),
+                Birthtime: types.MustTimeFromString("2022-10-11T03:35:08.498Z"),
                 Name: "string",
                 PersonType: "string",
                 UID: "string",
@@ -726,7 +726,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendDeleteBody
 
@@ -772,7 +772,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## UpdateString
 
@@ -819,4 +819,4 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |

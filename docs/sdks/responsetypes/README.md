@@ -63,7 +63,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Get3339Datetime
 
@@ -109,7 +109,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetBinary
 
@@ -155,7 +155,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetBoolean
 
@@ -201,7 +201,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetDateArray
 
@@ -251,7 +251,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetDynamic
 
@@ -297,7 +297,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetHeaders
 
@@ -344,7 +344,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetInteger
 
@@ -390,7 +390,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetLong
 
@@ -437,7 +437,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetModelArray
 
@@ -487,7 +487,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetPrecision
 
@@ -533,7 +533,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetStringEnumArray
 
@@ -584,7 +584,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## GetUnixDateTime
 
@@ -630,7 +630,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Getcontenttypeheaders
 
@@ -677,7 +677,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Returnresponsewithenums
 
@@ -723,4 +723,4 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |

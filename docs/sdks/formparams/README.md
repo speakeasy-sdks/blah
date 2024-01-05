@@ -42,7 +42,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendDate(ctx, &operations.SendDateRequestBody{
-        Date: types.MustDateFromString("2021-10-04"),
+        Date: types.MustDateFromString("2022-10-05"),
     })
     if err != nil {
         log.Fatal(err)
@@ -69,7 +69,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendFile
 
@@ -122,7 +122,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendIntegerEnumArray
 
@@ -178,7 +178,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendLong
 
@@ -228,7 +228,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendMixedArray
 
@@ -264,13 +264,13 @@ func main() {
             shared.Employee{
                 Address: "259 Diego Estates",
                 Age: 994876,
-                Birthday: types.MustDateFromString("2022-06-13"),
-                Birthtime: types.MustTimeFromString("2021-11-15T23:08:18.123Z"),
+                Birthday: types.MustDateFromString("2023-06-13"),
+                Birthtime: types.MustTimeFromString("2022-11-16T06:07:45.702Z"),
                 Boss: &shared.Person{
                     Address: "7442 Tamara Grove",
                     Age: 318424,
-                    Birthday: types.MustDateFromString("2023-02-04"),
-                    Birthtime: types.MustTimeFromString("2021-05-07T13:59:39.796Z"),
+                    Birthday: types.MustDateFromString("2024-02-04"),
+                    Birthtime: types.MustTimeFromString("2022-05-07T16:46:07.722Z"),
                     Name: "string",
                     PersonType: "string",
                     UID: "string",
@@ -280,8 +280,8 @@ func main() {
                     shared.Person{
                         Address: "536 King Locks",
                         Age: 351258,
-                        Birthday: types.MustDateFromString("2023-01-25"),
-                        Birthtime: types.MustTimeFromString("2022-08-23T17:04:03.001Z"),
+                        Birthday: types.MustDateFromString("2024-01-26"),
+                        Birthtime: types.MustTimeFromString("2023-08-24T06:12:42.675Z"),
                         Name: "string",
                         PersonType: "string",
                         UID: "string",
@@ -327,7 +327,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendModel
 
@@ -355,13 +355,13 @@ func main() {
         Model: shared.Employee{
             Address: "0371 Nienow Coves",
             Age: 574270,
-            Birthday: types.MustDateFromString("2021-05-28"),
-            Birthtime: types.MustTimeFromString("2022-10-14T06:30:12.294Z"),
+            Birthday: types.MustDateFromString("2022-05-28"),
+            Birthtime: types.MustTimeFromString("2023-10-14T20:46:40.251Z"),
             Boss: &shared.Person{
                 Address: "8002 Pansy Dale",
                 Age: 509061,
-                Birthday: types.MustDateFromString("2021-10-26"),
-                Birthtime: types.MustTimeFromString("2023-06-05T00:58:45.263Z"),
+                Birthday: types.MustDateFromString("2022-10-26"),
+                Birthtime: types.MustTimeFromString("2024-06-04T20:22:38.619Z"),
                 Name: "string",
                 PersonType: "string",
                 UID: "string",
@@ -371,8 +371,8 @@ func main() {
                 shared.Person{
                     Address: "8830 McDermott Forks",
                     Age: 465073,
-                    Birthday: types.MustDateFromString("2021-02-06"),
-                    Birthtime: types.MustTimeFromString("2023-04-01T23:29:40.608Z"),
+                    Birthday: types.MustDateFromString("2022-02-06"),
+                    Birthtime: types.MustTimeFromString("2024-04-01T17:29:19.221Z"),
                     Name: "string",
                     PersonType: "string",
                     UID: "string",
@@ -414,7 +414,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendRfc1123DateTime
 
@@ -464,7 +464,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendRfc3339DateTime
 
@@ -488,7 +488,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendRfc3339DateTime(ctx, &operations.SendRfc3339DateTimeRequestBody{
-        Datetime: types.MustTimeFromString("2021-01-24T16:40:49.158Z"),
+        Datetime: types.MustTimeFromString("2022-01-24T17:11:58.792Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -515,7 +515,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendStringArray
 
@@ -570,7 +570,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendStringEnumArray
 
@@ -626,7 +626,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendUnixDateTime
 
@@ -676,7 +676,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## UpdateModelwithForm
 
@@ -704,13 +704,13 @@ func main() {
         Model: shared.Employee{
             Address: "37579 Sporer Fields",
             Age: 899553,
-            Birthday: types.MustDateFromString("2023-02-10"),
-            Birthtime: types.MustTimeFromString("2021-06-17T01:16:01.265Z"),
+            Birthday: types.MustDateFromString("2024-02-11"),
+            Birthtime: types.MustTimeFromString("2022-06-17T04:55:42.416Z"),
             Boss: &shared.Person{
                 Address: "1901 Carter Lodge",
                 Age: 445689,
-                Birthday: types.MustDateFromString("2022-02-09"),
-                Birthtime: types.MustTimeFromString("2022-03-17T14:13:39.740Z"),
+                Birthday: types.MustDateFromString("2023-02-10"),
+                Birthtime: types.MustTimeFromString("2023-03-17T23:53:04.324Z"),
                 Name: "string",
                 PersonType: "string",
                 UID: "string",
@@ -720,8 +720,8 @@ func main() {
                 shared.Person{
                     Address: "11041 Jacobi Stream",
                     Age: 134413,
-                    Birthday: types.MustDateFromString("2021-08-30"),
-                    Birthtime: types.MustTimeFromString("2023-11-26T23:43:21.899Z"),
+                    Birthday: types.MustDateFromString("2022-08-30"),
+                    Birthtime: types.MustTimeFromString("2024-11-26T22:57:19.344Z"),
                     Name: "string",
                     PersonType: "string",
                     UID: "string",
@@ -763,7 +763,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SendDeleteMultipart
 
@@ -809,7 +809,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SenddeleteForm
 
@@ -855,7 +855,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SenddeleteForm1
 
@@ -901,7 +901,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## UpdateStringwithForm
 
@@ -951,4 +951,4 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |

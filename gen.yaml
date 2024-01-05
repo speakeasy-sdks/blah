@@ -1,23 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 00e173209ee87c215970773789a89b4a
-  docVersion: "1.4"
-  speakeasyVersion: 1.126.4
-  generationVersion: 2.214.10
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: tester
-  repoURL: https://github.com/speakeasy-sdks/blah.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  go:
-    core: 3.2.2
-    downloadStreams: 0.1.1
-    globalServerURLs: 2.82.1
-    methodServerURLs: 2.82.1
 go:
   version: 0.4.1
   clientServerStatusCodesAsErrors: true
@@ -31,9 +18,6 @@ go:
       shared: pkg/models/shared
       webhooks: pkg/models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/blah
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: github.com/speakeasy-sdks/blah
-  published: true
-  repoSubDirectory: .

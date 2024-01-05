@@ -44,7 +44,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.QueryParam.Date(ctx, operations.DateRequest{
-        Date: types.MustDateFromString("2021-12-06"),
+        Date: types.MustDateFromString("2022-12-07"),
     })
     if err != nil {
         log.Fatal(err)
@@ -71,7 +71,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## DateArray
 
@@ -96,7 +96,7 @@ func main() {
     ctx := context.Background()
     res, err := s.QueryParam.DateArray(ctx, operations.DateArrayRequest{
         Dates: []types.Date{
-            types.MustDateFromString("2021-10-21"),
+            types.MustDateFromString("2022-10-22"),
         },
     })
     if err != nil {
@@ -124,7 +124,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## IntegerEnumArray
 
@@ -177,7 +177,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## MultipleParams
 
@@ -230,7 +230,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## NoParams
 
@@ -276,7 +276,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## NumberArray
 
@@ -328,7 +328,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## OptionalDynamicQueryParam
 
@@ -378,7 +378,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Rfc1123DateTime
 
@@ -428,7 +428,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Rfc1123DateTimeArray
 
@@ -480,7 +480,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Rfc3339DateTime
 
@@ -504,7 +504,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.QueryParam.Rfc3339DateTime(ctx, operations.Rfc3339DateTimeRequest{
-        Datetime: types.MustTimeFromString("2022-04-29T10:26:48.393Z"),
+        Datetime: types.MustTimeFromString("2023-04-29T21:02:33.424Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -531,7 +531,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Rfc3339DateTimeArray
 
@@ -557,7 +557,7 @@ func main() {
     ctx := context.Background()
     res, err := s.QueryParam.Rfc3339DateTimeArray(ctx, operations.Rfc3339DateTimeArrayRequest{
         Datetimes: []time.Time{
-            types.MustTimeFromString("2021-09-26T11:16:44.151Z"),
+            types.MustTimeFromString("2022-09-26T17:09:47.534Z"),
         },
     })
     if err != nil {
@@ -585,7 +585,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## SimpleQuery
 
@@ -637,7 +637,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## StringArray
 
@@ -689,7 +689,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## StringEnumArray
 
@@ -742,7 +742,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## StringParam
 
@@ -792,7 +792,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## UnixDateTime
 
@@ -842,7 +842,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## UnixDateTimeArray
 
@@ -894,7 +894,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## URLParam
 
@@ -944,4 +944,4 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |

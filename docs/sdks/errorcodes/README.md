@@ -53,7 +53,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Get401
 
@@ -100,7 +100,7 @@ func main() {
 | sdkerrors.LocalTestException   | 401,421,431,432,441            | application/json               |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Get500
 
@@ -146,7 +146,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Get501
 
@@ -192,7 +192,7 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412,501                        | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
 
 ## Catch412globalerror
 
@@ -238,4 +238,4 @@ func main() {
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | sdkerrors.NestedModelException | 412                            | application/json               |
 | sdkerrors.GlobalTestException  | 500                            | application/json               |
-| sdkerrors.SDKError             | 400-600                        | */*                            |
+| sdkerrors.SDKError             | 4xx-5xx                        | */*                            |
