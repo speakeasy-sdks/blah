@@ -4,9 +4,9 @@ management:
   docChecksum: 00e173209ee87c215970773789a89b4a
   docVersion: "1.4"
   speakeasyVersion: internal
-  generationVersion: 2.250.2
-  releaseVersion: 0.5.0
-  configChecksum: 2b72b601b6889884dcb877720451b609
+  generationVersion: 2.253.0
+  releaseVersion: 0.5.1
+  configChecksum: 6b360b775e096c22cb0e558b40988d6a
   repoURL: https://github.com/speakeasy-sdks/blah.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/blah

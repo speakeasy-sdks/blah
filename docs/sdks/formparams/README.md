@@ -136,7 +136,6 @@ package main
 import(
 	"github.com/speakeasy-sdks/blah"
 	"context"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 	"log"
 )
@@ -146,11 +145,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendIntegerEnumArray(ctx, operations.SendIntegerEnumArrayRequest{
-        RequestBody: &operations.SendIntegerEnumArrayRequestBody{
-            Suites: []shared.SuiteCode{
-                shared.SuiteCodeFour,
-            },
-        },
         Array: false,
     })
     if err != nil {
@@ -266,35 +260,26 @@ func main() {
                 Age: 994876,
                 Birthday: types.MustDateFromString("2023-06-13"),
                 Birthtime: types.MustTimeFromString("2022-11-16T06:07:45.702Z"),
-                Boss: &shared.Person{
-                    Address: "7442 Tamara Grove",
-                    Age: 318424,
-                    Birthday: types.MustDateFromString("2024-02-04"),
-                    Birthtime: types.MustTimeFromString("2022-05-07T16:46:07.722Z"),
-                    Name: "string",
-                    PersonType: "string",
-                    UID: "string",
-                },
                 Department: "string",
                 Dependents: []shared.Person{
                     shared.Person{
-                        Address: "536 King Locks",
-                        Age: 351258,
-                        Birthday: types.MustDateFromString("2024-01-26"),
-                        Birthtime: types.MustTimeFromString("2023-08-24T06:12:42.675Z"),
+                        Address: "7442 Tamara Grove",
+                        Age: 318424,
+                        Birthday: types.MustDateFromString("2024-02-04"),
+                        Birthtime: types.MustTimeFromString("2022-05-07T16:46:07.722Z"),
                         Name: "string",
                         PersonType: "string",
                         UID: "string",
                     },
                 },
                 HiredAt: "string",
-                JoiningDay: shared.DaysThursday,
+                JoiningDay: shared.DaysFriday,
                 Name: "string",
                 PersonType: "string",
-                Salary: 244149,
+                Salary: 523994,
                 UID: "string",
                 WorkingDays: []shared.Days{
-                    shared.DaysWednesday,
+                    shared.DaysTuesday,
                 },
             },
         },
@@ -357,35 +342,26 @@ func main() {
             Age: 574270,
             Birthday: types.MustDateFromString("2022-05-28"),
             Birthtime: types.MustTimeFromString("2023-10-14T20:46:40.251Z"),
-            Boss: &shared.Person{
-                Address: "8002 Pansy Dale",
-                Age: 509061,
-                Birthday: types.MustDateFromString("2022-10-26"),
-                Birthtime: types.MustTimeFromString("2024-06-04T20:22:38.619Z"),
-                Name: "string",
-                PersonType: "string",
-                UID: "string",
-            },
             Department: "string",
             Dependents: []shared.Person{
                 shared.Person{
-                    Address: "8830 McDermott Forks",
-                    Age: 465073,
-                    Birthday: types.MustDateFromString("2022-02-06"),
-                    Birthtime: types.MustTimeFromString("2024-04-01T17:29:19.221Z"),
+                    Address: "8002 Pansy Dale",
+                    Age: 509061,
+                    Birthday: types.MustDateFromString("2022-10-26"),
+                    Birthtime: types.MustTimeFromString("2024-06-04T20:22:38.619Z"),
                     Name: "string",
                     PersonType: "string",
                     UID: "string",
                 },
             },
             HiredAt: "string",
-            JoiningDay: shared.DaysMonday,
+            JoiningDay: shared.DaysTuesday,
             Name: "string",
             PersonType: "string",
-            Salary: 35111,
+            Salary: 879548,
             UID: "string",
             WorkingDays: []shared.Days{
-                shared.DaysSunday,
+                shared.DaysSaturday,
             },
         },
     })
@@ -538,11 +514,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendStringArray(ctx, operations.SendStringArrayRequest{
-        RequestBody: &operations.SendStringArrayRequestBody{
-            Strings: []string{
-                "string",
-            },
-        },
         Array: false,
     })
     if err != nil {
@@ -584,7 +555,6 @@ package main
 import(
 	"github.com/speakeasy-sdks/blah"
 	"context"
-	"github.com/speakeasy-sdks/blah/pkg/models/shared"
 	"github.com/speakeasy-sdks/blah/pkg/models/operations"
 	"log"
 )
@@ -594,11 +564,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendStringEnumArray(ctx, operations.SendStringEnumArrayRequest{
-        RequestBody: &operations.SendStringEnumArrayRequestBody{
-            Days: []shared.Days{
-                shared.DaysMonday,
-            },
-        },
         Array: false,
     })
     if err != nil {
@@ -706,35 +671,26 @@ func main() {
             Age: 899553,
             Birthday: types.MustDateFromString("2024-02-11"),
             Birthtime: types.MustTimeFromString("2022-06-17T04:55:42.416Z"),
-            Boss: &shared.Person{
-                Address: "1901 Carter Lodge",
-                Age: 445689,
-                Birthday: types.MustDateFromString("2023-02-10"),
-                Birthtime: types.MustTimeFromString("2023-03-17T23:53:04.324Z"),
-                Name: "string",
-                PersonType: "string",
-                UID: "string",
-            },
             Department: "string",
             Dependents: []shared.Person{
                 shared.Person{
-                    Address: "11041 Jacobi Stream",
-                    Age: 134413,
-                    Birthday: types.MustDateFromString("2022-08-30"),
-                    Birthtime: types.MustTimeFromString("2024-11-26T22:57:19.344Z"),
+                    Address: "1901 Carter Lodge",
+                    Age: 445689,
+                    Birthday: types.MustDateFromString("2023-02-10"),
+                    Birthtime: types.MustTimeFromString("2023-03-17T23:53:04.324Z"),
                     Name: "string",
                     PersonType: "string",
                     UID: "string",
                 },
             },
             HiredAt: "string",
-            JoiningDay: shared.DaysFriday,
+            JoiningDay: shared.DaysMonday,
             Name: "string",
             PersonType: "string",
-            Salary: 697151,
+            Salary: 103269,
             UID: "string",
             WorkingDays: []shared.Days{
-                shared.DaysMonday,
+                shared.DaysSunday,
             },
         },
     })
