@@ -26,7 +26,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Header.SendHeaders(ctx, operations.SendHeadersRequest{
-        CustomHeader: "string",
+        CustomHeader: "<value>",
     })
     if err != nil {
         log.Fatal(err)

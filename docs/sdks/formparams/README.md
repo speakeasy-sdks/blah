@@ -260,31 +260,31 @@ func main() {
                 Age: 994876,
                 Birthday: types.MustDateFromString("2023-06-13"),
                 Birthtime: types.MustTimeFromString("2022-11-16T06:07:45.702Z"),
-                Department: "string",
+                Department: "<value>",
                 Dependents: []shared.Person{
                     shared.Person{
                         Address: "7442 Tamara Grove",
                         Age: 318424,
                         Birthday: types.MustDateFromString("2024-02-04"),
                         Birthtime: types.MustTimeFromString("2022-05-07T16:46:07.722Z"),
-                        Name: "string",
-                        PersonType: "string",
-                        UID: "string",
+                        Name: "<value>",
+                        PersonType: "<value>",
+                        UID: "<value>",
                     },
                 },
-                HiredAt: "string",
+                HiredAt: "<value>",
                 JoiningDay: shared.DaysFriday,
-                Name: "string",
-                PersonType: "string",
+                Name: "<value>",
+                PersonType: "<value>",
                 Salary: 523994,
-                UID: "string",
+                UID: "<value>",
                 WorkingDays: []shared.Days{
                     shared.DaysTuesday,
                 },
             },
         },
         Strings: []string{
-            "string",
+            "<value>",
         },
     })
     if err != nil {
@@ -342,24 +342,24 @@ func main() {
             Age: 574270,
             Birthday: types.MustDateFromString("2022-05-28"),
             Birthtime: types.MustTimeFromString("2023-10-14T20:46:40.251Z"),
-            Department: "string",
+            Department: "<value>",
             Dependents: []shared.Person{
                 shared.Person{
                     Address: "8002 Pansy Dale",
                     Age: 509061,
                     Birthday: types.MustDateFromString("2022-10-26"),
                     Birthtime: types.MustTimeFromString("2024-06-04T20:22:38.619Z"),
-                    Name: "string",
-                    PersonType: "string",
-                    UID: "string",
+                    Name: "<value>",
+                    PersonType: "<value>",
+                    UID: "<value>",
                 },
             },
-            HiredAt: "string",
+            HiredAt: "<value>",
             JoiningDay: shared.DaysTuesday,
-            Name: "string",
-            PersonType: "string",
+            Name: "<value>",
+            PersonType: "<value>",
             Salary: 879548,
-            UID: "string",
+            UID: "<value>",
             WorkingDays: []shared.Days{
                 shared.DaysSaturday,
             },
@@ -413,7 +413,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.SendRfc1123DateTime(ctx, &operations.SendRfc1123DateTimeRequestBody{
-        Datetime: "string",
+        Datetime: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -671,24 +671,24 @@ func main() {
             Age: 899553,
             Birthday: types.MustDateFromString("2024-02-11"),
             Birthtime: types.MustTimeFromString("2022-06-17T04:55:42.416Z"),
-            Department: "string",
+            Department: "<value>",
             Dependents: []shared.Person{
                 shared.Person{
                     Address: "1901 Carter Lodge",
                     Age: 445689,
                     Birthday: types.MustDateFromString("2023-02-10"),
                     Birthtime: types.MustTimeFromString("2023-03-17T23:53:04.324Z"),
-                    Name: "string",
-                    PersonType: "string",
-                    UID: "string",
+                    Name: "<value>",
+                    PersonType: "<value>",
+                    UID: "<value>",
                 },
             },
-            HiredAt: "string",
+            HiredAt: "<value>",
             JoiningDay: shared.DaysMonday,
-            Name: "string",
-            PersonType: "string",
+            Name: "<value>",
+            PersonType: "<value>",
             Salary: 103269,
-            UID: "string",
+            UID: "<value>",
             WorkingDays: []shared.Days{
                 shared.DaysSunday,
             },
@@ -880,7 +880,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.FormParams.UpdateStringwithForm(ctx, &operations.UpdateStringwithFormRequestBody{
-        Value: "string",
+        Value: "<value>",
     })
     if err != nil {
         log.Fatal(err)

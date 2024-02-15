@@ -199,24 +199,24 @@ func main() {
         Age: 85493,
         Birthday: types.MustDateFromString("2022-07-04"),
         Birthtime: types.MustTimeFromString("2022-02-27T02:56:38.456Z"),
-        Department: "string",
+        Department: "<value>",
         Dependents: []shared.Person{
             shared.Person{
                 Address: "881 Ryann Ways",
                 Age: 46325,
                 Birthday: types.MustDateFromString("2023-11-16"),
                 Birthtime: types.MustTimeFromString("2024-02-10T21:17:33.741Z"),
-                Name: "string",
-                PersonType: "string",
-                UID: "string",
+                Name: "<value>",
+                PersonType: "<value>",
+                UID: "<value>",
             },
         },
-        HiredAt: "string",
+        HiredAt: "<value>",
         JoiningDay: shared.DaysWednesday,
-        Name: "string",
-        PersonType: "string",
+        Name: "<value>",
+        PersonType: "<value>",
         Salary: 383188,
-        UID: "string",
+        UID: "<value>",
         WorkingDays: []shared.Days{
             shared.DaysFriday,
         },
@@ -267,7 +267,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.PostSendRfc1123DateTime(ctx, "string")
+    res, err := s.BodyParams.PostSendRfc1123DateTime(ctx, "<value>")
     if err != nil {
         log.Fatal(err)
     }
@@ -364,7 +364,7 @@ func main() {
     ctx := context.Background()
     res, err := s.BodyParams.PostSendStringArray(ctx, operations.PostSendStringArrayRequest{
         RequestBody: []string{
-            "string",
+            "<value>",
         },
         Array: false,
     })
@@ -661,24 +661,24 @@ func main() {
         Age: 993094,
         Birthday: types.MustDateFromString("2022-03-30"),
         Birthtime: types.MustTimeFromString("2022-07-06T16:02:40.468Z"),
-        Department: "string",
+        Department: "<value>",
         Dependents: []shared.Person{
             shared.Person{
                 Address: "3734 Brisa Pine",
                 Age: 27925,
                 Birthday: types.MustDateFromString("2024-02-25"),
                 Birthtime: types.MustTimeFromString("2022-11-28T02:22:58.969Z"),
-                Name: "string",
-                PersonType: "string",
-                UID: "string",
+                Name: "<value>",
+                PersonType: "<value>",
+                UID: "<value>",
             },
         },
-        HiredAt: "string",
+        HiredAt: "<value>",
         JoiningDay: shared.DaysMonday,
-        Name: "string",
-        PersonType: "string",
+        Name: "<value>",
+        PersonType: "<value>",
         Salary: 714606,
-        UID: "string",
+        UID: "<value>",
         WorkingDays: []shared.Days{
             shared.DaysWednesday,
         },
@@ -775,7 +775,7 @@ func main() {
     s := blah.New()
 
     ctx := context.Background()
-    res, err := s.BodyParams.UpdateString(ctx, "string")
+    res, err := s.BodyParams.UpdateString(ctx, "<value>")
     if err != nil {
         log.Fatal(err)
     }
