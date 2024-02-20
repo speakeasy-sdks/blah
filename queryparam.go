@@ -47,12 +47,12 @@ func (s *QueryParam) Date(ctx context.Context, request operations.DateRequest) (
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -75,7 +75,6 @@ func (s *QueryParam) Date(ctx context.Context, request operations.DateRequest) (
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.DateResponse{
@@ -176,12 +175,12 @@ func (s *QueryParam) DateArray(ctx context.Context, request operations.DateArray
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -204,7 +203,6 @@ func (s *QueryParam) DateArray(ctx context.Context, request operations.DateArray
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.DateArrayResponse{
@@ -305,12 +303,12 @@ func (s *QueryParam) IntegerEnumArray(ctx context.Context, request operations.In
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -333,7 +331,6 @@ func (s *QueryParam) IntegerEnumArray(ctx context.Context, request operations.In
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.IntegerEnumArrayResponse{
@@ -434,12 +431,12 @@ func (s *QueryParam) MultipleParams(ctx context.Context, request operations.Mult
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -462,7 +459,6 @@ func (s *QueryParam) MultipleParams(ctx context.Context, request operations.Mult
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.MultipleParamsResponse{
@@ -559,12 +555,12 @@ func (s *QueryParam) NoParams(ctx context.Context) (*operations.NoParamsResponse
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -587,7 +583,6 @@ func (s *QueryParam) NoParams(ctx context.Context) (*operations.NoParamsResponse
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.NoParamsResponse{
@@ -688,12 +683,12 @@ func (s *QueryParam) NumberArray(ctx context.Context, request operations.NumberA
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -716,7 +711,6 @@ func (s *QueryParam) NumberArray(ctx context.Context, request operations.NumberA
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.NumberArrayResponse{
@@ -818,12 +812,12 @@ func (s *QueryParam) OptionalDynamicQueryParam(ctx context.Context, request oper
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -846,7 +840,6 @@ func (s *QueryParam) OptionalDynamicQueryParam(ctx context.Context, request oper
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.OptionalDynamicQueryParamResponse{
@@ -947,12 +940,12 @@ func (s *QueryParam) Rfc1123DateTime(ctx context.Context, request operations.Rfc
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -975,7 +968,6 @@ func (s *QueryParam) Rfc1123DateTime(ctx context.Context, request operations.Rfc
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Rfc1123DateTimeResponse{
@@ -1076,12 +1068,12 @@ func (s *QueryParam) Rfc1123DateTimeArray(ctx context.Context, request operation
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1104,7 +1096,6 @@ func (s *QueryParam) Rfc1123DateTimeArray(ctx context.Context, request operation
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Rfc1123DateTimeArrayResponse{
@@ -1205,12 +1196,12 @@ func (s *QueryParam) Rfc3339DateTime(ctx context.Context, request operations.Rfc
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1233,7 +1224,6 @@ func (s *QueryParam) Rfc3339DateTime(ctx context.Context, request operations.Rfc
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Rfc3339DateTimeResponse{
@@ -1334,12 +1324,12 @@ func (s *QueryParam) Rfc3339DateTimeArray(ctx context.Context, request operation
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1362,7 +1352,6 @@ func (s *QueryParam) Rfc3339DateTimeArray(ctx context.Context, request operation
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Rfc3339DateTimeArrayResponse{
@@ -1463,12 +1452,12 @@ func (s *QueryParam) SimpleQuery(ctx context.Context, request operations.SimpleQ
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1491,7 +1480,6 @@ func (s *QueryParam) SimpleQuery(ctx context.Context, request operations.SimpleQ
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.SimpleQueryResponse{
@@ -1592,12 +1580,12 @@ func (s *QueryParam) StringArray(ctx context.Context, request operations.StringA
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1620,7 +1608,6 @@ func (s *QueryParam) StringArray(ctx context.Context, request operations.StringA
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.StringArrayResponse{
@@ -1721,12 +1708,12 @@ func (s *QueryParam) StringEnumArray(ctx context.Context, request operations.Str
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1749,7 +1736,6 @@ func (s *QueryParam) StringEnumArray(ctx context.Context, request operations.Str
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.StringEnumArrayResponse{
@@ -1850,12 +1836,12 @@ func (s *QueryParam) StringParam(ctx context.Context, request operations.StringP
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1878,7 +1864,6 @@ func (s *QueryParam) StringParam(ctx context.Context, request operations.StringP
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.StringParamResponse{
@@ -1979,12 +1964,12 @@ func (s *QueryParam) UnixDateTime(ctx context.Context, request operations.UnixDa
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -2007,7 +1992,6 @@ func (s *QueryParam) UnixDateTime(ctx context.Context, request operations.UnixDa
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.UnixDateTimeResponse{
@@ -2108,12 +2092,12 @@ func (s *QueryParam) UnixDateTimeArray(ctx context.Context, request operations.U
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -2136,7 +2120,6 @@ func (s *QueryParam) UnixDateTimeArray(ctx context.Context, request operations.U
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.UnixDateTimeArrayResponse{
@@ -2237,12 +2220,12 @@ func (s *QueryParam) URLParam(ctx context.Context, request operations.URLParamRe
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -2265,7 +2248,6 @@ func (s *QueryParam) URLParam(ctx context.Context, request operations.URLParamRe
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.URLParamResponse{

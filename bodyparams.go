@@ -49,12 +49,12 @@ func (s *BodyParams) PostSendDate(ctx context.Context, request []byte) (*operati
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -77,7 +77,6 @@ func (s *BodyParams) PostSendDate(ctx context.Context, request []byte) (*operati
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendDateResponse{
@@ -184,12 +183,12 @@ func (s *BodyParams) PostSendIntegerArray(ctx context.Context, request operation
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -212,7 +211,6 @@ func (s *BodyParams) PostSendIntegerArray(ctx context.Context, request operation
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendIntegerArrayResponse{
@@ -319,12 +317,12 @@ func (s *BodyParams) PostSendIntegerEnumArray(ctx context.Context, request opera
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -347,7 +345,6 @@ func (s *BodyParams) PostSendIntegerEnumArray(ctx context.Context, request opera
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendIntegerEnumArrayResponse{
@@ -450,12 +447,12 @@ func (s *BodyParams) PostSendModel(ctx context.Context, request shared.Employee)
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -478,7 +475,6 @@ func (s *BodyParams) PostSendModel(ctx context.Context, request shared.Employee)
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendModelResponse{
@@ -581,12 +577,12 @@ func (s *BodyParams) PostSendRfc1123DateTime(ctx context.Context, request string
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -609,7 +605,6 @@ func (s *BodyParams) PostSendRfc1123DateTime(ctx context.Context, request string
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendRfc1123DateTimeResponse{
@@ -712,12 +707,12 @@ func (s *BodyParams) PostSendRfc3339DateTime(ctx context.Context, request []byte
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -740,7 +735,6 @@ func (s *BodyParams) PostSendRfc3339DateTime(ctx context.Context, request []byte
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendRfc3339DateTimeResponse{
@@ -848,12 +842,12 @@ func (s *BodyParams) PostSendStringArray(ctx context.Context, request operations
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -876,7 +870,6 @@ func (s *BodyParams) PostSendStringArray(ctx context.Context, request operations
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendStringArrayResponse{
@@ -983,12 +976,12 @@ func (s *BodyParams) PostSendStringEnumArray(ctx context.Context, request operat
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1011,7 +1004,6 @@ func (s *BodyParams) PostSendStringEnumArray(ctx context.Context, request operat
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendStringEnumArrayResponse{
@@ -1114,12 +1106,12 @@ func (s *BodyParams) PostSendUnixDateTime(ctx context.Context, request []byte) (
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1142,7 +1134,6 @@ func (s *BodyParams) PostSendUnixDateTime(ctx context.Context, request []byte) (
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostSendUnixDateTimeResponse{
@@ -1239,12 +1230,12 @@ func (s *BodyParams) SendDeleteBodywithModel(ctx context.Context) (*operations.S
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1267,7 +1258,6 @@ func (s *BodyParams) SendDeleteBodywithModel(ctx context.Context) (*operations.S
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.SendDeleteBodywithModelResponse{
@@ -1364,12 +1354,12 @@ func (s *BodyParams) SendDeletePlainText(ctx context.Context) (*operations.SendD
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1392,7 +1382,6 @@ func (s *BodyParams) SendDeletePlainText(ctx context.Context) (*operations.SendD
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.SendDeletePlainTextResponse{
@@ -1495,12 +1484,12 @@ func (s *BodyParams) SendDynamic(ctx context.Context, request []byte) (*operatio
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1523,7 +1512,6 @@ func (s *BodyParams) SendDynamic(ctx context.Context, request []byte) (*operatio
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.SendDynamicResponse{
@@ -1626,12 +1614,12 @@ func (s *BodyParams) UpdateModel(ctx context.Context, request shared.Employee) (
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1654,7 +1642,6 @@ func (s *BodyParams) UpdateModel(ctx context.Context, request shared.Employee) (
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.UpdateModelResponse{
@@ -1751,12 +1738,12 @@ func (s *BodyParams) SendDeleteBody(ctx context.Context) (*operations.SendDelete
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1779,7 +1766,6 @@ func (s *BodyParams) SendDeleteBody(ctx context.Context) (*operations.SendDelete
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.SendDeleteBodyResponse{
@@ -1882,12 +1868,12 @@ func (s *BodyParams) UpdateString(ctx context.Context, request string) (*operati
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1910,7 +1896,6 @@ func (s *BodyParams) UpdateString(ctx context.Context, request string) (*operati
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.UpdateStringResponse{

@@ -59,12 +59,12 @@ func (s *ResponseTypes) Get1123DateTime(ctx context.Context, opts ...operations.
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -87,7 +87,6 @@ func (s *ResponseTypes) Get1123DateTime(ctx context.Context, opts ...operations.
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Get1123DateTimeResponse{
@@ -195,12 +194,12 @@ func (s *ResponseTypes) Get3339Datetime(ctx context.Context, opts ...operations.
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -223,7 +222,6 @@ func (s *ResponseTypes) Get3339Datetime(ctx context.Context, opts ...operations.
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.Get3339DatetimeResponse{
@@ -332,12 +330,12 @@ func (s *ResponseTypes) GetBinary(ctx context.Context, opts ...operations.Option
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -360,7 +358,6 @@ func (s *ResponseTypes) GetBinary(ctx context.Context, opts ...operations.Option
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetBinaryResponse{
@@ -471,12 +468,12 @@ func (s *ResponseTypes) GetBoolean(ctx context.Context, opts ...operations.Optio
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -499,7 +496,6 @@ func (s *ResponseTypes) GetBoolean(ctx context.Context, opts ...operations.Optio
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetBooleanResponse{
@@ -596,12 +592,12 @@ func (s *ResponseTypes) GetDateArray(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -624,7 +620,6 @@ func (s *ResponseTypes) GetDateArray(ctx context.Context, request operations.Get
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetDateArrayResponse{
@@ -736,12 +731,12 @@ func (s *ResponseTypes) GetDynamic(ctx context.Context, opts ...operations.Optio
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -764,7 +759,6 @@ func (s *ResponseTypes) GetDynamic(ctx context.Context, opts ...operations.Optio
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetDynamicResponse{
@@ -857,12 +851,12 @@ func (s *ResponseTypes) GetHeaders(ctx context.Context) (*operations.GetHeadersR
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -885,7 +879,6 @@ func (s *ResponseTypes) GetHeaders(ctx context.Context) (*operations.GetHeadersR
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetHeadersResponse{
@@ -987,12 +980,12 @@ func (s *ResponseTypes) GetInteger(ctx context.Context, opts ...operations.Optio
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1015,7 +1008,6 @@ func (s *ResponseTypes) GetInteger(ctx context.Context, opts ...operations.Optio
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetIntegerResponse{
@@ -1128,12 +1120,12 @@ func (s *ResponseTypes) GetLong(ctx context.Context, opts ...operations.Option) 
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1156,7 +1148,6 @@ func (s *ResponseTypes) GetLong(ctx context.Context, opts ...operations.Option) 
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetLongResponse{
@@ -1253,12 +1244,12 @@ func (s *ResponseTypes) GetModelArray(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1281,7 +1272,6 @@ func (s *ResponseTypes) GetModelArray(ctx context.Context, request operations.Ge
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetModelArrayResponse{
@@ -1393,12 +1383,12 @@ func (s *ResponseTypes) GetPrecision(ctx context.Context, opts ...operations.Opt
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1421,7 +1411,6 @@ func (s *ResponseTypes) GetPrecision(ctx context.Context, opts ...operations.Opt
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetPrecisionResponse{
@@ -1518,12 +1507,12 @@ func (s *ResponseTypes) GetStringEnumArray(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1546,7 +1535,6 @@ func (s *ResponseTypes) GetStringEnumArray(ctx context.Context, request operatio
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetStringEnumArrayResponse{
@@ -1658,12 +1646,12 @@ func (s *ResponseTypes) GetUnixDateTime(ctx context.Context, opts ...operations.
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1686,7 +1674,6 @@ func (s *ResponseTypes) GetUnixDateTime(ctx context.Context, opts ...operations.
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetUnixDateTimeResponse{
@@ -1779,12 +1766,12 @@ func (s *ResponseTypes) Getcontenttypeheaders(ctx context.Context) (*operations.
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1807,7 +1794,6 @@ func (s *ResponseTypes) Getcontenttypeheaders(ctx context.Context) (*operations.
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetcontenttypeheadersResponse{
@@ -1893,12 +1879,12 @@ func (s *ResponseTypes) Returnresponsewithenums(ctx context.Context) (*operation
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	client := s.sdkConfiguration.DefaultClient
-
 	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
+
+	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -1921,7 +1907,6 @@ func (s *ResponseTypes) Returnresponsewithenums(ctx context.Context) (*operation
 			return nil, err
 		}
 	}
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.ReturnresponsewithenumsResponse{
