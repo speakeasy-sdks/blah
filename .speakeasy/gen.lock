@@ -4,16 +4,16 @@ management:
   docChecksum: 00e173209ee87c215970773789a89b4a
   docVersion: "1.4"
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.6.0
-  configChecksum: 30e62d3b4ad0a9b76545c48504ce2150
+  generationVersion: 2.263.3
+  releaseVersion: 0.6.1
+  configChecksum: 199f41dd0792646b9be01b8981f79dfb
   repoURL: https://github.com/speakeasy-sdks/blah.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/blah
   published: true
 features:
   go:
-    core: 3.4.0
+    core: 3.4.1
     downloadStreams: 0.1.1
     globalServerURLs: 2.82.1
     methodServerURLs: 2.82.1
@@ -27,7 +27,6 @@ generatedFiles:
   - responsetypes.go
   - tester.go
   - go.mod
-  - go.sum
   - pkg/models/sdkerrors/sdkerror.go
   - pkg/types/bigint.go
   - pkg/types/date.go
