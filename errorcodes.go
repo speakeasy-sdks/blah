@@ -27,7 +27,11 @@ func newErrorCodes(sdkConfig sdkConfiguration) *ErrorCodes {
 
 // Get400
 func (s *ErrorCodes) Get400(ctx context.Context, opts ...operations.Option) (*operations.Get400Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "Get400"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "Get400",
+		SecuritySource: nil,
+	}
 
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -57,12 +61,12 @@ func (s *ErrorCodes) Get400(ctx context.Context, opts ...operations.Option) (*op
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -72,15 +76,15 @@ func (s *ErrorCodes) Get400(ctx context.Context, opts ...operations.Option) (*op
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"400", "402", "403", "404", "412", "4XX", "500", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -162,7 +166,11 @@ func (s *ErrorCodes) Get400(ctx context.Context, opts ...operations.Option) (*op
 
 // Get401
 func (s *ErrorCodes) Get401(ctx context.Context, opts ...operations.Option) (*operations.Get401Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "Get401"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "Get401",
+		SecuritySource: nil,
+	}
 
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -192,12 +200,12 @@ func (s *ErrorCodes) Get401(ctx context.Context, opts ...operations.Option) (*op
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -207,15 +215,15 @@ func (s *ErrorCodes) Get401(ctx context.Context, opts ...operations.Option) (*op
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"400", "401", "402", "403", "404", "412", "421", "431", "432", "441", "4XX", "500", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -316,7 +324,11 @@ func (s *ErrorCodes) Get401(ctx context.Context, opts ...operations.Option) (*op
 
 // Get500
 func (s *ErrorCodes) Get500(ctx context.Context, opts ...operations.Option) (*operations.Get500Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "Get500"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "Get500",
+		SecuritySource: nil,
+	}
 
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -346,12 +358,12 @@ func (s *ErrorCodes) Get500(ctx context.Context, opts ...operations.Option) (*op
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -361,15 +373,15 @@ func (s *ErrorCodes) Get500(ctx context.Context, opts ...operations.Option) (*op
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"400", "402", "403", "404", "412", "4XX", "500", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -451,7 +463,11 @@ func (s *ErrorCodes) Get500(ctx context.Context, opts ...operations.Option) (*op
 
 // Get501
 func (s *ErrorCodes) Get501(ctx context.Context, opts ...operations.Option) (*operations.Get501Response, error) {
-	hookCtx := hooks.HookContext{OperationID: "Get501"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "Get501",
+		SecuritySource: nil,
+	}
 
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -481,12 +497,12 @@ func (s *ErrorCodes) Get501(ctx context.Context, opts ...operations.Option) (*op
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -496,15 +512,15 @@ func (s *ErrorCodes) Get501(ctx context.Context, opts ...operations.Option) (*op
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"400", "402", "403", "404", "412", "4XX", "500", "501", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -588,7 +604,11 @@ func (s *ErrorCodes) Get501(ctx context.Context, opts ...operations.Option) (*op
 
 // Catch412globalerror - catch 412 global error
 func (s *ErrorCodes) Catch412globalerror(ctx context.Context, opts ...operations.Option) (*operations.Catch412globalerrorResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "catch412globalerror"}
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "catch412globalerror",
+		SecuritySource: nil,
+	}
 
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -618,12 +638,12 @@ func (s *ErrorCodes) Catch412globalerror(ctx context.Context, opts ...operations
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := s.sdkConfiguration.DefaultClient
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.DefaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -633,15 +653,15 @@ func (s *ErrorCodes) Catch412globalerror(ctx context.Context, opts ...operations
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"400", "402", "403", "404", "412", "4XX", "500", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
