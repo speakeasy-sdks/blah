@@ -47,7 +47,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -100,7 +99,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -150,7 +148,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -200,7 +197,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -290,7 +286,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -368,7 +363,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -418,7 +412,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -469,7 +462,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -519,7 +511,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -569,7 +560,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -619,7 +609,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -697,7 +686,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -744,7 +732,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -790,7 +777,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -836,7 +822,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }
@@ -885,7 +870,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ServerResponse != nil {
         // handle response
     }

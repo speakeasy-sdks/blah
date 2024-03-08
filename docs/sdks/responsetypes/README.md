@@ -42,7 +42,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -88,7 +87,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -134,7 +132,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Stream != nil {
         // handle response
     }
@@ -180,7 +177,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -229,7 +225,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Dates != nil {
         // handle response
     }
@@ -276,7 +271,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -312,7 +306,6 @@ import(
 	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -323,8 +316,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -369,7 +361,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -415,7 +406,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -465,7 +455,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Classes != nil {
         // handle response
     }
@@ -512,7 +501,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -562,7 +550,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Enums != nil {
         // handle response
     }
@@ -609,7 +596,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -645,7 +631,6 @@ import(
 	"github.com/speakeasy-sdks/blah"
 	"context"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -656,8 +641,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -702,7 +686,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.ResponsewithEnum != nil {
         // handle response
     }
