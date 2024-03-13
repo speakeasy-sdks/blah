@@ -3,10 +3,10 @@ id: 4fd62506-320b-445e-8949-7d2ca6950524
 management:
   docChecksum: 00e173209ee87c215970773789a89b4a
   docVersion: "1.4"
-  speakeasyVersion: 1.204.1
-  generationVersion: 2.279.1
-  releaseVersion: 0.7.0
-  configChecksum: 3239a19c779a876c47b39eba440c5a09
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 0.7.1
+  configChecksum: 925088bf4ba9348f3369420ec47e5d37
   repoURL: https://github.com/speakeasy-sdks/blah.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/blah
@@ -15,7 +15,7 @@ features:
   go:
     core: 3.4.4
     downloadStreams: 0.1.1
-    globalServerURLs: 2.82.1
+    globalServerURLs: 2.82.2
     methodServerURLs: 2.82.1
     responseFormat: 0.1.0
 generatedFiles:
